@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
@@ -41,12 +42,12 @@ public class ResponsiveTestExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your applitools key");
+        eyes.setApiKey("applitools_api_key");
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.STRICT);
-        BatchInfo batch = new BatchInfo("Responsive");
+        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        BatchInfo batch = new BatchInfo("Responsive Github");
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
@@ -61,6 +62,8 @@ public class ResponsiveTestExample {
         String h = Integer.toString(height);
 
         eyes.checkWindow(w + "x" + h);
+        //eyes.checkRegion(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm"));
+
         TestResults results = eyes.close();
         assertEquals(true, results.isPassed());
     }
