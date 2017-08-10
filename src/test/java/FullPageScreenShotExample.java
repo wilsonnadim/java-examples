@@ -17,7 +17,7 @@ public class FullPageScreenShotExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your applitools key");
+        eyes.setApiKey("your_applitools_key");
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);

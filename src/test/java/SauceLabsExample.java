@@ -36,8 +36,8 @@ public class SauceLabsExample {
     protected String screenResolution;
 
 
-    public static String username = "your sauce username";
-    public static String accesskey = "your sauce key";
+    public static String username = "your_sauce_user";
+    public static String accesskey = "your_sauce_key";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
@@ -65,7 +65,7 @@ public class SauceLabsExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your applitools key");
+        eyes.setApiKey("your_applitools_key");
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);

@@ -14,6 +14,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 @RunWith(Parallell.class)
 public class ResponsiveTestExample {
@@ -42,7 +44,8 @@ public class ResponsiveTestExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("applitools_api_key");
+
+        eyes.setApiKey("your_applitools_key");
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
@@ -51,12 +54,12 @@ public class ResponsiveTestExample {
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-        driver.get("https://www.github.com");
+        driver.get("http://www.netapp.com/us/index.aspx");
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(width, height));
+    public void NetAppHomeResponsive() throws Exception {
+        eyes.open(driver, "Github", "Responsive Home Page", new RectangleSize(width, height));
 
         String w = Integer.toString(width);
         String h = Integer.toString(height);

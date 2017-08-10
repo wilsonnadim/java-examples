@@ -35,8 +35,8 @@ public class BrowserStackExample {
     protected String deviceName;
     protected String deviceOrientation;
 
-    public static String username = "your browserstack username";
-    public static String accesskey = "your browserstack key";
+    public static String username = "your_browserstack_user";
+    public static String accesskey = "your_browserstack_key";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
@@ -63,11 +63,13 @@ public class BrowserStackExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your applitools key");
+        eyes.setApiKey("your_applitools_key");
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
+
+        //eyes.setSaveFailedTests(false);
 
         BatchInfo batch = new BatchInfo("Google");
         eyes.setBatch(batch);
