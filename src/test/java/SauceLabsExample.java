@@ -1,3 +1,5 @@
+//https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
+
 import java.net.URL;
 import java.util.LinkedList;
 import com.applitools.eyes.BatchInfo;

@@ -23,6 +23,8 @@ public class FullPageScreenShotExample {
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.STRICT);
 
+        //eyes.setSaveFailedTests(false);
+
         driver = new ChromeDriver();
         driver.get("https://www.github.com");
     }

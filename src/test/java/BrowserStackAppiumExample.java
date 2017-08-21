@@ -1,9 +1,6 @@
-import java.net.URL;
-import java.util.LinkedList;
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+//https://www.browserstack.com/list-of-browsers-and-platforms?product=automate
+
+import com.applitools.eyes.*;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
@@ -17,10 +14,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
+import java.util.LinkedList;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parallell.class)
-public class BrowserStackExample {
+public class BrowserStackAppiumExample {
 
     @Rule
     public TestName name = new TestName() {
@@ -37,24 +38,24 @@ public class BrowserStackExample {
 
     public static String username = "your_browserstack_user";
     public static String accesskey = "your_browserstack_key";
+    public static String applitoolsKey = "your_applitools_key";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"WINDOWS", "15",   "Edge",    null, null});
-        env.add(new String[]{"WINDOWS", "54",   "firefox", null, null});
-        env.add(new String[]{"MAC",     "10.1", "safari",  null, null});
-        env.add(new String[]{"MAC",     "59",   "chrome",  null, null});
+        env.add(new String[]{"Android", "6.0",  "Android Emulator", "chrome", "portrait"});
+        env.add(new String[]{"iPhone",     "9.1", "iPhone 6S Plus", "Safari", "portrait"});
+        env.add(new String[]{"iPhone",     "9.1", "iPhone 6S",   "Safari", "portrait"});
 
         return env;
     }
 
-    public BrowserStackExample(String os, String version, String browser, String deviceName,
-                            String deviceOrientation) {
+    public BrowserStackAppiumExample(String os, String version, String deviceName, String browser,
+                                  String deviceOrientation) {
         this.os = os;
         this.version = version;
-        this.browser = browser;
         this.deviceName = deviceName;
+        this.browser = browser;
         this.deviceOrientation = deviceOrientation;
     }
 
@@ -63,7 +64,7 @@ public class BrowserStackExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your_applitools_key");
+        eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
@@ -71,7 +72,7 @@ public class BrowserStackExample {
 
         //eyes.setSaveFailedTests(false);
 
-        BatchInfo batch = new BatchInfo("Google");
+        BatchInfo batch = new BatchInfo("Github");
         eyes.setBatch(batch);
 
         DesiredCapabilities capability = new DesiredCapabilities();
@@ -81,15 +82,23 @@ public class BrowserStackExample {
         capability.setCapability("deviceName", deviceName);
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
+        //capability.setCapability("realMobile", true); //Set for real devices on BS.
+        capability.setCapability("browserstack.appium_version", "1.6.3");
+
+        if (browser == "Safari") {
+            //lower scale gets wider. higher scale gets thinner
+            eyes.setScaleRatio(0.66); //scale the device image to appropriate size.
+            eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //remove URL and footer.
+        }
 
         String browserStackUrl = "http://" + username + ":" + accesskey + "@hub-cloud.browserstack.com/wd/hub";
         driver = new RemoteWebDriver(new URL(browserStackUrl), capability);
-        driver.get("https://www.google.com");
+        driver.get("https://www.github.com/");
     }
 
     @Test
-    public void GoogleHomePage() throws Exception {
-        eyes.open(driver, "Google", "Home Page", new RectangleSize(800, 600));
+    public void GithubHomePage() throws Exception {
+        eyes.open(driver, "Github", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
         TestResults results = eyes.close();
         assertEquals(true, results.isPassed());
@@ -101,6 +110,3 @@ public class BrowserStackExample {
         eyes.abortIfNotClosed();
     }
 }
-
-//iphone 6
-//frp.gov

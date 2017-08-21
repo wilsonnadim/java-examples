@@ -54,7 +54,7 @@ public class ResponsiveTestExample {
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-        driver.get("http://www.netapp.com/us/index.aspx");
+        driver.get("http://www.github.com");
     }
 
     @Test
