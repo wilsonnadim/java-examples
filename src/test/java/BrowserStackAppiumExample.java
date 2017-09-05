@@ -83,7 +83,7 @@ public class BrowserStackAppiumExample {
         capability.setCapability("deviceName", deviceName);
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
-        //capability.setCapability("realMobile", true); //Set for real devices on BS.
+        capability.setCapability("realMobile", true); //Set for real devices on BS.
         capability.setCapability("browserstack.appium_version", "1.6.3");
 
         if (browser == "Safari") {
