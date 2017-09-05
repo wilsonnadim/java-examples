@@ -1,4 +1,5 @@
-//https://www.browserstack.com/list-of-browsers-and-platforms?product=automate
+//https://www.browserstack.com/automate/capabilities#ie-capabilities
+//https://www.browserstack.com/list-of-browsers-and-platforms?product=live
 
 import com.applitools.eyes.*;
 import com.applitools.eyes.selenium.Eyes;

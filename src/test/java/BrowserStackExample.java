@@ -1,3 +1,6 @@
+//https://www.browserstack.com/automate/capabilities#ie-capabilities
+//https://www.browserstack.com/list-of-browsers-and-platforms?product=live
+
 import java.net.URL;
 import java.util.LinkedList;
 import com.applitools.eyes.BatchInfo;
