@@ -102,6 +102,3 @@ public class BrowserStackExample {
         eyes.abortIfNotClosed();
     }
 }
-
-//iphone 6
-//frp.gov
