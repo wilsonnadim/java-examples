@@ -39,9 +39,9 @@ public class BrowserStackAppiumExample2 {
     protected String deviceName;
     protected String deviceOrientation;
 
-    public static String username = "justin646";
-    public static String accesskey = "Vu85HDQC5BxNZx7iWxa8";
-    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
+    public static String username = "your_bs_user";
+    public static String accesskey = "your_bs_pw";
+    public static String applitoolsKey = "your_applitools_key";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
