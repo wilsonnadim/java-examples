@@ -29,33 +29,33 @@ public class BrowserStackExample {
         }
     };
 
-    protected String browser;
     protected String os;
-    protected String version;
-    protected String deviceName;
-    protected String deviceOrientation;
+    protected String os_version;
+    protected String browser_version;
+    protected String browser;
+    protected String screenResolution;
 
-    public static String username = "your_browserstack_user";
-    public static String accesskey = "your_browserstack_key";
+    public static String username = "your_bs_user";
+    public static String accesskey = "your_bs_key";
+    public static String applitoolsKey = "your_applitools_key";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"WINDOWS", "15",   "Edge",    null, null});
-        env.add(new String[]{"WINDOWS", "54",   "firefox", null, null});
-        env.add(new String[]{"MAC",     "10.1", "safari",  null, null});
-        env.add(new String[]{"MAC",     "59",   "chrome",  null, null});
+        env.add(new String[]{"Windows", "10",         "55",   "firefox", "2048x1536"});
+        env.add(new String[]{"Windows", "8.1",        "59",   "chrome",  "2048x1536"});
+        env.add(new String[]{"OS X",    "Sierra",     "55",   "firefox", "1920x1080"});
+        env.add(new String[]{"OS X",    "El Capitan", "9.1",  "safari",  "1920x1080"});
 
         return env;
     }
 
-    public BrowserStackExample(String os, String version, String browser, String deviceName,
-                            String deviceOrientation) {
+    public BrowserStackExample(String os, String os_version, String browser_version, String browser, String resolution) {
         this.os = os;
-        this.version = version;
+        this.os_version = os_version;
+        this.browser_version = browser_version;
         this.browser = browser;
-        this.deviceName = deviceName;
-        this.deviceOrientation = deviceOrientation;
+        this.screenResolution = resolution;
     }
 
     private Eyes eyes = new Eyes();
@@ -63,33 +63,34 @@ public class BrowserStackExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your_applitools_key");
+        eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
 
+        //eyes.setStitchOverlap(70);
         //eyes.setSaveFailedTests(false);
 
-        BatchInfo batch = new BatchInfo("Google");
+        BatchInfo batch = new BatchInfo("Github");
         eyes.setBatch(batch);
 
         DesiredCapabilities capability = new DesiredCapabilities();
-        capability.setCapability(CapabilityType.PLATFORM, os);
+        capability.setCapability("os", os);
+        capability.setCapability("os_version", os_version);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-        capability.setCapability(CapabilityType.VERSION, version);
-        capability.setCapability("deviceName", deviceName);
-        capability.setCapability("device-orientation", deviceOrientation);
+        capability.setCapability(CapabilityType.VERSION, browser_version);
+        capability.setCapability("resolution", screenResolution);
         capability.setCapability("name", name.getMethodName());
 
         String browserStackUrl = "http://" + username + ":" + accesskey + "@hub-cloud.browserstack.com/wd/hub";
         driver = new RemoteWebDriver(new URL(browserStackUrl), capability);
-        driver.get("https://www.google.com");
+        driver.get("https://www.github.com");
     }
 
     @Test
-    public void GoogleHomePage() throws Exception {
-        eyes.open(driver, "Google", "Home Page", new RectangleSize(800, 600));
+    public void GithubHomePage() throws Exception {
+        eyes.open(driver, "Github", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
         TestResults results = eyes.close();
         assertEquals(true, results.isPassed());

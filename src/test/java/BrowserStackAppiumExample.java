@@ -36,8 +36,8 @@ public class BrowserStackAppiumExample {
     protected String deviceName;
     protected String deviceOrientation;
 
-    public static String username = "your_browserstack_user";
-    public static String accesskey = "your_browserstack_key";
+    public static String username = "your_bs_user";
+    public static String accesskey = "your_bs_key";
     public static String applitoolsKey = "your_applitools_key";
 
     @Parameterized.Parameters

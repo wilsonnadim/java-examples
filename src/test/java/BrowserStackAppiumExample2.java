@@ -1,8 +1,7 @@
-//https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
+//https://www.browserstack.com/list-of-browsers-and-platforms?product=automate
 
-import java.net.URL;
-import java.util.LinkedList;
 import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.FixedCutProvider;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
@@ -18,10 +17,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
+import java.util.LinkedList;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parallell.class)
-public class SauceLabsExample {
+public class BrowserStackAppiumExample2 {
 
     @Rule
     public TestName name = new TestName() {
@@ -32,35 +35,31 @@ public class SauceLabsExample {
 
     protected String browser;
     protected String os;
-    protected String version;
+    //protected String version;
     protected String deviceName;
     protected String deviceOrientation;
-    protected String screenResolution;
 
-    public static String username = "your_sauce_user";
-    public static String accesskey = "your_sauce_key";
-    public static String applitoolsKey = "your_applitools_key";
+    public static String username = "justin646";
+    public static String accesskey = "Vu85HDQC5BxNZx7iWxa8";
+    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"Windows 7",   "59.0", "chrome",            null, null, "1600x1200"});
-        env.add(new String[]{"Windows 8.1", "59.0", "chrome",            null, null, "1280x1024"});
-        env.add(new String[]{"Windows 10",  "49.0", "firefox",           null, null, "1280x1024"});
-        env.add(new String[]{"Windows 7",   "11.0", "internet explorer", null, null, "1280x1024"});
-        env.add(new String[]{"OS X 10.10",  "54.0", "chrome",            null, null, "1280x1024"});
+//        env.add(new String[]{"Android", "6",    "Samsung Galaxy S8", "chrome", "portrait"});
+//        env.add(new String[]{"iPhone",  "10.0", "iPhone 7 Plus",     "Safari", "portrait"});
+        env.add(new String[]{"iPhone",  "10.0", "iPhone 7",          "Safari", "portrait"});
 
         return env;
     }
 
-    public SauceLabsExample(String os, String version, String browser, String deviceName,
-                   String deviceOrientation, String resolution) {
+    public BrowserStackAppiumExample2(String os, String version, String deviceName, String browser,
+                                      String deviceOrientation) {
         this.os = os;
-        this.version = version;
-        this.browser = browser;
+        //this.version = version;
         this.deviceName = deviceName;
+        this.browser = browser;
         this.deviceOrientation = deviceOrientation;
-        this.screenResolution = resolution;
     }
 
     private Eyes eyes = new Eyes();
@@ -74,26 +73,35 @@ public class SauceLabsExample {
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
 
-        BatchInfo batch = new BatchInfo("Github");
+        //eyes.setSaveFailedTests(false);
+
+        BatchInfo batch = new BatchInfo("NYF");
         eyes.setBatch(batch);
 
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-        capability.setCapability(CapabilityType.VERSION, version);
+        //capability.setCapability(CapabilityType.VERSION, version);
         capability.setCapability("deviceName", deviceName);
         capability.setCapability("device-orientation", deviceOrientation);
-        capability.setCapability("screenResolution", screenResolution);
         capability.setCapability("name", name.getMethodName());
+        capability.setCapability("realMobile", true); //Set for real devices on BS.
+        capability.setCapability("browserstack.appium_version", "1.6.3");
 
-        String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
-        driver = new RemoteWebDriver(new URL(sauce_url), capability);
-        driver.get("https://www.newyorkfed.org/");
+        if (browser == "Safari") {
+            //lower scale gets wider. higher scale gets thinner
+            eyes.setScaleRatio(1.0); //scale the device image to appropriate size. 0.65
+            eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //remove URL and footer.
+        }
+
+        String browserStackUrl = "http://" + username + ":" + accesskey + "@hub-cloud.browserstack.com/wd/hub";
+        driver = new RemoteWebDriver(new URL(browserStackUrl), capability);
+        driver.get("https://www.newyorkfed.org/outreach-and-education");
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page");
+    public void NYFHomePage() throws Exception {
+        eyes.open(driver, "NYF", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
         TestResults results = eyes.close();
         assertEquals(true, results.isPassed());
