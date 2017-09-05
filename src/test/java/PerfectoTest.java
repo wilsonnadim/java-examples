@@ -13,37 +13,30 @@ import java.net.URLEncoder;
 
 public class PerfectoTest {
 
-    private static final int HEADER_SIZE = 65; // Should be adupted according to device
+    private static final int HEADER_SIZE = 65; // Should be adopted according to device
     private static final String USER_NAME = "your_perfecto_user";
     private static final String PASSWORD = "your_perfecto_pw";
     private static final String DEVICE = null;
     private static final String applitoolsKey = "your_applitools_key";
 
-
-
-    public static void main(String[] args)
-            throws MalformedURLException, InterruptedException, UnsupportedEncodingException {
+    public static void main(String[] args) throws MalformedURLException, InterruptedException, UnsupportedEncodingException {
 
         Eyes eyes = new Eyes();
 
         eyes.setApiKey(applitoolsKey);
 
-
-        DesiredCapabilities capabilities = new DesiredCapabilities("", "",
-                Platform.ANY);
+        DesiredCapabilities capabilities = new DesiredCapabilities("", "", Platform.ANY);
 
         capabilities.setCapability("user", USER_NAME);
 
         capabilities.setCapability("password", PASSWORD);
 
-        String user = URLEncoder.encode(USER_NAME,
-                "UTF-8");
+        String user = URLEncoder.encode(USER_NAME, "UTF-8");
 
         String password = URLEncoder.encode(PASSWORD, "UTF-8");
 
         capabilities.setCapability("deviceName", DEVICE);
-        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,
-                200);
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 200);
 
         URL url = new URL("https://" + user + ":" + password + "@partners.perfectomobile.com/nexperience/wd/hub");
 
