@@ -1,11 +1,7 @@
 //https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
 
 import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.FixedCutProvider;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
-import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -13,18 +9,19 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 import java.util.LinkedList;
-
-import static org.junit.Assert.assertEquals;
+import java.util.List;
 
 @RunWith(Parallell.class)
-public class SauceLabsAppiumExample {
+public class SauceLabsAppiumNativeExample {
 
     protected String os;
     protected String version;
@@ -46,14 +43,14 @@ public class SauceLabsAppiumExample {
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"Android", "6.0",  "Android Emulator",        "chrome", "portrait"});
-        env.add(new String[]{"iOS",     "10.3", "iPhone 7 Plus Simulator", "Safari", "portrait"});
-        env.add(new String[]{"iOS",     "9.3", "iPad Pro Simulator",       "Safari", "portrait"});
-        env.add(new String[]{"iOS",     "9.2",  "iPhone Simulator",        "Safari", "portrait"});
+        env.add(new String[]{"Android", "6.0", "Android Emulator",                     "", "portrait"});
+        env.add(new String[]{"Android", "7.0", "Android GoogleAPI Emulator",           "", "portrait"});
+        env.add(new String[]{"Android", "4.4", "Google Nexus 7 HD GoogleAPI Emulator", "", "portrait"});
+        env.add(new String[]{"Android", "4.4", "Samsung Galaxy S3 GoogleAPI Emulator", "", "portrait"});
         return env;
     }
 
-    public SauceLabsAppiumExample(String os, String version, String deviceName, String browser, String deviceOrientation) {
+    public SauceLabsAppiumNativeExample(String os, String version, String deviceName, String browser, String deviceOrientation) {
         this.os = os;
         this.version = version;
         this.deviceName = deviceName;
@@ -67,12 +64,9 @@ public class SauceLabsAppiumExample {
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
-        eyes.setHideScrollbars(true);
-        eyes.setForceFullPageScreenshot(true);
-        eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        BatchInfo batch = new BatchInfo("Github SauceLabs");
+        BatchInfo batch = new BatchInfo("Native App SauceLabs");
         eyes.setBatch(batch);
+
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
@@ -80,22 +74,19 @@ public class SauceLabsAppiumExample {
         capability.setCapability("deviceName", deviceName);
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
-
-        if (browser == "Safari") {
-            eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //remove URL and footer.
-        }
-
+        capability.setCapability("app", "https://www.dropbox.com/s/yksa2wfszjjslba/app-debug.apk?dl=1");
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
-        driver.get("https://github.com/");
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page");
-        eyes.checkWindow("Home Page Screenshot");
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+    public void NativeApp() throws Exception {
+        driver.findElement(By.id("ReferenceApp")).click();
+        List<WebElement> we  = driver.findElements(By.id("Row Category Name"));
+        we.get(2).click();
+        eyes.open(driver, "Native App Test", "Native Page");
+        eyes.checkWindow("Test");
+        eyes.close();
     }
 
     @After

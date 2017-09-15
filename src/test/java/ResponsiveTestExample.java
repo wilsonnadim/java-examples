@@ -1,4 +1,3 @@
-import java.util.LinkedList;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.RectangleSize;
@@ -10,12 +9,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.LinkedList;
+
 import static org.junit.Assert.assertEquals;
-import java.net.URI;
-import java.net.URISyntaxException;
 
 @RunWith(Parallell.class)
 public class ResponsiveTestExample {
