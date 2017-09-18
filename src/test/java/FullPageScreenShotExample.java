@@ -6,9 +6,9 @@ import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import static org.junit.Assert.assertEquals;
 
 public class FullPageScreenShotExample {
@@ -26,6 +26,9 @@ public class FullPageScreenShotExample {
         eyes.setMatchLevel(MatchLevel.STRICT);
         //set new baseline images...
         //eyes.setSaveFailedTests(true);
+
+        //output detailed log data
+        //eyes.setLogHandler(new StdoutLogHandler(true));
 
         driver = new ChromeDriver();
         driver.get("https://www.github.com");

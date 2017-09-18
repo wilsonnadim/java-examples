@@ -1,16 +1,11 @@
 //https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
 
-import java.net.URL;
-import java.util.LinkedList;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -18,6 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
+import java.util.LinkedList;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parallell.class)
@@ -66,6 +65,13 @@ public class SauceLabsExample {
     private Eyes eyes = new Eyes();
     private WebDriver driver;
 
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("Github");
+    }
+
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
@@ -73,8 +79,6 @@ public class SauceLabsExample {
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
-
-        BatchInfo batch = new BatchInfo("Github");
         eyes.setBatch(batch);
 
         DesiredCapabilities capability = new DesiredCapabilities();
@@ -88,7 +92,7 @@ public class SauceLabsExample {
 
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
-        driver.get("https://www.newyorkfed.org/");
+        driver.get("https://github.com");
     }
 
     @Test
