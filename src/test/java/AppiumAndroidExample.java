@@ -26,6 +26,7 @@ public class AppiumAndroidExample {
         BatchInfo batch = new BatchInfo("Github Local");
         eyes.setBatch(batch);
         DesiredCapabilities capability = new DesiredCapabilities();
+        DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platformName", "Android");
         capability.setCapability("deviceName", "android");
         capability.setCapability("browserName", "Chrome");

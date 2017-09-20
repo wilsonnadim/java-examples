@@ -6,10 +6,7 @@ import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -46,10 +43,10 @@ public class SauceLabsAppiumExample {
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"Android", "6.0",  "Android Emulator",        "chrome", "portrait"});
-        env.add(new String[]{"iOS",     "10.3", "iPhone 7 Plus Simulator", "Safari", "portrait"});
-        env.add(new String[]{"iOS",     "9.3", "iPad Pro Simulator",       "Safari", "portrait"});
-        env.add(new String[]{"iOS",     "9.2",  "iPhone Simulator",        "Safari", "portrait"});
+        env.add(new String[]{"Android", "6.0",  "Android Emulator",           "chrome", "portrait"});
+        env.add(new String[]{"iOS",     "7.1",  "Android GoogleAPI Emulator", "chrome", "portrait"});
+        env.add(new String[]{"iOS",     "10.3", "iPhone 7 Plus Simulator",    "Safari", "portrait"});
+        env.add(new String[]{"iOS",     "9.2",  "iPhone Simulator",           "Safari", "portrait"});
         return env;
     }
 
@@ -64,6 +61,13 @@ public class SauceLabsAppiumExample {
     private Eyes eyes = new Eyes();
     private WebDriver driver;
 
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("Github With Sauce Labs");
+    }
+
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
@@ -71,7 +75,6 @@ public class SauceLabsAppiumExample {
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        BatchInfo batch = new BatchInfo("Github SauceLabs");
         eyes.setBatch(batch);
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
@@ -92,8 +95,8 @@ public class SauceLabsAppiumExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page");
-        eyes.checkWindow("Home Page Screenshot");
+        eyes.open(driver, "Github", "Github Home Page");
+        eyes.checkWindow("Home Page");
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }

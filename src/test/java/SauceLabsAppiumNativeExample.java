@@ -2,10 +2,7 @@
 
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.selenium.Eyes;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -61,12 +58,17 @@ public class SauceLabsAppiumNativeExample {
     private Eyes eyes = new Eyes();
     private WebDriver driver;
 
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("Native App With Sauce Labs");
+    }
+
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
-        BatchInfo batch = new BatchInfo("Native App SauceLabs");
         eyes.setBatch(batch);
-
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
@@ -84,7 +86,7 @@ public class SauceLabsAppiumNativeExample {
         driver.findElement(By.id("ReferenceApp")).click();
         List<WebElement> we  = driver.findElements(By.id("Row Category Name"));
         we.get(2).click();
-        eyes.open(driver, "Native App Test", "Native Page");
+        eyes.open(driver, "Native App Test", "Native Components");
         eyes.checkWindow("Test");
         eyes.close();
     }

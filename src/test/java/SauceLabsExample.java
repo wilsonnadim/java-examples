@@ -69,7 +69,7 @@ public class SauceLabsExample {
 
     @BeforeClass
     public static void batchInitialization(){
-        batch = new BatchInfo("Github");
+        batch = new BatchInfo("Github Sauce Labs");
     }
 
     @Before

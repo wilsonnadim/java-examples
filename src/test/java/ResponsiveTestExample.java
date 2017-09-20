@@ -40,11 +40,12 @@ public class ResponsiveTestExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
+    public static String applitoolsKey = "your_applitools_key";
 
     @Before
     public void setUp() throws Exception {
 
-        eyes.setApiKey("your_applitools_key");
+        eyes.setApiKey("applitoolsKey");
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
