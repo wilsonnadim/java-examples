@@ -1,11 +1,8 @@
 //https://www.browserstack.com/automate/capabilities#ie-capabilities
 //https://www.browserstack.com/list-of-browsers-and-platforms?product=live
 
-import java.net.URL;
-import java.util.LinkedList;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
@@ -20,6 +17,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
+import java.util.LinkedList;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parallell.class)
@@ -95,7 +96,7 @@ public class BrowserStackExample {
     public void GithubHomePage() throws Exception {
         eyes.open(driver, "Github", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
-        TestResults results = eyes.close();
+        TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
 

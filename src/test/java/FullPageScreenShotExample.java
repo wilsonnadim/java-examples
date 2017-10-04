@@ -6,6 +6,7 @@ import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -19,6 +20,8 @@ public class FullPageScreenShotExample {
 
     @Before
     public void setUp() throws Exception {
+
+        //eyes.setServerUrl(URI.create("https://your-onprem-server"));
         eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
@@ -34,7 +37,7 @@ public class FullPageScreenShotExample {
         driver.get("https://www.github.com");
 
         //for sites with older or non-standard css structure. Need to inject JS so SDK can get correct screen size.
-//        JavascriptExecutor js =(JavascriptExecutor)driver;
+        JavascriptExecutor js =(JavascriptExecutor)driver;
 //        js.executeScript("$('html').css('overflow-y','visible');");
 //        js.executeScript("$('html').css('overflow-x','visible');");
 //        js.executeScript("$('html').css('height','unset');");
@@ -42,9 +45,9 @@ public class FullPageScreenShotExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(1000, 800));
+        eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
         eyes.checkWindow("1000x800");
-        TestResults results = eyes.close();
+        TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
 

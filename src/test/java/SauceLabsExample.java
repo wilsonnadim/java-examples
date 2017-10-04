@@ -99,7 +99,7 @@ public class SauceLabsExample {
     public void GithubHomePage() throws Exception {
         eyes.open(driver, "Github", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
-        TestResults results = eyes.close();
+        TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
 

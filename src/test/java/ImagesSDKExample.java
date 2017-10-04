@@ -2,23 +2,23 @@
  * Created by justin on 7/19/17.
  */
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import com.applitools.eyes.MatchLevel;
+import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.images.Eyes;
-import com.applitools.eyes.RectangleSize;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.TakesScreenshot;
 
 import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -64,7 +64,7 @@ public class ImagesSDKExample {
 
         }
 
-        TestResults results = eyes.close();
+        TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
 

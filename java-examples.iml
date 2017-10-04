@@ -58,14 +58,14 @@
     <orderEntry type="library" name="Maven: xalan:xalan:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: xerces:xercesImpl:2.11.0" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
-    <orderEntry type="library" name="Maven: com.applitools:eyes-selenium-java3:3.19" level="project" />
-    <orderEntry type="library" name="Maven: com.applitools:eyes-common-java3:3.19" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-selenium-java3:3.22" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-common-java3:3.22" level="project" />
     <orderEntry type="library" name="Maven: org.imgscalr:imgscalr-lib:4.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.1" level="project" />
-    <orderEntry type="library" name="Maven: com.applitools:eyes-sdk-core-java3:3.19" level="project" />
-    <orderEntry type="library" name="Maven: com.applitools:eyes-connectivity-java3-jersey2x:3.19" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-sdk-core-java3:3.22" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-connectivity-java3-jersey2x:3.22" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.connectors:jersey-apache-connector:2.16" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-common:2.16" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
@@ -95,7 +95,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.openpnp:opencv:3.2.0-1" level="project" />
-    <orderEntry type="library" name="Maven: com.applitools:eyes-images-java3:3.21" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-images-java3:3.22" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
   </component>
 </module>
