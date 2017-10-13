@@ -6,7 +6,6 @@ import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -37,7 +36,7 @@ public class FullPageScreenShotExample {
         driver.get("https://www.github.com");
 
         //for sites with older or non-standard css structure. Need to inject JS so SDK can get correct screen size.
-        JavascriptExecutor js =(JavascriptExecutor)driver;
+        //JavascriptExecutor js =(JavascriptExecutor)driver;
 //        js.executeScript("$('html').css('overflow-y','visible');");
 //        js.executeScript("$('html').css('overflow-x','visible');");
 //        js.executeScript("$('html').css('height','unset');");
