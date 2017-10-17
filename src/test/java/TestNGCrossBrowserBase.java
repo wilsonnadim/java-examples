@@ -4,7 +4,6 @@ import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -23,13 +22,10 @@ import java.rmi.UnexpectedException;
  *
  * @author Neil Manvar
  */
-public class TestNGSauceLabsBase {
+public class TestNGCrossBrowserBase {
 
-    public String buildTag = System.getenv("BUILD_TAG");
-
-    public String username = System.getenv("SAUCE_USERNAME");
-
-    public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+    public String username = System.getenv("CBT_USERNAME");
+    public String authkey = System.getenv("CBT_AUTH_KEY");
 
     private ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
     public WebDriver getWebDriver() {
@@ -50,14 +46,15 @@ public class TestNGSauceLabsBase {
      * @param testMethod
      * @return Two dimensional array of objects with browser, version, and platform information
      */
+
+    //Comment out all but one for your initial baseline sample. After your baseline is created then uncomment out each browser/os combo to do cross browser testing.
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
-    public static Object[][] sauceBrowserDataProvider(Method testMethod) {
+    public static Object[][] cbtBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-                new Object[]{"MicrosoftEdge",     "14.14393", "Windows 10", "2560x1600"},
-                new Object[]{"firefox",           "49.0",     "Windows 10", "2560x1600"},
-                new Object[]{"internet explorer", "11.0",     "Windows 7",  "2560x1600"},
-                new Object[]{"safari",            "10.0",     "OS X 10.11", "2048x1536"},
-                new Object[]{"chrome",            "54.0",     "OS X 10.10", "2048x1536"},
+                new Object[]{"Chrome",            "60",    "Windows 10",    "2560x1920"},
+                new Object[]{"Internet Explorer", "9",     "Windows 7",     "1920x1080"},
+                new Object[]{"Safari",            "9",     "Mac OSX 10.11", "2560x1600"},
+                new Object[]{"Firefox",           "54",    "Mac OSX 10.12", "2560x1600"},
         };
     }
 
@@ -84,14 +81,11 @@ public class TestNGSauceLabsBase {
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("screenResolution", resolution);
         capabilities.setCapability("name", methodName);
-
-        if (buildTag != null) {
-            capabilities.setCapability("build", buildTag);
-        }
+        capabilities.setCapability("record_video", "true");
 
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
-                new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
+                new URL("http://" + username + ":" + authkey +"@hub.crossbrowsertesting.com:80/wd/hub"),
                 capabilities));
 
         //webDriver.set(new ChromeDriver());
@@ -101,8 +95,9 @@ public class TestNGSauceLabsBase {
         getEyes().setHideScrollbars(true);
         getEyes().setForceFullPageScreenshot(true);
         getEyes().setStitchMode(StitchMode.CSS);
-        getEyes().setMatchLevel(MatchLevel.STRICT);
+        getEyes().setMatchLevel(MatchLevel.LAYOUT2);
         getEyes().setBatch(batch);
+        getEyes().setBaselineEnvName(methodName);
 
 
         // set current sessionId
@@ -114,21 +109,15 @@ public class TestNGSauceLabsBase {
 
     @BeforeClass
     public static void batchInitialization(){
-        batch = new BatchInfo("TestNG SauceLabs");
+        batch = new BatchInfo("TestNG CBT Applitools");
     }
 
-    /**
-     * Method that gets invoked after test.
-     * Dumps browser log and
-     * Closes the browser
-     */
     @AfterMethod
     public void tearDown(ITestResult result) throws Exception {
-        ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         webDriver.get().quit();
     }
 
     protected void annotate(String text) {
-        ((JavascriptExecutor) webDriver.get()).executeScript("sauce:context=" + text);
+
     }
 }

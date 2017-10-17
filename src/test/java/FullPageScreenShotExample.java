@@ -15,7 +15,7 @@ public class FullPageScreenShotExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "your_applitools_key";
+    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
 
     @Before
     public void setUp() throws Exception {
@@ -25,7 +25,8 @@ public class FullPageScreenShotExample {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.STRICT);
+        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        eyes.setBaselineEnvName("BaselineName");
         //set new baseline images...
         //eyes.setSaveFailedTests(true);
 
@@ -33,6 +34,7 @@ public class FullPageScreenShotExample {
         //eyes.setLogHandler(new StdoutLogHandler(true));
 
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         driver.get("https://www.github.com");
 
         //for sites with older or non-standard css structure. Need to inject JS so SDK can get correct screen size.
@@ -44,7 +46,7 @@ public class FullPageScreenShotExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
+        eyes.open(driver, "Github2", "Home Page2", new RectangleSize(1035, 635));
         eyes.checkWindow("1000x800");
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
