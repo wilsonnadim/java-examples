@@ -1,3 +1,4 @@
+import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.openqa.selenium.JavascriptExecutor;
@@ -7,6 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import java.lang.reflect.Method;
@@ -26,7 +28,6 @@ public class TestNGSauceLabsBase {
     public String username = System.getenv("SAUCE_USERNAME");
 
     public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
-
 
     private ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
     public WebDriver getWebDriver() {
@@ -97,10 +98,19 @@ public class TestNGSauceLabsBase {
         getEyes().setHideScrollbars(true);
         getEyes().setForceFullPageScreenshot(true);
         getEyes().setStitchMode(StitchMode.CSS);
+        getEyes().setBatch(batch);
+
 
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
         sessionId.set(id);
+    }
+
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("TestNG SauceLabs");
     }
 
     /**

@@ -1,3 +1,4 @@
+import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.openqa.selenium.JavascriptExecutor;
@@ -5,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import java.lang.reflect.Method;
@@ -35,7 +37,6 @@ public class TestNGLocalBase {
                 new Object[]{630,  699},
                 new Object[]{860,  640},
                 new Object[]{1212, 666},
-
         };
     }
 
@@ -49,7 +50,15 @@ public class TestNGLocalBase {
         getEyes().setHideScrollbars(true);
         getEyes().setForceFullPageScreenshot(true);
         getEyes().setStitchMode(StitchMode.CSS);
+        getEyes().setBatch(batch);
 
+    }
+
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("TestNG SauceLabs");
     }
 
     @AfterMethod
