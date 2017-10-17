@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.rmi.UnexpectedException;
 import java.util.UUID;
 
-public class TextInputSauceLabsTestNG extends TestNGSauceLabsBase {
+public class TestNGTextInputSauceLabs extends TestNGSauceLabsBase {
 
     /**
      * Runs a simple test verifying if the comment input is functional.
@@ -22,7 +22,7 @@ public class TextInputSauceLabsTestNG extends TestNGSauceLabsBase {
         this.createDriver(browser, version, os, resolution, method.getName());
         WebDriver driver = this.getWebDriver();
 
-        this.getEyes().open(driver, "TextInputSauceLabsTestNG", "GuineaPig Page", new RectangleSize(1050, 700));
+        this.getEyes().open(driver, "TestNGTextInputSauceLabs", "GuineaPig Page", new RectangleSize(1050, 700));
 
         String commentInputText = UUID.randomUUID().toString();
 
