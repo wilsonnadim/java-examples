@@ -15,7 +15,7 @@ public class FullPageScreenShotExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
+    public static String applitoolsKey = "your-applitools-key";
 
     @Before
     public void setUp() throws Exception {
@@ -26,7 +26,7 @@ public class FullPageScreenShotExample {
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        eyes.setBaselineEnvName("BaselineName");
+        //eyes.setBaselineEnvName("BaselineName");
         //set new baseline images...
         //eyes.setSaveFailedTests(true);
 
@@ -46,8 +46,8 @@ public class FullPageScreenShotExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github2", "Home Page2", new RectangleSize(1035, 635));
-        eyes.checkWindow("1000x800");
+        eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
+        eyes.checkWindow("github");
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
