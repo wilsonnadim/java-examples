@@ -46,7 +46,7 @@ public class SauceLabsExample {
         LinkedList env = new LinkedList();
         env.add(new String[]{"Windows 7",   "59.0", "chrome",            null, null, "1600x1200"});
         env.add(new String[]{"Windows 8.1", "11.0", "internet explorer", null, null, "1280x1024"});
-        env.add(new String[]{"Windows 10",  "56.0", "firefox",           null, null, "1280x1024"});
+        env.add(new String[]{"Windows 10",  "44.0", "firefox",           null, null, "1280x1024"});
         env.add(new String[]{"Windows 7",   "11.0", "internet explorer", null, null, "1280x1024"});
         env.add(new String[]{"OS X 10.10",  "54.0", "chrome",            null, null, "1280x1024"});
 
