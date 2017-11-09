@@ -2,7 +2,6 @@ import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -27,7 +26,7 @@ public class TestNGCrossBrowserBase {
     public String username = System.getenv("CBT_USERNAME");
     public String authkey = System.getenv("CBT_AUTH_KEY");
 
-    private ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
+    public ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
     public WebDriver getWebDriver() {
         return webDriver.get();
     }
@@ -61,7 +60,7 @@ public class TestNGCrossBrowserBase {
     /**
      * Constructs a new {@link RemoteWebDriver} instance which is configured to use the capabilities defined by the browser,
      * version and os parameters, and which is configured to run against ondemand.saucelabs.com, using
-     * the username and access key populated by the {@link #authentication} instance.
+     * the username and access key populated by the {@link //authentication} instance.
      *
      * @param browser Represents the browser to be used as part of the test run.
      * @param version Represents the version of the browser to be used as part of the test run.
@@ -85,7 +84,7 @@ public class TestNGCrossBrowserBase {
 
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
-                new URL("http://" + username + ":" + authkey +"@hub.crossbrowsertesting.com:80/wd/hub"),
+                new URL("http://" + username +":" + authkey +"@hub.crossbrowsertesting.com:80/wd/hub"),
                 capabilities));
 
         //webDriver.set(new ChromeDriver());
@@ -97,7 +96,7 @@ public class TestNGCrossBrowserBase {
         getEyes().setStitchMode(StitchMode.CSS);
         getEyes().setMatchLevel(MatchLevel.LAYOUT2);
         getEyes().setBatch(batch);
-        getEyes().setBaselineEnvName(methodName);
+        getEyes().setBaselineEnvName("TEST B");
 
 
         // set current sessionId

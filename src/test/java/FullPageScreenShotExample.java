@@ -15,7 +15,7 @@ public class FullPageScreenShotExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "your-applitools-key";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_KEY");
 
     @Before
     public void setUp() throws Exception {
@@ -48,6 +48,8 @@ public class FullPageScreenShotExample {
     public void GithubHomePage() throws Exception {
         eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
         eyes.checkWindow("github");
+        //eyes.check("Fluent - Window with ignore region by selector", Target.window());
+
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }

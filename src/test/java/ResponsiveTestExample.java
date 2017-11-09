@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.LinkedList;
 
@@ -41,7 +41,7 @@ public class ResponsiveTestExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "your-applitools-key";
+    public static String applitoolsKey = "KjEidhJxEh3J1094111MLquUnWZGwfvG4Ptr63qUNtAkH00110";
 
     private static BatchInfo batch;
 
@@ -60,13 +60,14 @@ public class ResponsiveTestExample {
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setBatch(batch);
 
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("http://www.github.com");
     }
 
     @Test
     public void NetAppHomeResponsive() throws Exception {
-        eyes.open(driver, "Github", "Responsive Home Page", new RectangleSize(width, height));
+        eyes.open(driver, "Github2", "Responsive Home Page2", new RectangleSize(width, height));
 
         String w = Integer.toString(width);
         String h = Integer.toString(height);

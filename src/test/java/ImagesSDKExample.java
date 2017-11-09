@@ -2,6 +2,7 @@
  * Created by justin on 7/19/17.
  */
 
+import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
@@ -9,6 +10,7 @@ import com.applitools.eyes.images.Eyes;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -27,6 +29,13 @@ public class ImagesSDKExample {
     private Eyes eyes = new Eyes();
     private WebDriver driver;
 
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("Github Images SDK");
+    }
+
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey("your applitools key");
@@ -35,6 +44,9 @@ public class ImagesSDKExample {
         eyes.setHostApp("Chrome 59.0");
         driver = new ChromeDriver();
         driver.get("https://www.github.com");
+        if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
+            batch.setId(System.getenv("APPLITOOLS_BATCH_ID"));
+        }
     }
 
     @Test

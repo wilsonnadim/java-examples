@@ -2,6 +2,7 @@
 
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
+import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
@@ -97,7 +98,7 @@ public class SauceLabsExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page");
+        eyes.open(driver, "Github", "Home Page", new RectangleSize(1000, 650));
         eyes.checkWindow("Home Page Screenshot");
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
