@@ -96,7 +96,7 @@ public class TestNGCrossBrowserBase {
         getEyes().setStitchMode(StitchMode.CSS);
         getEyes().setMatchLevel(MatchLevel.LAYOUT2);
         getEyes().setBatch(batch);
-        getEyes().setBaselineEnvName("TEST B");
+        getEyes().setBaselineEnvName(methodName);
 
 
         // set current sessionId
