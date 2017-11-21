@@ -85,7 +85,7 @@ public class SauceLabsAppiumExample {
         capability.setCapability("name", name.getMethodName());
 
         if (browser == "Safari") {
-            eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //remove URL and footer.
+            eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //remove URL and footer. values = (header, footer, left, right)
         }
 
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
