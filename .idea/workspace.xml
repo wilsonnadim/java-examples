@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" afterPath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestNGCrossBrowserBase.class" afterPath="$PROJECT_DIR$/target/test-classes/TestNGCrossBrowserBase.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_26.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_26.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_26.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_26.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_26.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_7_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_7_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" afterPath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TableCompare.class" afterPath="$PROJECT_DIR$/target/test-classes/TableCompare.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-old-selenium/src/test/java/SauceLabsExample.java" afterPath="$PROJECT_DIR$/java-old-selenium/src/test/java/SauceLabsExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" afterPath="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java" afterPath="$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-examples.iml" afterPath="$PROJECT_DIR$/java-examples.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" afterPath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,18 +36,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FullPageScreenShotExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SauceLabsExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java-old-selenium/src/test/java/SauceLabsExample.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/java-old-selenium/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/java-old-selenium/src/test/java/Parallell.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
-              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+              <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -84,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+              <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,15 +92,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FluentApiTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FluentApiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+            <state relative-caret-position="161">
+              <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+              <caret line="90" column="23" lean-forward="false" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,14 +130,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableCompare.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TableCompare.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TableCompare.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,8 +221,8 @@
         <option value="$PROJECT_DIR$/java-old-selenium/src/test/java/SauceLabsExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TableCompare.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
       </list>
     </option>
   </component>
@@ -631,8 +641,8 @@
     <history-entry file="FluentApiTest - 2017.11.21 at 16h 39m 27s.xml">
       <configuration name="FluentApiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TableCompare - 2017.11.15 at 16h 05m 12s.xml">
-      <configuration name="TableCompare" configurationId="JUnit" />
+    <history-entry file="FluentApiTest - 2017.11.21 at 16h 44m 37s.xml">
+      <configuration name="FluentApiTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TableCompare - 2017.11.15 at 16h 06m 19s.xml">
       <configuration name="TableCompare" configurationId="JUnit" />
@@ -867,14 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestNGSauceLabsBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
@@ -949,7 +951,7 @@
     <entry file="file://$PROJECT_DIR$/java-old-selenium/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -957,7 +959,7 @@
     <entry file="file://$PROJECT_DIR$/java-old-selenium/src/test/java/Parallell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -967,7 +969,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -982,22 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+          <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1007,7 +997,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+          <caret line="90" column="23" lean-forward="false" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1017,9 +1007,29 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/TableCompare.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -17,7 +17,7 @@ public class FluentApiTest {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
+    public static String applitoolsKey = "your-applitools-key";
 
     private static BatchInfo batch;
 
