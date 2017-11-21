@@ -50,7 +50,7 @@ public class FluentApiTest {
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm"))
                 .ignore(element).fully());
 
-        eyes.close(false);
+        eyes.close();
     }
 
     @After
