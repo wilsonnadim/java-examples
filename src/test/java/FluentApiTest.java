@@ -42,7 +42,7 @@ public class FluentApiTest {
     }
 
     @Test
-    public void NetAppHomeResponsive() throws Exception {
+    public void FluentTest() throws Exception {
         eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1000, 700));
 
         WebElement element = driver.findElement(By.cssSelector("a.header-logo-invertocat.my-0")); //github logo top left
