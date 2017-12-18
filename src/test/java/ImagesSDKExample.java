@@ -38,7 +38,7 @@ public class ImagesSDKExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("your applitools key");
+        eyes.setApiKey("applitools_api_key");
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setHostOS("OSX 10.12");
         eyes.setHostApp("Chrome 59.0");
@@ -51,7 +51,8 @@ public class ImagesSDKExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open("Github", "Github Home Page", new RectangleSize(800, 600));
+        eyes.open("Github", "Github Home Page", new RectangleSize(800, 200));
+        // new RectangleSize(800, 600)
 
         File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String fileName = "github-homepage.png";
