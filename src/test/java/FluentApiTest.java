@@ -48,7 +48,7 @@ public class FluentApiTest {
         WebElement element = driver.findElement(By.cssSelector("a.header-logo-invertocat.my-0")); //github logo top left
         eyes.check("Fluent - Region by Selector and Element", Target.window()
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm"))
-                .ignore(element).fully());
+                .ignore(element).fully().matchLevel(MatchLevel.LAYOUT2));
 
         eyes.close();
     }

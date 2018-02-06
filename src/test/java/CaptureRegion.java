@@ -24,13 +24,14 @@ public class CaptureRegion {
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         driver = new ChromeDriver();
-        driver.get("https://www.theglobeandmail.com/");
+        driver.get("https://www.bloomberg.com/markets/stocks");
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Global And Mail", "More Top Stories", new RectangleSize(1200, 650));
-        eyes.check("More Top Stories", Target.region(By.id("f0xUStsRIWlUDq")));
+    public void StocksPage() throws Exception {
+        eyes.open(driver, "Bloomberg.com/stocks", "Check Region - Stock Chart", new RectangleSize(1200, 650));
+        eyes.check("chart", Target.region(By.cssSelector("div.chart-container")));
+
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }

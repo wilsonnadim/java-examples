@@ -34,28 +34,28 @@ public class BrowserStackAppiumExample {
     protected String browser;
     protected String os;
     protected String version;
-    protected String deviceName;
+    protected String device;
     protected String deviceOrientation;
 
-    public static String username = "your_bs_user";
-    public static String accesskey = "your_bs_key";
+    public static String username = "your_browserstack_user";
+    public static String accesskey = "your_browserstack_key";
     public static String applitoolsKey = "your_applitools_key";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"Android", "6.0",  "Android Emulator", "chrome", "portrait"});
+        env.add(new String[]{"Android", "6.0",  "Samsung Galaxy S7", "chrome", "portrait"});
         env.add(new String[]{"iPhone",     "9.1", "iPhone 6S Plus", "Safari", "portrait"});
         env.add(new String[]{"iPhone",     "9.1", "iPhone 6S",   "Safari", "portrait"});
 
         return env;
     }
 
-    public BrowserStackAppiumExample(String os, String version, String deviceName, String browser,
+    public BrowserStackAppiumExample(String os, String version, String device, String browser,
                                   String deviceOrientation) {
         this.os = os;
         this.version = version;
-        this.deviceName = deviceName;
+        this.device = device;
         this.browser = browser;
         this.deviceOrientation = deviceOrientation;
     }
@@ -77,14 +77,14 @@ public class BrowserStackAppiumExample {
         eyes.setBatch(batch);
 
         DesiredCapabilities capability = new DesiredCapabilities();
-        capability.setCapability(CapabilityType.PLATFORM, os);
+        capability.setCapability(CapabilityType.PLATFORM_NAME, os);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-        capability.setCapability(CapabilityType.VERSION, version);
-        capability.setCapability("deviceName", deviceName);
+        capability.setCapability("os_version", version);
+        capability.setCapability("device", device);
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
         capability.setCapability("realMobile", true); //Set for real devices on BS.
-        capability.setCapability("browserstack.appium_version", "1.6.3");
+        //capability.setCapability("browserstack.appium_version", "1.6.3");
 
         if (browser == "Safari") {
             //lower scale gets wider. higher scale gets thinner
@@ -94,7 +94,8 @@ public class BrowserStackAppiumExample {
 
         String browserStackUrl = "http://" + username + ":" + accesskey + "@hub-cloud.browserstack.com/wd/hub";
         driver = new RemoteWebDriver(new URL(browserStackUrl), capability);
-        driver.get("https://www.github.com/");
+        //driver.get("https://www.github.com/");
+        driver.get("https://www.spectrum.com/");
     }
 
     @Test
