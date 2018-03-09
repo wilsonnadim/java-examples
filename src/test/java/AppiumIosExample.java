@@ -25,7 +25,6 @@ public class AppiumIosExample {
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //removes URL field...
-
         BatchInfo batch = new BatchInfo("Github");
         eyes.setBatch(batch);
 

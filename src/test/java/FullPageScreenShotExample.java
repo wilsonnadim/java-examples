@@ -3,6 +3,7 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +31,10 @@ public class FullPageScreenShotExample {
         //set new baseline images...
         //eyes.setSaveFailedTests(true);
 
+//        eyes.setLogHandler(new FileLogger("/Users/justin/repos/applitools/file.log", true, true));
+//        eyes.setDebugScreenshotsPath("/Users/justin/repos/applitools");
+//        eyes.setSaveDebugScreenshots(true);
+
         //output detailed log data
         //eyes.setLogHandler(new StdoutLogHandler(true));
 
@@ -48,7 +53,8 @@ public class FullPageScreenShotExample {
     public void GithubHomePage() throws Exception {
         eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
         eyes.checkWindow("github");
-        //eyes.check("Fluent - Window with ignore region by selector", Target.window());
+
+        eyes.check("Fluent API", Target.window());
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());

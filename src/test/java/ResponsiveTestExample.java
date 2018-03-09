@@ -10,8 +10,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -49,7 +47,7 @@ public class ResponsiveTestExample {
 
     @BeforeClass
     public static void batchInitialization(){
-        batch = new BatchInfo("Bloomberg Selenium");
+        batch = new BatchInfo("Github Responsive");
     }
 
     @Before
@@ -64,23 +62,21 @@ public class ResponsiveTestExample {
 
         driver = new ChromeDriver();
         //driver = new FirefoxDriver();
-
-        driver.get("https://www.bloomberg.com");
+        driver.get("https://www.github.com");
     }
 
     @Test
-    public void BloombergResponsive() throws Exception {
-        eyes.open(driver, "Bloomberg", "Responsive Bloomberg", new RectangleSize(width, height));
+    public void GithubResponsive() throws Exception {
+        eyes.open(driver, "Github", "Responsive Github", new RectangleSize(width, height));
 
         String w = Integer.toString(width);
         String h = Integer.toString(height);
 
-        driver.findElement(By.id("closeChromeTout")).click();
-        JavascriptExecutor js =(JavascriptExecutor)driver;
-        js.executeScript("document.querySelector('body > bb-mini-player').setAttribute('style', 'display:none')");
+//        driver.findElement(By.id("closeChromeTout")).click();
+//        JavascriptExecutor js =(JavascriptExecutor)driver;
+//        js.executeScript("document.querySelector('body > bb-mini-player').setAttribute('style', 'display:none')");
 
         eyes.checkWindow(w + "x" + h);
-        //eyes.checkRegion(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm"));
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());

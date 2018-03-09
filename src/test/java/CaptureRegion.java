@@ -31,7 +31,6 @@ public class CaptureRegion {
     public void StocksPage() throws Exception {
         eyes.open(driver, "Bloomberg.com/stocks", "Check Region - Stock Chart", new RectangleSize(1200, 650));
         eyes.check("chart", Target.region(By.cssSelector("div.chart-container")));
-
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
