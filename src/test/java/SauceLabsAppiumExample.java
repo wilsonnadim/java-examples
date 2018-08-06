@@ -29,9 +29,9 @@ public class SauceLabsAppiumExample {
     protected String browser;
     protected String deviceOrientation;
 
-    public static String username = "your_sauce_user";
-    public static String accesskey = "your_sauce_key";
-    public static String applitoolsKey = "your_applitools_key";
+    public static String username = "matan";
+    public static String accesskey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
+    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
 
     @Rule
     public TestName name = new TestName() {
@@ -46,7 +46,7 @@ public class SauceLabsAppiumExample {
         env.add(new String[]{"Android", "6.0",  "Android Emulator",           "chrome", "portrait"});
         env.add(new String[]{"iOS",     "7.1",  "Android GoogleAPI Emulator", "chrome", "portrait"});
         env.add(new String[]{"iOS",     "10.3", "iPhone 7 Plus Simulator",    "Safari", "portrait"});
-        env.add(new String[]{"iOS",     "9.2",  "iPhone Simulator",           "Safari", "portrait"});
+        env.add(new String[]{"iOS",     "10.3",  "iPhone Simulator",           "Safari", "portrait"});
         return env;
     }
 
@@ -71,11 +71,11 @@ public class SauceLabsAppiumExample {
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
-        eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setBatch(batch);
+
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
@@ -90,12 +90,14 @@ public class SauceLabsAppiumExample {
 
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
-        driver.get("https://github.com/");
+        driver.get("https://www.radiologysolutions.bayer.com/aboutus/congresses/");
     }
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Github Home Page");
+
+
+        eyes.open(driver, "Github2222", "Github Home Page");
         eyes.checkWindow("Home Page");
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());

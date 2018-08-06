@@ -37,9 +37,9 @@ public class BrowserStackAppiumExample {
     protected String device;
     protected String deviceOrientation;
 
-    public static String username = "your_browserstack_user";
-    public static String accesskey = "your_browserstack_key";
-    public static String applitoolsKey = "your_applitools_key";
+    public static String username = "YourBSUser";
+    public static String accesskey = "YourBSKey";
+    public static String applitoolsKey = "YourApplitoolsKey";
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
@@ -47,6 +47,7 @@ public class BrowserStackAppiumExample {
         env.add(new String[]{"Android", "6.0",  "Samsung Galaxy S7", "chrome", "portrait"});
         env.add(new String[]{"iPhone",     "9.1", "iPhone 6S Plus", "Safari", "portrait"});
         env.add(new String[]{"iPhone",     "9.1", "iPhone 6S",   "Safari", "portrait"});
+        env.add(new String[]{"iPhone",     "11.0", "iPhone X",   "Safari", "portrait"});
 
         return env;
     }
@@ -84,6 +85,7 @@ public class BrowserStackAppiumExample {
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
         capability.setCapability("realMobile", true); //Set for real devices on BS.
+        capability.setCapability("browserstack.timezone", "US");
         //capability.setCapability("browserstack.appium_version", "1.6.3");
 
         if (browser == "Safari") {
@@ -95,12 +97,12 @@ public class BrowserStackAppiumExample {
         String browserStackUrl = "http://" + username + ":" + accesskey + "@hub-cloud.browserstack.com/wd/hub";
         driver = new RemoteWebDriver(new URL(browserStackUrl), capability);
         //driver.get("https://www.github.com/");
-        driver.get("https://www.spectrum.com/");
+        driver.get("https://www.radiologysolutions.bayer.com/aboutus/congresses/");
     }
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page");
+        eyes.open(driver, "Bayer", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
 
         TestResults results = eyes.close(false);

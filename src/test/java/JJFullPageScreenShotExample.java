@@ -1,15 +1,17 @@
-import com.applitools.eyes.*;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class FullPageScreenShotExample {
+public class JJFullPageScreenShotExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
@@ -23,20 +25,20 @@ public class FullPageScreenShotExample {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        eyes.setLogHandler(new StdoutLogHandler(true));
-
-        BatchInfo batch = new BatchInfo("My Fullpage Test");
-        eyes.setBatch(batch);
+        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        //eyes.setLogHandler(new StdoutLogHandler(true));
 
         driver = new ChromeDriver();
-        driver.get("https://www.github.com");
+        driver.get("https://www.jnj.com/");
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
-        eyes.checkWindow("github");
+    public void JJHomePage() throws Exception {
+        eyes.open(driver, "J&J", "Home Page", new RectangleSize(1000, 700));
+
+        driver.findElement(By.cssSelector("button.CookieBanner-button")).click();
+
+        eyes.checkWindow("J&J");
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());

@@ -41,13 +41,13 @@ public class ResponsiveTestExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "your_applitools_key";
+    public static String applitoolsKey = "YourApplitoolsKey";
 
     private static BatchInfo batch;
 
     @BeforeClass
     public static void batchInitialization(){
-        batch = new BatchInfo("Github Responsive");
+        batch = new BatchInfo("Github Responsive Design");
     }
 
     @Before
@@ -72,15 +72,12 @@ public class ResponsiveTestExample {
         String w = Integer.toString(width);
         String h = Integer.toString(height);
 
-//        driver.findElement(By.id("closeChromeTout")).click();
-//        JavascriptExecutor js =(JavascriptExecutor)driver;
-//        js.executeScript("document.querySelector('body > bb-mini-player').setAttribute('style', 'display:none')");
-
         eyes.checkWindow(w + "x" + h);
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
+
 
     @After
     public void tearDown() throws Exception {

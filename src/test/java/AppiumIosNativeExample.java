@@ -1,4 +1,5 @@
 import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.selenium.Eyes;
 import org.junit.After;
 import org.junit.Before;
@@ -13,13 +14,14 @@ public class AppiumIosNativeExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "your_applitools_key";
+    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
 
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
         BatchInfo batch = new BatchInfo("iOS Native Local");
         eyes.setBatch(batch);
+        eyes.setLogHandler(new StdoutLogHandler(true));
 
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platformName", "iOS");
