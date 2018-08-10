@@ -26,6 +26,7 @@ public class IgnoreRegion {
 
     @Test
     public void Applitools() throws Exception {
+        //Test Firefox Ignore region 5 times...
         for (int i = 0; i < 5; i++) {
 
             driver.get("https://www.github.com");
