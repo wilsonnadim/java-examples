@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_35.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_37.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_35.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_37.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_36.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_37.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_35.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_37.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_35.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_37.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AppiumIosNativeExample.class" afterPath="$PROJECT_DIR$/target/test-classes/AppiumIosNativeExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/IgnoreRegion.class" afterPath="$PROJECT_DIR$/target/test-classes/IgnoreRegion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/JJFullPageScreenShotExample.class" afterPath="$PROJECT_DIR$/target/test-classes/JJFullPageScreenShotExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" afterPath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestNGCrossBrowserBase.class" afterPath="$PROJECT_DIR$/target/test-classes/TestNGCrossBrowserBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-examples.iml" afterPath="$PROJECT_DIR$/java-examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java" afterPath="$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/HelloWorld.java" afterPath="$PROJECT_DIR$/src/test/java/HelloWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" afterPath="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java" afterPath="$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" afterPath="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" afterPath="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java" afterPath="$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,8 +118,8 @@
       <file leaf-file-name="AppiumIosNativeExample.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="319">
+              <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -985,8 +964,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="319">
+          <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
