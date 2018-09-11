@@ -1,7 +1,6 @@
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
-import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,10 +22,11 @@ public class JJFullPageScreenShotExample {
         //eyes.setServerUrl(URI.create("https://your-onprem-server"));
         eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
-        eyes.setForceFullPageScreenshot(true);
-        eyes.setStitchMode(StitchMode.CSS);
+        //eyes.setForceFullPageScreenshot(true);
+        //eyes.setStitchMode(StitchMode.CSS);
         //eyes.setMatchLevel(MatchLevel.LAYOUT2);
         //eyes.setLogHandler(new StdoutLogHandler(true));
+        //eyes.setBaselineEnvName("OldOSX");
 
         driver = new ChromeDriver();
         driver.get("https://www.jnj.com/");
@@ -34,7 +34,7 @@ public class JJFullPageScreenShotExample {
 
     @Test
     public void JJHomePage() throws Exception {
-        eyes.open(driver, "J&J", "Home Page", new RectangleSize(1000, 700));
+        eyes.open(driver, "J&J2", "Home Page2", new RectangleSize(1000, 700));
 
         driver.findElement(By.cssSelector("button.CookieBanner-button")).click();
 

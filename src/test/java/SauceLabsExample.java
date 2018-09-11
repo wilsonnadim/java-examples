@@ -36,8 +36,8 @@ public class SauceLabsExample {
     protected String deviceOrientation;
     protected String screenResolution;
 
-    public static String username = "SauceLabsUser";
-    public static String accesskey = "SauceLabsKey";
+    public static String username = "matan";
+    public static String accesskey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
@@ -85,6 +85,8 @@ public class SauceLabsExample {
         eyes.setStitchMode(StitchMode.CSS);
         //eyes.setMatchLevel(MatchLevel.EXACT);
         eyes.setBatch(batch);
+
+        //eyes.setBranchName("myBranch");
 
         if (browser == "Safari") {
             //remove URL and footer. values = (header, footer, left, right)

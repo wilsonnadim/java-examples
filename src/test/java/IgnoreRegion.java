@@ -32,7 +32,8 @@ public class IgnoreRegion {
             driver.get("https://www.github.com");
             eyes.open(driver, "Github.com", "Ignore Region", new RectangleSize(1200, 800));
 
-            WebElement element = driver.findElement(By.cssSelector("a.header-logo-invertocat.my-0")); //github logo top left
+            //WebElement element = driver.findElement(By.cssSelector("a.header-logo-invertocat.my-0")); //github logo top left
+            WebElement element = driver.findElement(By.className("position-relative")); //github logo top left
             eyes.check("Fluent - Region by Selector and Element", Target.window()
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")) //ignores the login form
                 .ignore(element)); //ignores github logo top left

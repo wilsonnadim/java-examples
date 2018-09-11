@@ -1,20 +1,21 @@
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.selenium.Eyes;
+import io.appium.java_client.ios.IOSDriver;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class AppiumIosNativeExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
+    public static String applitoolsKey = "yourApplitoolsAPIKey";
 
     @Before
     public void setUp() throws Exception {
@@ -26,16 +27,18 @@ public class AppiumIosNativeExample {
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platformName", "iOS");
         capability.setCapability("deviceName", "iPhone Simulator");
-        capability.setCapability("browserName", "");
+        //capability.setCapability("browserName", "");
         capability.setCapability("automationName", "XCUITest");
         capability.setCapability("platformVersion", "10.3");
         capability.setCapability("app", "https://store.applitools.com/download/iOS.TestApp.app.zip");
 
-        driver = new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"), capability);
+        //driver = new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"), capability);
+        driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), capability);
     }
 
     @Test
     public void iOSTestApp() throws Exception {
+        TimeUnit.SECONDS.sleep(5);
         eyes.open(driver, "Test iOS App", "Main View");
         eyes.checkWindow("TEST");
         eyes.close();

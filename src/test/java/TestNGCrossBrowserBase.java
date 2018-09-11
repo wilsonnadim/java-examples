@@ -96,7 +96,7 @@ public class TestNGCrossBrowserBase {
         getEyes().setStitchMode(StitchMode.CSS);
         getEyes().setMatchLevel(MatchLevel.LAYOUT2);
         getEyes().setBatch(batch);
-        getEyes().setBaselineEnvName("Win7Chrome");
+        getEyes().setBaselineEnvName("MyCrossBrowserTest");
 
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();

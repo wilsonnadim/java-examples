@@ -13,7 +13,8 @@ public class HelloWorld {
 
         // Initialize the eyes SDK and set your private API key.
         Eyes eyes = new Eyes();
-        eyes.setApiKey("YOUR_API_KEY");
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
+        eyes.setBaselineEnvName("testtestest");
 
         try{
 
@@ -25,7 +26,7 @@ public class HelloWorld {
             driver.get("https://applitools.com/helloworld");
 
             // Visual checkpoint #1.
-            eyes.checkWindow("Hello!");
+            //eyes.checkWindow("Hello!");
 
             // Click the "Click me!" button.
             driver.findElement(By.tagName("button")).click();
