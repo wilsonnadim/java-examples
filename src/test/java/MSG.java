@@ -87,13 +87,13 @@ public class MSG {
         //driver.get("https://www.msg.com/calendar?happening=9%2F12%2F2018-7%2F31%2F2021");
 
         //this week
-        //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F16%2F2018");
+        driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F16%2F2018");
 
         //this month
         //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F30%2F2018");
 
         //next month
-        driver.get("https://www.msg.com/calendar?happening=10%2F01%2F2018-10%2F31%2F2018");
+        //driver.get("https://www.msg.com/calendar?happening=10%2F01%2F2018-10%2F31%2F2018");
 
         //wait a few more seconds for everything to fully load. you can replace this sleep with webdriver wait until logic...
         TimeUnit.SECONDS.sleep(5);
@@ -127,9 +127,6 @@ public class MSG {
         removeDynamicContent();
 
         //Put all event rows in an array
-        //List<WebElement> events = driver.findElements(By.className("_3LcCX"));
-        //List<WebElement> events = driver.findElements(By.className("_2UYrt,_24zdn,_3NauK"));
-        //List<WebElement> events = driver.findElements(By.className("article._3Y6Yf.page-section._2-U1b._26oN5._3WNaZ._38YB1._3PgYi._3eo4x._3ceOG._3nrAj.t2BqD"));
         List<WebElement> events = driver.findElements(By.tagName("article"));
         events.remove(events.size() - 1); //Remove the last object in array which is in the footer...
 
