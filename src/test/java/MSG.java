@@ -87,13 +87,13 @@ public class MSG {
         //driver.get("https://www.msg.com/calendar?happening=9%2F12%2F2018-7%2F31%2F2021");
 
         //this week
-        driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F16%2F2018");
+        //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F16%2F2018");
 
         //this month
         //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F30%2F2018");
 
         //next month
-        //driver.get("https://www.msg.com/calendar?happening=10%2F01%2F2018-10%2F31%2F2018");
+        driver.get("https://www.msg.com/calendar?happening=10%2F01%2F2018-10%2F31%2F2018");
 
         //wait a few more seconds for everything to fully load. you can replace this sleep with webdriver wait until logic...
         TimeUnit.SECONDS.sleep(5);
@@ -216,7 +216,7 @@ public class MSG {
             //The eyes.open values must be exactly the same as your baseline values in the msgEventBaselineCreation test...
             eyes.open(driver, "Madison Square Garden Events", "Featured Events", new RectangleSize(width, height));
             //removeDynamicContent();
-            eyes.check("Non-Dated Event " + i, Target.region(featuredEvents.get(i)).fully());
+            eyes.check("Featured Event " + i, Target.region(featuredEvents.get(i)).fully());
             eyes.close(false);
         }
 
