@@ -84,7 +84,7 @@ public class MSG {
         driver = new ChromeDriver();
 
         //all events
-        //driver.get("https://www.msg.com/calendar?happening=9%2F12%2F2018-7%2F31%2F2021");
+        driver.get("https://www.msg.com/calendar?happening=9%2F12%2F2018-7%2F31%2F2021");
 
         //this week
         //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F16%2F2018");
@@ -93,7 +93,7 @@ public class MSG {
         //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F30%2F2018");
 
         //next month
-        driver.get("https://www.msg.com/calendar?happening=10%2F01%2F2018-10%2F31%2F2018");
+        //driver.get("https://www.msg.com/calendar?happening=10%2F01%2F2018-10%2F31%2F2018");
 
         //wait a few more seconds for everything to fully load. you can replace this sleep with webdriver wait until logic...
         TimeUnit.SECONDS.sleep(5);
@@ -187,6 +187,7 @@ public class MSG {
 //        eyes.close(false);
 //    }
 
+    //Before running this test make sure to comment out the msgEventBaselineCreation test class.
     @Test
     public void msgEventsPage() throws Exception {
 

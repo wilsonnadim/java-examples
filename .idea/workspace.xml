@@ -94,8 +94,8 @@
       <file leaf-file-name="MSG.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MSG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="217" column="37" lean-forward="true" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
+            <state relative-caret-position="369">
+              <caret line="189" column="84" lean-forward="false" selection-start-line="189" selection-start-column="84" selection-end-line="189" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2757#2769#0" expanded="true" />
@@ -584,9 +584,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MSG - 2018.09.13 at 09h 21m 37s.xml">
-      <configuration name="MSG" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MSG - 2018.09.13 at 09h 30m 46s.xml">
       <configuration name="MSG" configurationId="JUnit" />
     </history-entry>
@@ -612,6 +609,9 @@
       <configuration name="MSG" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MSG - 2018.09.13 at 16h 21m 19s.xml">
+      <configuration name="MSG" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MSG - 2018.09.13 at 17h 33m 22s.xml">
       <configuration name="MSG" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -981,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MSG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="217" column="37" lean-forward="true" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
+        <state relative-caret-position="369">
+          <caret line="189" column="84" lean-forward="false" selection-start-line="189" selection-start-column="84" selection-end-line="189" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2757#2769#0" expanded="true" />
