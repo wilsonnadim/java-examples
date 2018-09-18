@@ -28,7 +28,7 @@ public class SauceLabsAppiumNativeExample {
 
     public static String username = "your_sauce_user";
     public static String accesskey = "your_sauce_key";
-    public static String applitoolsKey = "your_applitools_key";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Rule
     public TestName name = new TestName() {

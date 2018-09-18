@@ -29,9 +29,9 @@ public class SauceLabsAppiumExample {
     protected String browser;
     protected String deviceOrientation;
 
-    public static String username = "matan";
-    public static String accesskey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
-    public static String applitoolsKey = "9RkMajXrzS1Zu110oTWQps102CHiPRPmeyND99E9iL0G7yAc110";
+    public static String username = "YourSauceUser";
+    public static String accesskey = "YourSauceKey";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Rule
     public TestName name = new TestName() {
