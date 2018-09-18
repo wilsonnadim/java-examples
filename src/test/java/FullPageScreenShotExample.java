@@ -30,7 +30,7 @@ public class FullPageScreenShotExample {
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-        driver.get("https://www.github.com");
+        driver.get("https://www.github.com/");
     }
 
     @Test
