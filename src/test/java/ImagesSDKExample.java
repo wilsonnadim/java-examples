@@ -38,7 +38,7 @@ public class ImagesSDKExample {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey("applitools_api_key");
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setHostOS("OSX 10.12");
         eyes.setHostApp("Chrome 59.0");

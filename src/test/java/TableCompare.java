@@ -39,7 +39,7 @@ public class TableCompare {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "your-applitools-key";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     private static BatchInfo batch;
 

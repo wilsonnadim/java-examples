@@ -1,0 +1,120 @@
+//https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
+
+import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.MatchLevel;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResults;
+import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.StitchMode;
+import org.junit.*;
+import org.junit.rules.TestName;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
+import java.util.LinkedList;
+
+import static org.junit.Assert.assertEquals;
+
+@RunWith(Parallell.class)
+public class SauceLabsExampleDesktop {
+
+    @Rule
+    public TestName name = new TestName() {
+        public String getMethodName() {
+            return String.format("%s", super.getMethodName());
+        }
+    };
+
+    protected String browser;
+    protected String os;
+    protected String version;
+    protected String screenResolution;
+
+    public static String username = "YourSauceUser";
+    public static String accesskey = "YourSauceKey";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
+
+    @Parameterized.Parameters
+    public static LinkedList getEnvironments() throws Exception {
+        LinkedList env = new LinkedList();
+        env.add(new String[]{"Windows 7",   "69.0",     "chrome",            "2560x1600"});
+        env.add(new String[]{"Windows 7",   "62.0",     "firefox",           "2560x1600"});
+
+        env.add(new String[]{"Windows 8",   "69.0",     "chrome",            "2560x1600"});
+        env.add(new String[]{"Windows 8",   "62.0",     "firefox",           "2560x1600"});
+
+        env.add(new String[]{"Windows 8.1", "69.0",     "chrome",            "2560x1600"});
+        env.add(new String[]{"Windows 8.1", "62.0",     "firefox",           "2560x1600"});
+
+        env.add(new String[]{"Windows 10",  "16.16299", "chrome",            "2560x1600"});
+        env.add(new String[]{"Windows 10",  "16.16299", "MicrosoftEdge",     "1400x1050"});
+        env.add(new String[]{"Windows 10",  "62.0",     "firefox",           "2560x1600"});
+
+        env.add(new String[]{"OS X 10.13",  "62.0",     "firefox",           "1920x1440"});
+        env.add(new String[]{"OS X 10.13",  "11.1",     "safari",            "1920x1440"});
+        env.add(new String[]{"OS X 10.13",  "69.0",     "chrome",            "1920x1440"});
+        return env;
+    }
+
+    public SauceLabsExampleDesktop(String os, String version, String browser, String resolution) {
+        this.os = os;
+        this.version = version;
+        this.browser = browser;
+        this.screenResolution = resolution;
+    }
+
+    private Eyes eyes = new Eyes();
+    private RemoteWebDriver driver;
+
+    private static BatchInfo batch;
+
+    @BeforeClass
+    public static void batchInitialization(){
+        batch = new BatchInfo("Github Cross Browser Test");
+    }
+
+    @Before
+    public void setUp() throws Exception {
+        eyes.setApiKey(applitoolsKey);
+        eyes.setHideScrollbars(true);
+        eyes.setForceFullPageScreenshot(true);
+        eyes.setStitchMode(StitchMode.CSS);
+        eyes.setMatchLevel(MatchLevel.LAYOUT2); //Must use Layout for cross browser tests...
+        eyes.setBatch(batch);
+        eyes.setBaselineEnvName("GitHub-Cross-Browser-Test");
+        //eyes.setBranchName("myBranch");
+
+
+        DesiredCapabilities capability = new DesiredCapabilities();
+        capability.setCapability(CapabilityType.PLATFORM, os);
+        capability.setCapability(CapabilityType.BROWSER_NAME, browser);
+        capability.setCapability(CapabilityType.VERSION, version);
+        capability.setCapability("screenResolution", screenResolution);
+        capability.setCapability("name", name.getMethodName());
+
+        String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
+        driver = new RemoteWebDriver(new URL(sauce_url), capability);
+        driver.get("https://github.com");
+    }
+
+    @Test
+    public void GithubHomePage() throws Exception {
+
+        eyes.open(driver, "Github Desktop", "Cross-Browser Home Page", new RectangleSize(1200, 800));
+
+        eyes.checkWindow("Home Page");
+
+        TestResults results = eyes.close(false);
+        assertEquals(true, results.isPassed());
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        driver.quit();
+        eyes.abortIfNotClosed();
+    }
+}

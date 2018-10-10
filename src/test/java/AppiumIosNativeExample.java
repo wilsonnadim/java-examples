@@ -15,7 +15,7 @@ public class AppiumIosNativeExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "yourApplitoolsAPIKey";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Before
     public void setUp() throws Exception {

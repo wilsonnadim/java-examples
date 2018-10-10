@@ -17,7 +17,7 @@ public class PerfectoTest {
     private static final String PASSWORD = "your_pefecto_password";
     private static final String MANUFACTURER = "Samsung";
     private static final String MODEL = "Galaxy S7";
-    private static final String applitoolsKey = "your_applitools_key";
+    private static final String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     public static void main(String[] args) throws MalformedURLException, InterruptedException, UnsupportedEncodingException {
 

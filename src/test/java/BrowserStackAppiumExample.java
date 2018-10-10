@@ -39,7 +39,7 @@ public class BrowserStackAppiumExample {
 
     public static String username = "YourBSUser";
     public static String accesskey = "YourBSKey";
-    public static String applitoolsKey = "YourApplitoolsKey";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {

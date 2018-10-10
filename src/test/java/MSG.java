@@ -83,8 +83,10 @@ public class MSG {
 
         driver = new ChromeDriver();
 
+        driver.get("https://www.msg.com/calendar?happening=11%2F1%2F2018-11%2F15%2F2018&venues=all");
+
         //all events
-        driver.get("https://www.msg.com/calendar?happening=9%2F12%2F2018-7%2F31%2F2021");
+        //driver.get("https://www.msg.com/calendar?happening=9%2F12%2F2018-7%2F31%2F2021");
 
         //this week
         //driver.get("https://www.msg.com/calendar?happening=09%2F12%2F2018-09%2F16%2F2018");

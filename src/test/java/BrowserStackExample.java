@@ -41,7 +41,7 @@ public class BrowserStackExample {
 
     public static String username = "your_bs_user";
     public static String accesskey = "your_bs_key";
-    public static String applitoolsKey = "your_applitools_key";
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {

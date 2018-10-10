@@ -9,7 +9,7 @@ public class accessibilityTesting {
 
     public static void main(String[] args) throws InterruptedException {
         Eyes eyes = new Eyes();
-        eyes.setApiKey("your-applitools-key");
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         WebDriver driver = new ChromeDriver();
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
 

@@ -26,6 +26,7 @@ public class FullPageScreenShotExample {
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
 
+
         BatchInfo batch = new BatchInfo("My Fullpage Test");
         eyes.setBatch(batch);
 
@@ -35,7 +36,7 @@ public class FullPageScreenShotExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(1035, 635));
+        eyes.open(driver, "Github", "Home Page", new RectangleSize(414, 568));
         eyes.checkWindow("github");
 
         TestResults results = eyes.close(false);
