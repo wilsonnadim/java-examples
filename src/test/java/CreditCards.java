@@ -58,7 +58,7 @@ public class CreditCards {
     }
 
     @Test
-    public void msgEventBaselineCreation() throws Exception {
+    public void studentCreditCards() throws Exception {
         WebElement featuredCard = driver.findElement(By.cssSelector("div.product-box.product-box--featured.product-box--masked--featured"));
         String featuredId = featuredCard.getAttribute("data-product-id");
         eyes.open(driver, "Creditcards.com", "Card: " + featuredId, new RectangleSize(width, height));
