@@ -1,6 +1,7 @@
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -14,6 +15,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class CreditCards {
 
@@ -59,11 +62,14 @@ public class CreditCards {
 
     @Test
     public void studentCreditCards() throws Exception {
+
         WebElement featuredCard = driver.findElement(By.cssSelector("div.product-box.product-box--featured.product-box--masked--featured"));
         String featuredId = featuredCard.getAttribute("data-product-id");
         eyes.open(driver, "Creditcards.com", "Card: " + featuredId, new RectangleSize(width, height));
         eyes.check("Card: " + featuredId, Target.region(featuredCard).fully());
-        eyes.close(false);
+
+        TestResults featuredResults = eyes.close(false);
+        assertEquals(true, featuredResults.isPassed());
 
         //Put all remaining non-featured cards in an array
         List<WebElement> cards = driver.findElements(By.className("product-box"));
@@ -73,7 +79,9 @@ public class CreditCards {
             String cardId = cards.get(i).getAttribute("data-product-id");
             eyes.open(driver, "Creditcards.com", "Card: " + cardId, new RectangleSize(width, height));
             eyes.check("Card: " + cardId, Target.region(cards.get(i)).fully());
-            eyes.close(false);
+
+            TestResults results = eyes.close(false);
+            assertEquals(true, results.isPassed());
         }
     }
 }
