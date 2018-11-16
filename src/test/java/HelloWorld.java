@@ -1,8 +1,8 @@
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.selenium.Eyes;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import com.applitools.eyes.selenium.Eyes;
-import com.applitools.eyes.RectangleSize;
 
 public class HelloWorld {
 
@@ -14,7 +14,6 @@ public class HelloWorld {
         // Initialize the eyes SDK and set your private API key.
         Eyes eyes = new Eyes();
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-        eyes.setBaselineEnvName("testtestest");
 
         try{
 
@@ -22,7 +21,7 @@ public class HelloWorld {
             driver.get("https://applitools.com/helloworld");
 
             // Start the test and set the browser's viewport size to 800x600.
-            eyes.open(driver, "Hello World!", "My first Selenium Java test!", new RectangleSize(800, 600));
+            eyes.open(driver, "Hello World!", "My first Selenium Java test!", new RectangleSize(1200, 800));
 
             // Visual checkpoint #1.
             eyes.checkWindow("Hello!");

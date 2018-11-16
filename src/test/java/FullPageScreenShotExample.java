@@ -25,18 +25,18 @@ public class FullPageScreenShotExample {
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
-
+        //eyes.setMatchTimeout(5000);
 
         BatchInfo batch = new BatchInfo("My Fullpage Test");
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-        driver.get("https://www.github.com/");
     }
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(414, 568));
+        driver.get("https://www.github.com/");
+        eyes.open(driver, "Github", "Home Page", new RectangleSize(1200, 800));
         eyes.checkWindow("github");
 
         TestResults results = eyes.close(false);

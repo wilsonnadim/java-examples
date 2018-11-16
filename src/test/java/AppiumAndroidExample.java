@@ -2,6 +2,7 @@ import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,8 +23,8 @@ public class AppiumAndroidExample {
         eyes.setApiKey(applitoolsKey);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        BatchInfo batch = new BatchInfo("Github Local");
+        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        BatchInfo batch = new BatchInfo("Made");
         eyes.setBatch(batch);
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platformName", "Android");
@@ -34,9 +35,10 @@ public class AppiumAndroidExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        driver.get("https://github.com/");
-        eyes.open(driver, "Github", "Home Page");
-        eyes.checkWindow("Home Page Screenshot");
+        driver.get("https://made.com/");
+        eyes.open(driver, "Made.com", "Home Page");
+        //eyes.checkWindow("Home Page Screenshot");
+        eyes.check("Simple Product Page", Target.window().matchLevel(MatchLevel.STRICT));
         eyes.close();
     }
 
