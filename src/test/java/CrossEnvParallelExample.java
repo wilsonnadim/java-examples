@@ -57,10 +57,10 @@ public class CrossEnvParallelExample {
     //Its a good practice to run your baseline environment is conjunction with your cross-env browsers so you can update the baseline if needed.
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
-        LinkedList<myBrowsers> environments = new LinkedList<myBrowsers>();
+        LinkedList<myBrowsers> environments = new LinkedList<>();
         environments.add(new myBrowsers("Chrome",   true,   true));
-        environments.add(new myBrowsers("Firefox",  false,  true));
-        environments.add(new myBrowsers("Safari",   false,  true));
+        environments.add(new myBrowsers("Firefox",  false,  false));
+        environments.add(new myBrowsers("Safari",   false,  false));
 //        env.add(new Object[]{"Chrome",  true,  true});
 
         LinkedList env = new LinkedList();
