@@ -51,7 +51,7 @@ public class CrossEnvParallelExample {
         }
     }
 
-    //Note: The first time you run this. Set which browser you want to be your baseline by setting it to true and execute to true.
+    //Note: The first time you run this. Set which browser you want to be your baseline by setting it to true and execute to true. Set all other browsers to false, false.
     //Run your baseline tests... After completion you now have baselines for this environment. e.g. My-MacOSX-Chrome
     //Now define the other browsers you want to compare against (e.g. firefox and safari) and set baseline to false and execute to true.
     //Its a good practice to run your baseline environment is conjuction with your cross-env browsers so you can update the baseline if needed.

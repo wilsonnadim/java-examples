@@ -70,15 +70,15 @@
       <file leaf-file-name="CrossEnvParallelExample.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="114" column="39" lean-forward="false" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
+            <state relative-caret-position="-503">
+              <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#708#892#0" expanded="true" />
                 <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#2379#2391#0" expanded="true" />
-                <element signature="e#3600#3601#0" expanded="true" />
-                <element signature="e#3664#3665#0" expanded="true" />
+                <element signature="e#2419#2431#0" expanded="true" />
+                <element signature="e#3640#3641#0" expanded="true" />
+                <element signature="e#3704#3705#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1057,15 +1057,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="39" lean-forward="false" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
+        <state relative-caret-position="-503">
+          <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#708#892#0" expanded="true" />
             <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#2379#2391#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
+            <element signature="e#2419#2431#0" expanded="true" />
+            <element signature="e#3640#3641#0" expanded="true" />
+            <element signature="e#3704#3705#0" expanded="true" />
           </folding>
         </state>
       </provider>
