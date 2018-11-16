@@ -51,6 +51,10 @@ public class CrossEnvParallelExample {
         }
     }
 
+    //Note: The first time you run this. Set which browser you want to be your baseline by setting it to true and execute to true.
+    //Run your baseline tests... After completion you now have baselines for this environment. e.g. My-MacOSX-Chrome
+    //Now define the other browsers you want to compare against (e.g. firefox and safari) and set baseline to false and execute to true.
+    //Its a good practice to run your baseline environment is conjuction with your cross-env browsers so you can update the baseline if needed.
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList<myBrowsers> environments = new LinkedList<myBrowsers>();
@@ -107,7 +111,7 @@ public class CrossEnvParallelExample {
         eyes.addProperty("Baselines", baselineString);
 
         //You should avoid ever using these methods.
-        //Let the system detect the OS/Browser and set the viewport in the eyes.open...
+        //Let the SDK detect the OS/Browser and set the viewport in the eyes.open...
         //eyes.setExplicitViewportSize(new RectangleSize(1300, 900));
         //eyes.setHostApp("Chrome");
         //eyes.setHostOS("Mac OS X 10.14");
