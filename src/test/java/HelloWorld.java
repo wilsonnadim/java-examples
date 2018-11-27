@@ -21,7 +21,7 @@ public class HelloWorld {
             driver.get("https://applitools.com/helloworld");
 
             // Start the test and set the browser's viewport size to 800x600.
-            eyes.open(driver, "Hello World!", "My first Selenium Java test!", new RectangleSize(1200, 800));
+            eyes.open(driver, "My Hello World!", "My first Selenium Java test!", new RectangleSize(1200, 800));
 
             // Visual checkpoint #1.
             eyes.checkWindow("Hello!");

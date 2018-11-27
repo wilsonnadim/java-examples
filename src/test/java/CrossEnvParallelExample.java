@@ -59,8 +59,8 @@ public class CrossEnvParallelExample {
     public static LinkedList getEnvironments() throws Exception {
         LinkedList<myBrowsers> environments = new LinkedList<>();
         environments.add(new myBrowsers("Chrome",   true,   true));
-        environments.add(new myBrowsers("Firefox",  false,  false));
-        environments.add(new myBrowsers("Safari",   false,  false));
+        environments.add(new myBrowsers("Firefox",  false,  true));
+        environments.add(new myBrowsers("Safari",   false,  true));
 //        env.add(new Object[]{"Chrome",  true,  true});
 
         LinkedList env = new LinkedList();

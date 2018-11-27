@@ -21,7 +21,7 @@ public class FullPageScreenShotExample {
         //eyes.setServerUrl(URI.create("https://your-onprem-server"));
         eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
-        eyes.setForceFullPageScreenshot(true);
+        //eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
@@ -31,12 +31,16 @@ public class FullPageScreenShotExample {
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
+
+        //eyes.setBranchName("MyAwesomeBranchAgain");
+
+        //eyes.setSaveNewTests(false);
     }
 
     @Test
     public void GithubHomePage() throws Exception {
         driver.get("https://www.github.com/");
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(1200, 800));
+        eyes.open(driver, "Github98767", "Home Page", new RectangleSize(1200, 800));
         eyes.checkWindow("github");
 
         TestResults results = eyes.close(false);

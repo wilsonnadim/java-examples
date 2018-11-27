@@ -13,12 +13,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class FluentApiTest {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
-
     private static BatchInfo batch;
 
     @BeforeClass
@@ -45,13 +46,20 @@ public class FluentApiTest {
     public void FluentTest() throws Exception {
         eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1000, 700));
 
-        WebElement element = driver.findElement(By.cssSelector("a.header-logo-invertocat.my-0")); //github logo top left
-        eyes.check("Fluent - Region by Selector and Element", Target.window()
+        List<WebElement> icons = driver.findElements(By.cssSelector("img.CircleBadge-icon"));
+
+        WebElement[] icons_array = new WebElement[icons.size()];
+        icons.toArray(icons_array);
+
+        WebElement element = driver.findElement(By.cssSelector("a.mr-4")); //github logo top left
+
+        eyes.check("Fluent - Region by Selector and Element", Target.window().ignore(icons_array)
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm"))
-                .ignore(element).fully().matchLevel(MatchLevel.LAYOUT2));
+                .ignore(element));
 
         eyes.close();
     }
+
 
     @After
     public void tearDown() throws Exception {
