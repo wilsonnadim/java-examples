@@ -6,6 +6,7 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
@@ -36,8 +37,8 @@ public class SauceLabsExample {
     protected String deviceOrientation;
     protected String screenResolution;
 
-    public static String username = "YourSauceUser";
-    public static String accesskey = "YourSauceKey";
+    public static String username = "matan";
+    public static String accesskey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
@@ -49,8 +50,7 @@ public class SauceLabsExample {
         env.add(new String[]{"Windows 7",   "11.0", "internet explorer", null, null, "1280x1024"});
         env.add(new String[]{"OS X 10.10",  "54.0", "chrome",            null, null, "1280x1024"});
         env.add(new String[]{"Android",     "6.0",  "chrome", "Android Emulator", "portrait", null});
-        env.add(new String[]{"Android",     "7.1",  "chrome", "Samsung Galaxy S8 Plus GoogleAPI Emulator", "landscape", null});
-        env.add(new String[]{"iOS",         "7.1",  "chrome", "Android GoogleAPI Emulator", "portrait", null});
+        env.add(new String[]{"Android",     "7.1",  "chrome", "Android GoogleAPI Emulator", "landscape", null});
         env.add(new String[]{"iOS",         "10.3", "Safari", "iPhone 7 Plus Simulator", "portrait", null});
         env.add(new String[]{"iOS",         "10.3", "Safari", "iPhone Simulator",           "portrait", null});
 
@@ -117,7 +117,8 @@ public class SauceLabsExample {
             eyes.open(driver, "Github", "Home Page", new RectangleSize(1200, 800));
         }
 
-        eyes.checkWindow("Home Page Screenshot");
+        //eyes.checkWindow("Home Page Screenshot");
+        eyes.check("Fluent - Region by Selector and Element", Target.window());
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
