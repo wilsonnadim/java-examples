@@ -32,10 +32,10 @@ public class Hyatt2 {
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new Integer[]{454, 675});
-        env.add(new Integer[]{630, 699});
-        env.add(new Integer[]{860, 640});
-        env.add(new Integer[]{1212, 666});
+        env.add(new Integer[]{480, 639});
+//        env.add(new Integer[]{630, 699});
+//        env.add(new Integer[]{860, 640});
+//        env.add(new Integer[]{1212, 666});
 
         return env;
     }
@@ -150,6 +150,7 @@ public class Hyatt2 {
 
         WebElement[] locations_array = new WebElement[locations.size()];
         locations.toArray(locations_array);
+
         for(int i=0; i<results.size(); i++){
             String hotelId = results.get(i).getAttribute("data-spirit-code");
             eyes.open(driver, appName, "Hotel: " + hotelId, new RectangleSize(width, height));

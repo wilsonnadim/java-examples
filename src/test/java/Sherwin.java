@@ -15,7 +15,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class FluentApiTest {
+public class Sherwin {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
@@ -34,35 +34,23 @@ public class FluentApiTest {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
 
-        driver.get("http://www.github.com");
+        driver.get("https://www.sherwin-williams.com/painting-contractors/products/exterior-paint-coatings/deck-products/finishes#facet:&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:45&");
     }
 
     @Test
     public void FluentTest() throws Exception {
-        eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1000, 700));
+        eyes.open(driver, "Sherwin Williams", "Fluent Test", new RectangleSize(1200, 800));
 
-        List<WebElement> icons = driver.findElements(By.cssSelector("img.CircleBadge-icon"));
-        WebElement[] icons_array = new WebElement[icons.size()];
-        icons.toArray(icons_array);
+        List<WebElement> ratings = driver.findElements(By.className("prod-shelf__product__ratings-wrapper"));
+        WebElement[] ratings_array = new WebElement[ratings.size()];
+        ratings.toArray(ratings_array);
 
-        WebElement element = driver.findElement(By.cssSelector("a.mr-4")); //github logo top left
-
-        eyes.check("Fluent - Region by Selector and Element", Target.window()
-                .ignore(icons_array)
-                .ignore(element)
-                .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")));
-
-//        eyes.check(
-//                Target.region(By.cssSelector("img.CircleBadge-icon")).withName("Icon Badges"),
-//                Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")).withName("Login Fields"),
-//                Target.region(element).fully().withName("GitHub Logo)")
-//        );
+        eyes.check("Fluent - Region by Selector and Element", Target.region(driver.findElement(By.id("ProductShelfContainer"))).ignore(ratings_array));
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
