@@ -50,7 +50,7 @@ public class Sherwin {
         WebElement[] ratings_array = new WebElement[ratings.size()];
         ratings.toArray(ratings_array);
 
-        eyes.check("Fluent - Region by Selector and Element", Target.region(driver.findElement(By.id("ProductShelfContainer"))).ignore(ratings_array));
+        eyes.check("Fluent - Region and Ignore array", Target.region(driver.findElement(By.id("ProductShelfContainer"))).ignore(ratings_array));
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());

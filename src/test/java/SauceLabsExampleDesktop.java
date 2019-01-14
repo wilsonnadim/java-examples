@@ -6,10 +6,14 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -34,8 +38,8 @@ public class SauceLabsExampleDesktop {
     protected String version;
     protected String screenResolution;
 
-    public static String username = "YourSauceUser";
-    public static String accesskey = "YourSauceKey";
+    public static String username = "matan";
+    public static String accesskey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
@@ -74,7 +78,7 @@ public class SauceLabsExampleDesktop {
 
     @BeforeClass
     public static void batchInitialization(){
-        batch = new BatchInfo("Github Cross Browser Test");
+        batch = new BatchInfo("Github Supported Browsers Test");
     }
 
     @Before
@@ -98,15 +102,23 @@ public class SauceLabsExampleDesktop {
 
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
+
         driver.get("https://github.com");
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, 0);");
     }
 
     @Test
     public void GithubHomePage() throws Exception {
 
-        eyes.open(driver, "Github Desktop", "Cross-Browser Home Page", new RectangleSize(1200, 800));
+        eyes.open(driver, "Github Desktop", "Home Page", new RectangleSize(1200, 800));
 
-        eyes.checkWindow("Home Page");
+        //eyes.checkWindow("Home Page");
+        WebElement element = driver.findElement(By.className("position-relative")); //github logo top left
+        eyes.check("Fluent - Region by Selector and Element", Target.window()
+                .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")) //ignores the login form
+                .ignore(element)); //ignores github logo top left
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
