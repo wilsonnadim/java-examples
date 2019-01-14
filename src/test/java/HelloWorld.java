@@ -10,6 +10,7 @@ public class HelloWorld {
 
         // Open a Chrome browser.
         WebDriver driver = new ChromeDriver();
+        //WebDriver driver = new FirefoxDriver();
 
         // Initialize the eyes SDK and set your private API key.
         Eyes eyes = new Eyes();

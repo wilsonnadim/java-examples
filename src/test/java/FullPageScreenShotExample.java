@@ -13,12 +13,12 @@ public class FullPageScreenShotExample {
 
     private Eyes eyes = new Eyes();
     private WebDriver driver;
-    public static String applitoolsKey = "8Us81OBM29YlJbfOKNeX2AgfPiins111fqvi9Q1032ZWbO0110000";//System.getenv("APPLITOOLS_API_KEY");
+    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Before
     public void setUp() throws Exception {
 
-        eyes.setServerUrl("https://testeyes.applitools.com");
+        //eyes.setServerUrl("YourApplitoolsServer");
         eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
         //eyes.setForceFullPageScreenshot(true);
