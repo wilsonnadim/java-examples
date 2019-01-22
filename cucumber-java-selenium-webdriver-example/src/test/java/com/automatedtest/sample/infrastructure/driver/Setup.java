@@ -13,14 +13,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-@RunWith(Cucumber.class)
 public class Setup {
 
     public static WebDriver driver;
     public static Eyes eyes = new Eyes();
     public static RectangleSize viewport = new RectangleSize(1300, 900);
-
-    //private static BatchInfo batch;
 
     private static Long unixTime = System.currentTimeMillis();
     private static String batchId = Long.toString(unixTime);
