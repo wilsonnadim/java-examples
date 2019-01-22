@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreditCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreditCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -33,50 +35,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="545">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CreditCards.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="465">
+              <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Sherwin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="-156">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,35 +65,63 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="15">
+              <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BrowserStackExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="326">
+              <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="453">
+              <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="51" selection-end-column="1" />
+            <state relative-caret-position="-427">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -177,17 +183,14 @@
         <option value="$PROJECT_DIR$/src/test/java/PerfectoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TableCompare.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestNGSauceLabsBase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsAppiumNativeExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/ChromeMobileEmulationExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java" />
         <option value="$PROJECT_DIR$/src/test/java/MobileNativeTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CreditCards.java" />
         <option value="$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/Hyatt.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Sherwin.java" />
         <option value="$PROJECT_DIR$/src/test/java/Hyatt2.java" />
         <option value="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" />
@@ -197,9 +200,12 @@
         <option value="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" />
         <option value="$PROJECT_DIR$/src/test/java/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CaptureRegion.java" />
         <option value="$PROJECT_DIR$/src/test/java/visualGridExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CaptureRegion.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CreditCards.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
       </list>
     </option>
   </component>
@@ -211,10 +217,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2163" />
-    <option name="y" value="247" />
-    <option name="width" value="1741" />
-    <option name="height" value="1077" />
+    <option name="x" value="-1809" />
+    <option name="y" value="146" />
+    <option name="width" value="1804" />
+    <option name="height" value="1282" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -222,8 +228,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,7 +293,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.visualGridExample">
+  <component name="RunManager" selected="JUnit.FluentApiTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -296,6 +302,15 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FluentApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-examples" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FluentApiTest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -322,15 +337,6 @@
       <module name="java-examples" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SauceLabsExampleDesktop" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sherwin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-examples" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Sherwin" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -403,19 +409,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.Sherwin" />
       <item itemvalue="JUnit.FullPageScreenShotExample" />
-      <item itemvalue="JUnit.visualGridExample" />
       <item itemvalue="JUnit.IgnoreRegion" />
       <item itemvalue="JUnit.SauceLabsExampleDesktop" />
+      <item itemvalue="JUnit.visualGridExample" />
+      <item itemvalue="JUnit.FluentApiTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FluentApiTest" />
         <item itemvalue="JUnit.visualGridExample" />
+        <item itemvalue="JUnit.FullPageScreenShotExample" />
         <item itemvalue="JUnit.IgnoreRegion" />
         <item itemvalue="JUnit.SauceLabsExampleDesktop" />
-        <item itemvalue="JUnit.FullPageScreenShotExample" />
-        <item itemvalue="JUnit.Sherwin" />
       </list>
     </recent_temporary>
   </component>
@@ -433,27 +439,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IgnoreRegion - 2019.01.07 at 12h 38m 09s.xml">
-      <configuration name="IgnoreRegion" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IgnoreRegion - 2019.01.07 at 12h 40m 12s.xml">
-      <configuration name="IgnoreRegion" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IgnoreRegion - 2019.01.07 at 12h 41m 24s.xml">
-      <configuration name="IgnoreRegion" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IgnoreRegion - 2019.01.07 at 12h 43m 44s.xml">
-      <configuration name="IgnoreRegion" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SauceLabsExampleDesktop - 2019.01.07 at 12h 54m 18s.xml">
-      <configuration name="SauceLabsExampleDesktop" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SauceLabsExampleDesktop - 2019.01.07 at 12h 57m 20s.xml">
-      <configuration name="SauceLabsExampleDesktop" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SauceLabsExampleDesktop - 2019.01.07 at 13h 01m 47s.xml">
-      <configuration name="SauceLabsExampleDesktop" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="IgnoreRegion - 2019.01.07 at 13h 10m 49s.xml">
       <configuration name="IgnoreRegion" configurationId="JUnit" />
     </history-entry>
@@ -463,25 +448,46 @@
     <history-entry file="visualGridExample - 2019.01.14 at 13h 12m 20s.xml">
       <configuration name="visualGridExample" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="FullPageScreenShotExample - 2019.01.16 at 13h 56m 47s.xml">
+      <configuration name="FullPageScreenShotExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FullPageScreenShotExample - 2019.01.16 at 13h 58m 00s.xml">
+      <configuration name="FullPageScreenShotExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FullPageScreenShotExample - 2019.01.16 at 13h 58m 34s.xml">
+      <configuration name="FullPageScreenShotExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="visualGridExample - 2019.01.16 at 15h 15m 11s.xml">
+      <configuration name="visualGridExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="visualGridExample - 2019.01.17 at 13h 52m 54s.xml">
+      <configuration name="visualGridExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FluentApiTest - 2019.01.22 at 09h 23m 49s.xml">
+      <configuration name="FluentApiTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FluentApiTest - 2019.01.22 at 09h 30m 04s.xml">
+      <configuration name="FluentApiTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2163" y="247" width="1741" height="1077" extended-state="0" />
+    <frame x="-1809" y="146" width="1804" height="1282" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25073573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27014756" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32711306" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63625664" visible="true" weight="0.34511435" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63564134" visible="true" weight="0.2570694" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48866212" weight="0.3984064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36374336" side_tool="true" visible="true" weight="0.34511435" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3643587" side_tool="true" visible="true" weight="0.2570694" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.5787982" weight="0.3160569" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -494,16 +500,6 @@
     </layout>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="CrossEnvParallelExample.batch" />
@@ -547,13 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="41" column="77" selection-start-line="41" selection-start-column="77" selection-end-line="41" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BrowserStackExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="43" column="77" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -627,20 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/6.0.0-BETA5/java-client-6.0.0-BETA5.jar!/io/appium/java_client/android/AndroidDriver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -700,34 +675,6 @@
     <entry file="file://$USER_HOME$/Downloads/Applitools_Test1.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CreditCards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="77" selection-start-line="77" selection-end-line="84" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -749,44 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-          <folding>
-            <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="86" column="48" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld2.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/MSG.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -795,12 +704,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="420">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sherwin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -811,17 +735,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="376">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Sherwin.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="293">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding>
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -830,59 +768,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="292">
+          <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="21">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="15">
+          <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/BrowserStackExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="411">
+          <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="240">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CreditCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="1064">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="326">
+          <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

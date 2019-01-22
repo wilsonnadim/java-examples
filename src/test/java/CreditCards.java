@@ -39,6 +39,7 @@ public class CreditCards {
     public void setUp() throws Exception {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setLogHandler(new StdoutLogHandler(true));
+        eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setBatch(batch);
         eyes.setMatchTimeout(5000);
@@ -65,7 +66,9 @@ public class CreditCards {
 
         WebElement featuredCard = driver.findElement(By.cssSelector("div.product-box.product-box--featured.product-box--masked--featured"));
         String featuredId = featuredCard.getAttribute("data-product-id");
+
         eyes.open(driver, "Creditcards.com", "Card: " + featuredId, new RectangleSize(width, height));
+
         eyes.check("Card: " + featuredId, Target.region(featuredCard).fully());
 
         TestResults featuredResults = eyes.close(false);

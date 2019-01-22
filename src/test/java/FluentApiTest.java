@@ -45,7 +45,7 @@ public class FluentApiTest {
 
     @Test
     public void FluentTest() throws Exception {
-        eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1000, 700));
+        eyes.open(driver, "Fluent Test 2", "Github", new RectangleSize(1000, 700));
 
         List<WebElement> icons = driver.findElements(By.cssSelector("img.CircleBadge-icon"));
         WebElement[] icons_array = new WebElement[icons.size()];
@@ -57,12 +57,6 @@ public class FluentApiTest {
                 .ignore(icons_array)
                 .ignore(element)
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")));
-
-//        eyes.check(
-//                Target.region(By.cssSelector("img.CircleBadge-icon")).withName("Icon Badges"),
-//                Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")).withName("Login Fields"),
-//                Target.region(element).fully().withName("GitHub Logo)")
-//        );
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
