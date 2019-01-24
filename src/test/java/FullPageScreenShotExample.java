@@ -22,21 +22,17 @@ public class FullPageScreenShotExample {
         //eyes.setServerUrl("YourApplitoolsServer");
         eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
-        //eyes.setForceFullPageScreenshot(true);
+        eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
-        eyes.setAppName("TEST");
         //eyes.setMatchTimeout(5000);
+        //eyes.setBranchName("MyAwesomeBranchAgain");
 
         BatchInfo batch = new BatchInfo("My Fullpage Test");
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-
-        //eyes.setBranchName("MyAwesomeBranchAgain");
-
-        //eyes.setSaveNewTests(false);
     }
 
     @Test

@@ -22,7 +22,7 @@ public class visualGridExample {
     public void setUp() throws Exception {
 
         renderConfig.setTestName("Hello World");
-        renderConfig.setAppName("Rendering Grid Test 2");
+        renderConfig.setAppName("Rendering Grid Test");
         renderConfig.addBrowser(800,  600, RenderingConfiguration.BrowserType.CHROME);
         renderConfig.addBrowser(700,  500, RenderingConfiguration.BrowserType.FIREFOX);
         renderConfig.addBrowser(1200, 800, RenderingConfiguration.BrowserType.CHROME);

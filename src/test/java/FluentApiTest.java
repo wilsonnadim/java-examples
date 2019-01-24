@@ -45,7 +45,7 @@ public class FluentApiTest {
 
     @Test
     public void FluentTest() throws Exception {
-        eyes.open(driver, "Fluent Test 2", "Github", new RectangleSize(1000, 700));
+        eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1000, 700));
 
         List<WebElement> icons = driver.findElements(By.cssSelector("img.CircleBadge-icon"));
         WebElement[] icons_array = new WebElement[icons.size()];
