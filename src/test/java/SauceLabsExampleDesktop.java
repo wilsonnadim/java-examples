@@ -38,8 +38,8 @@ public class SauceLabsExampleDesktop {
     protected String version;
     protected String screenResolution;
 
-    public static String username = "matan";
-    public static String accesskey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
+    public static String username = "SauceUser";
+    public static String accesskey = "SauceKey";
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
@@ -63,6 +63,9 @@ public class SauceLabsExampleDesktop {
         env.add(new String[]{"OS X 10.13",  "69.0",     "chrome",            "1920x1440"});
         return env;
     }
+
+     //       eyes.setSendDom(true);
+    //IE 11.2670 Win 7/10
 
     public SauceLabsExampleDesktop(String os, String version, String browser, String resolution) {
         this.os = os;
