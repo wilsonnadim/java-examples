@@ -1,3 +1,4 @@
+import com.applitools.eyes.FileLogger;
 import com.applitools.eyes.rendering.Eyes;
 import com.applitools.eyes.rendering.Target;
 import com.applitools.eyes.visualGridClient.model.RenderingConfiguration;
@@ -10,7 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class visualGridExample {
+public class visualGridExampleJNJ {
 
     private VisualGridManager VisualGrid = new VisualGridManager(10);
     private RenderingConfiguration renderConfig = new RenderingConfiguration();
@@ -21,28 +22,30 @@ public class visualGridExample {
     @Before
     public void setUp() throws Exception {
 
-        renderConfig.setAppName("Rendering Grid Test");
-        renderConfig.setTestName("Hello World");
+        renderConfig.setAppName("Reactine.ca"); //define a static App name. This should rarely change...
+        renderConfig.setTestName("Reactine Visual Grid Test"); //Define a test name. This should be unique...
         renderConfig.addBrowser(800,  600, RenderingConfiguration.BrowserType.CHROME);
         renderConfig.addBrowser(700,  500, RenderingConfiguration.BrowserType.FIREFOX);
         renderConfig.addBrowser(1200, 800, RenderingConfiguration.BrowserType.CHROME);
 
         eyes.setApiKey(applitoolsKey);
+        //Capture logs...
+        //eyes.setLogHandler(new StdoutLogHandler(true));
+        //or
+        eyes.setLogHandler(new FileLogger("/Users/justin/visualGrid.log",true,true));
 
         driver = new ChromeDriver();
-        driver.get("https://applitools.com/helloworld");
+        driver.get("https://www.reactine.ca/");
     }
 
     @Test
-    public void HelloWorld() throws Exception {
+    public void ReactineHomePage() throws Exception {
+
+        //close popup
+        driver.findElement(By.cssSelector("button.agree-button.click-processed")).click();
 
         eyes.open(driver, renderConfig);
-        eyes.check("first check", Target.window().withName("Step 1 A"));
-        eyes.check("second check", Target.window().fully(false).withName("Step 1 B"));
-        driver.findElement(By.tagName("button")).click();
-        eyes.check("third check", Target.window().withName("Step 2 A"));
-        eyes.check("forth check", Target.window().fully(false).withName("Step 2 B"));
-
+        eyes.check("Reactine Home Page", Target.window());
         eyes.close();
 
         TestResultSummary allTestResults = VisualGrid.getAllTestResults();
