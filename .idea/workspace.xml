@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/visualGridExampleJNJ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" afterDir="false" />
-    </list>
+    <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleJNJ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+            <state relative-caret-position="204">
+              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -437,9 +430,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="visualGridExample - 2019.01.24 at 09h 16m 35s.xml">
-      <configuration name="visualGridExample" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ResponsiveTestExample - 2019.01.25 at 07h 44m 42s.xml">
       <configuration name="ResponsiveTestExample" configurationId="JUnit" />
     </history-entry>
@@ -467,25 +457,28 @@
     <history-entry file="visualGridExampleJNJ - 2019.01.28 at 12h 14m 11s.xml">
       <configuration name="visualGridExampleJNJ" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="visualGridExampleJNJ - 2019.01.28 at 12h 19m 37s.xml">
+      <configuration name="visualGridExampleJNJ" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="666" y="24" width="2023" height="1302" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23573953" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23573953" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32711306" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.42200908" visible="true" weight="0.16175231" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7672892" visible="true" weight="0.42038754" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48866212" weight="0.3984064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5779909" side_tool="true" visible="true" weight="0.16175231" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23271075" side_tool="true" visible="true" weight="0.42038754" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.57546693" weight="0.31508005" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -876,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleJNJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        <state relative-caret-position="204">
+          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>
