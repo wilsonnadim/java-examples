@@ -25,7 +25,7 @@ public class Setup {
     @Before
     public void setWebDriver() throws Exception {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-        //eyes.setLogHandler(new StdoutLogHandler(true));
+        eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
 
