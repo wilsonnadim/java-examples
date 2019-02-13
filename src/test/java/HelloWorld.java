@@ -1,8 +1,13 @@
 import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertEquals;
+
 
 public class HelloWorld {
 
@@ -14,6 +19,7 @@ public class HelloWorld {
 
         // Initialize the eyes SDK and set your private API key.
         Eyes eyes = new Eyes();
+        eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
         try{
@@ -34,7 +40,8 @@ public class HelloWorld {
             eyes.checkWindow("Click!");
 
             // End the test.
-            eyes.close();
+            TestResults results = eyes.close(false);
+            assertEquals(true, results.isPassed());
 
         } finally {
 

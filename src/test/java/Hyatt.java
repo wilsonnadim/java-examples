@@ -48,7 +48,6 @@ public class Hyatt {
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setBatch(batch);
-
         eyes.setSendDom(false);
 
         driver = new ChromeDriver();

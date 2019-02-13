@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -40,6 +41,9 @@ public class visualGridExampleJNJ {
 
     @Test
     public void ReactineHomePage() throws Exception {
+
+        JavascriptExecutor js =(JavascriptExecutor)driver;
+        js.executeScript("var elem = document.querySelector('#fb-root > div > div:nth-child(1) > iframe'); elem.parentNode.removeChild(elem);");
 
         //close popup
         driver.findElement(By.cssSelector("button.agree-button.click-processed")).click();

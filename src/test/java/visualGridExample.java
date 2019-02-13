@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class visualGridExample {
 
-    private VisualGridManager VisualGrid = new VisualGridManager(10);
+    private VisualGridManager VisualGrid = new VisualGridManager(25);
     private RenderingConfiguration renderConfig = new RenderingConfiguration();
     private Eyes eyes = new Eyes(VisualGrid);
     private WebDriver driver;
@@ -23,7 +23,7 @@ public class visualGridExample {
 
         renderConfig.setAppName("Rendering Grid Test");
         renderConfig.setTestName("Hello World");
-        renderConfig.addBrowser(800,  600, RenderingConfiguration.BrowserType.CHROME);
+        renderConfig.addBrowser(800,  600, RenderingConfiguration.BrowserType.FIREFOX);
         renderConfig.addBrowser(700,  500, RenderingConfiguration.BrowserType.FIREFOX);
         renderConfig.addBrowser(1200, 800, RenderingConfiguration.BrowserType.CHROME);
 
