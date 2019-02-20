@@ -4,7 +4,6 @@ import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -32,19 +31,16 @@ public class FullPageScreenShotExample {
         BatchInfo batch = new BatchInfo("My Fullpage Test");
         eyes.setBatch(batch);
 
+
         driver = new ChromeDriver();
     }
 
     @Test
     public void GithubHomePage() throws Exception {
         driver.get("https://www.github.com/");
-        eyes.open(driver, "Github98767344", "Home Page", new RectangleSize(1200, 800));
-
-        driver.findElement(By.tagName("button")).click();
+        eyes.open(driver, "Github", "Home Page", new RectangleSize(1200, 800));
 
         eyes.checkWindow("github");
-
-        driver.findElement(By.tagName("button")).click();
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
@@ -53,7 +49,6 @@ public class FullPageScreenShotExample {
     @After
     public void tearDown() throws Exception {
         driver.quit();
-        eyes.close();
         eyes.abortIfNotClosed();
     }
 }
