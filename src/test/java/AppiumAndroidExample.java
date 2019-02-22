@@ -23,7 +23,9 @@ public class AppiumAndroidExample {
         eyes.setApiKey(applitoolsKey);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
+
+        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+
         BatchInfo batch = new BatchInfo("Made");
         eyes.setBatch(batch);
         DesiredCapabilities capability = new DesiredCapabilities();

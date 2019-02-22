@@ -25,6 +25,8 @@ public class FullPageScreenShotExample {
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
+        //eyes.setLogHandler(new FileLogger("C:\\Path\\To\\Your\\Dir\\Applitools.log", false, true));
+
         //eyes.setMatchTimeout(5000);
         //eyes.setBranchName("MyAwesomeBranchAgain");
 
