@@ -4,9 +4,6 @@ import com.applitools.eyes.config.SeleniumConfiguration;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
-import com.applitools.eyes.visualgridclient.model.EmulationDevice;
-import com.applitools.eyes.visualgridclient.model.EmulationInfo;
-import com.applitools.eyes.visualgridclient.model.ScreenOrientation;
 import com.applitools.eyes.visualgridclient.model.TestResultSummary;
 import com.applitools.eyes.visualgridclient.services.VisualGridRunner;
 import org.junit.After;
@@ -30,20 +27,11 @@ public class visualGridExampleNew {
 
     @BeforeClass
     public static void batchInitialization(){
-        //renderingManager = new VisualGridRunner(40);
-        //renderingManager.setLogHandler(new FileLogger(true));
-
-        //renderingManager.setServerUrl(SERVER_URL);
-        //batchInfo = new BatchInfo("Top Sites - Visual Grid");
         batch = new BatchInfo("Visual Grid - Hello World");
     }
 
     @Before
     public void setUp() throws Exception {
-
-        //renderingManager = new VisualGridRunner(25);
-
-        //renderingManager.setServerUrl("YOU_SERVER_URL");
 
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setHideScrollbars(true);
@@ -58,16 +46,16 @@ public class visualGridExampleNew {
         seleniumConfiguration.setTestName("Hello World");
 
         String environment = "VeryCoolEnvironment";
-        seleniumConfiguration.addBrowser(800, 600, SeleniumConfiguration.BrowserType.CHROME, environment);
+        seleniumConfiguration.addBrowser(800, 600, SeleniumConfiguration.BrowserType.FIREFOX, environment);
         seleniumConfiguration.addBrowser(700, 500, SeleniumConfiguration.BrowserType.CHROME, environment);
-        seleniumConfiguration.addBrowser(1200, 800, SeleniumConfiguration.BrowserType.CHROME, environment);
+        seleniumConfiguration.addBrowser(1200, 800, SeleniumConfiguration.BrowserType.FIREFOX, environment);
         seleniumConfiguration.addBrowser(1600, 1200, SeleniumConfiguration.BrowserType.CHROME, environment);
 
-        EmulationDevice emulationDevice = new EmulationDevice(300, 400, 0.5f, true, ScreenOrientation.LANDSCAPE);
-        EmulationInfo emulationInfo = new EmulationInfo(EmulationInfo.DeviceName.Galaxy_Note_II, ScreenOrientation.PORTRAIT);
-
-        seleniumConfiguration.addDeviceEmulation(emulationDevice, environment);
-        seleniumConfiguration.addDeviceEmulation(emulationInfo);
+//        EmulationDevice emulationDevice = new EmulationDevice(300, 400, 0.5f, true, ScreenOrientation.LANDSCAPE);
+//        EmulationInfo emulationInfo = new EmulationInfo(EmulationInfo.DeviceName.Galaxy_Note_II, ScreenOrientation.PORTRAIT);
+//
+//        seleniumConfiguration.addDeviceEmulation(emulationDevice, environment);
+//        seleniumConfiguration.addDeviceEmulation(emulationInfo);
 
         driver = new ChromeDriver();
         driver.get("https://applitools.com/helloworld");
@@ -77,9 +65,9 @@ public class visualGridExampleNew {
     public void HelloWorld() throws Exception {
 
         eyes.open(driver, seleniumConfiguration);
-        eyes.check("first check", Target.window().fully());
+        eyes.check("Hello", Target.window().fully());
         driver.findElement(By.tagName("button")).click();
-        eyes.check("forth check", Target.window().fully());
+        eyes.check("click me!", Target.window().fully());
 
         eyes.close();
 
