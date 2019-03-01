@@ -1,0 +1,28 @@
+2019-02-28 17:17:12.656 Eyes: [LOG    ] {} [1] visualGridExampleNew.setUp(): enter
+2019-02-28 17:17:36.770 Eyes: [LOG    ] {} [1] visualGridExampleNew.setUp(): enter
+2019-02-28 17:19:07.402 Eyes: [LOG    ] {} [1] visualGridExampleNew.setUp(): enter
+2019-02-28 17:20:00.059 Eyes: [LOG    ] {} [1] visualGridExampleNew.setUp(): enter
+2019-02-28 17:21:23.396 Eyes: [LOG    ] {} [1] visualGridExampleNew.setUp(): enter
+2019-02-28 17:21:51.196 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.VisualGridRunner.getAllTestResults(): enter
+2019-02-28 17:21:51.196 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.VisualGridRunner.getAllTestResults(): eyesToCloseList.size: 0
+2019-02-28 17:21:51.196 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.VisualGridRunner.getAllTestResults(): trying to call future.get on 0 future lists.
+2019-02-28 17:21:51.196 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.VisualGridRunner.stopServices(): enter
+2019-02-28 17:21:51.197 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.OpenerService.stopService(): concurrency on stop = 0
+2019-02-28 17:21:51.197 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.VisualGridRunner.stopServices(): exit
+2019-02-28 17:21:51.197 Eyes: [VERBOSE] {} [1] com.applitools.eyes.visualgridclient.services.VisualGridRunner.getAllTestResults(): exit
+2019-02-28 17:21:51.197 Eyes: [LOG    ] {} [12] com.applitools.eyes.visualgridclient.services.EyesService.run(): Service 'eyesOpenerService' is finished
+2019-02-28 17:21:51.197 Eyes: [LOG    ] {} [16] com.applitools.eyes.visualgridclient.services.EyesService.run(): Service 'eyesCheckerService' is finished
+2019-02-28 17:21:51.197 Eyes: [LOG    ] {} [13] com.applitools.eyes.visualgridclient.services.EyesService.run(): Service 'eyesCloserService' is finished
+2019-02-28 17:21:51.197 Eyes: [LOG    ] {} [15] com.applitools.eyes.visualgridclient.services.RenderingGridService.run(): Service 'renderingGridService' is finished
+2019-02-28 17:21:51.218 Eyes: [LOG    ] {} [1] visualGridExampleNew.HelloWorld(): result summary {
+	all results=
+		
+	passed=0
+	unresolved=0
+	failed=0
+	exceptions=0
+	mismatches=0
+	missing=0
+	matches=0
+}
+2019-02-28 17:25:54.675 Eyes: [LOG    ] {} [1] visualGridExampleNew.setUp(): enter
