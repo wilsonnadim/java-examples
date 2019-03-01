@@ -13,6 +13,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.applitools:eyes-selenium-java3:3.144.1" level="project" />
     <orderEntry type="library" name="Maven: com.applitools:eyes-common-java3:3.144.1" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-sdk-core-java3:3.144.1" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-connectivity-java3-jersey2x:3.144.1" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-images-java3:3.144.1" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-selenium-java3:3.144.1" level="project" />
+    <orderEntry type="library" name="Maven: com.applitools:eyes-common-java3:3.144.1" level="project" />
     <orderEntry type="library" name="Maven: org.imgscalr:imgscalr-lib:4.2" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
