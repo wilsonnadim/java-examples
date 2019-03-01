@@ -4,6 +4,7 @@ import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,7 +45,9 @@ public class FullPageScreenShotExample {
         driver.get("https://www.github.com/");
         eyes.open(driver, "Github", "Home Page", new RectangleSize(1200, 800));
 
-        eyes.checkWindow("github");
+        //eyes.checkWindow("github");
+
+        eyes.check("github", Target.window().fully());
 
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
