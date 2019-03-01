@@ -1,4 +1,7 @@
-import com.applitools.eyes.*;
+import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
@@ -23,7 +26,7 @@ public class FullPageScreenShotExample {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
         //eyes.setLogHandler(new FileLogger("C:\\Path\\To\\Your\\Dir\\Applitools.log", false, true));
 
@@ -32,7 +35,6 @@ public class FullPageScreenShotExample {
 
         BatchInfo batch = new BatchInfo("My Fullpage Test");
         eyes.setBatch(batch);
-
 
         driver = new ChromeDriver();
     }
