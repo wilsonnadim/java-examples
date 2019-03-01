@@ -41,7 +41,6 @@ public class TestVGEyes extends TestEyesBase {
     protected Eyes initEyes(WebDriver webDriver, String testedUrl) {
         Eyes eyes = new Eyes(renderingManager);
         eyes.setBatch(batchInfo);
-        eyes.setBaselineEnvName("applitools environment");
         Logger logger = eyes.getLogger();
         logger.log("creating WebDriver: " + testedUrl);
         try {
