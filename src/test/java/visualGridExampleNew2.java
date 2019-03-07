@@ -72,7 +72,6 @@ public class visualGridExampleNew2 {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo("Applitool VG - Hello World");
-        batch.setId(batchId);
     }
 
     @Before
@@ -80,7 +79,7 @@ public class visualGridExampleNew2 {
 
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setApiKey(applitoolsKey);
-        //batch.setId(batchId);
+        batch.setId(batchId);
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
@@ -94,6 +93,7 @@ public class visualGridExampleNew2 {
 
         seleniumConfiguration.setAppName("Applitools");
         seleniumConfiguration.setTestName("Hello World");
+        seleniumConfiguration.setBatch(batch);
 
         seleniumConfiguration.addBrowser(800, 600, SeleniumConfiguration.BrowserType.FIREFOX);
         seleniumConfiguration.addBrowser(700, 500, SeleniumConfiguration.BrowserType.CHROME);

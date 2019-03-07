@@ -88,6 +88,3 @@ public class CreditCards {
         }
     }
 }
-
-//baseline comparison of updated code
-//performance improvement of dashboard.
