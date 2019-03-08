@@ -2,7 +2,6 @@ import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
-import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,21 +25,21 @@ public class AppiumAndroidExample {
 
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
 
-        BatchInfo batch = new BatchInfo("Made");
+        BatchInfo batch = new BatchInfo("Github Android");
         eyes.setBatch(batch);
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platformName", "Android");
         capability.setCapability("deviceName", "android");
+        capability.setCapability("automationName", "uiautomator2");
         capability.setCapability("browserName", "Chrome");
         driver = new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"), capability);
     }
 
     @Test
     public void GithubHomePage() throws Exception {
-        driver.get("https://made.com/");
-        eyes.open(driver, "Made.com", "Home Page");
-        //eyes.checkWindow("Home Page Screenshot");
-        eyes.check("Simple Product Page", Target.window().matchLevel(MatchLevel.STRICT));
+        driver.get("https://github.com/");
+        eyes.open(driver, "Github.com", "Home Page");
+        eyes.checkWindow("Home Page Screenshot");
         eyes.close();
     }
 
