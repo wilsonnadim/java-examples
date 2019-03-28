@@ -23,10 +23,10 @@ public class FullPageScreenShotExample {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
         eyes.setLogHandler(new StdoutLogHandler(true));
         //eyes.setLogHandler(new FileLogger("C:\\Path\\To\\Your\\Dir\\Applitools.log", false, true));
-
+        //eyes.setWaitBeforeScreenshots(3000);
         //eyes.setMatchTimeout(5000);
         //eyes.setBranchName("MyAwesomeBranchAgain");
 
@@ -39,9 +39,10 @@ public class FullPageScreenShotExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        driver.get("https://www.github.com/");
-        eyes.open(driver, "Github", "Home Page", new RectangleSize(1200, 800));
+        driver.get("https://www.google.com");
+        eyes.open(driver, "Google", "Home Page", new RectangleSize(1200, 800));
 
+        //driver.findElement(By.id("loginRight:login_form:companyId")).sendKeys("sdfdsf");
         eyes.checkWindow("github");
 
         TestResults results = eyes.close(false);
