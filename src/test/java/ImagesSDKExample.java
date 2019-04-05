@@ -3,7 +3,6 @@
  */
 
 import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.images.Eyes;
@@ -39,9 +38,9 @@ public class ImagesSDKExample {
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        eyes.setHostOS("OSX 10.12");
-        eyes.setHostApp("Chrome 59.0");
+        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        //eyes.setHostOS("OSX 10.12");
+        //eyes.setHostApp("Chrome 59.0");
 
         driver = new ChromeDriver();
         driver.get("https://www.github.com");

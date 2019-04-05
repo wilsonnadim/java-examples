@@ -2,7 +2,7 @@ import com.applitools.ICheckSettings;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.FileLogger;
 import com.applitools.eyes.Logger;
-import com.applitools.eyes.config.SeleniumConfiguration;
+//import com.applitools.eyes.config.SeleniumConfiguration;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.fluent.Target;
 import com.applitools.eyes.visualgridclient.model.*;
@@ -44,24 +44,24 @@ public class TestVGEyes extends TestEyesBase {
         Logger logger = eyes.getLogger();
         logger.log("creating WebDriver: " + testedUrl);
         try {
-            SeleniumConfiguration seleniumConfiguration = new SeleniumConfiguration();
-            seleniumConfiguration.setTestName("Top Sites - " + testedUrl);
-            seleniumConfiguration.setAppName("Top Sites");
-
-            String environment = "VeryCoolEnvironment";
-            seleniumConfiguration.addBrowser(800, 600, SeleniumConfiguration.BrowserType.CHROME, environment);
-            seleniumConfiguration.addBrowser(700, 500, SeleniumConfiguration.BrowserType.CHROME, environment);
-            seleniumConfiguration.addBrowser(1200, 800, SeleniumConfiguration.BrowserType.CHROME, environment);
-            seleniumConfiguration.addBrowser(1600, 1200, SeleniumConfiguration.BrowserType.CHROME, environment);
-
-            EmulationDevice emulationDevice = new EmulationDevice(300, 400, 0.5f, true, ScreenOrientation.LANDSCAPE);
-            EmulationInfo emulationInfo = new EmulationInfo(EmulationInfo.DeviceName.Galaxy_Note_II, ScreenOrientation.PORTRAIT);
-
-            seleniumConfiguration.addDeviceEmulation(emulationDevice, environment);
-            seleniumConfiguration.addDeviceEmulation(emulationInfo);
+//            SeleniumConfiguration seleniumConfiguration = new SeleniumConfiguration();
+//            seleniumConfiguration.setTestName("Top Sites - " + testedUrl);
+//            seleniumConfiguration.setAppName("Top Sites");
+//
+//            String environment = "VeryCoolEnvironment";
+//            seleniumConfiguration.addBrowser(800, 600, SeleniumConfiguration.BrowserType.CHROME, environment);
+//            seleniumConfiguration.addBrowser(700, 500, SeleniumConfiguration.BrowserType.CHROME, environment);
+//            seleniumConfiguration.addBrowser(1200, 800, SeleniumConfiguration.BrowserType.CHROME, environment);
+//            seleniumConfiguration.addBrowser(1600, 1200, SeleniumConfiguration.BrowserType.CHROME, environment);
+//
+//            EmulationDevice emulationDevice = new EmulationDevice(300, 400, 0.5f, true, ScreenOrientation.LANDSCAPE);
+//            EmulationInfo emulationInfo = new EmulationInfo(EmulationInfo.DeviceName.Galaxy_Note_II, ScreenOrientation.PORTRAIT);
+//
+//            seleniumConfiguration.addDeviceEmulation(emulationDevice, environment);
+//            seleniumConfiguration.addDeviceEmulation(emulationInfo);
 
             logger.log("created configurations for url " + testedUrl);
-            eyes.open(webDriver, seleniumConfiguration);
+            //eyes.open(webDriver, seleniumConfiguration);
             this.eyes = eyes;
         } catch (Throwable e) {
             GeneralUtils.logExceptionStackTrace(logger, e);

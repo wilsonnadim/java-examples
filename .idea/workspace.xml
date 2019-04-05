@@ -2,119 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_148_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_148_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_148_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_148_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_148_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_6_0_0_BETA5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_framework_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_server_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_rcm_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_client_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_container_grizzly_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_core_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_spi_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_websocket_core_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openpnp_opencv_3_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_3_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_6_0_0_BETA5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_2_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_framework_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_server_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_rcm_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_jakarta_inject_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_connectors_jersey_apache_connector_2_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_inject_jersey_hk2_2_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_client_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_container_grizzly_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_spi_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_websocket_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_CR2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openpnp_opencv_3_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_3_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_148_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_149_2_beta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_148_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_149_2_beta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_148_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_150_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_148_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_149_2_beta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_148_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_149_2_beta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreditCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreditCards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MSG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MSG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestVGEyes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestVGEyes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExampleNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExampleNew.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumAndroidExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumAndroidNativeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumIosExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumIosNativeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ChromeMobileEmulationExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CreditCards.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample$myBrowsers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubTest$BasePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubTest$ExplorePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubTest$FeaturesPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubTest$HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorldCrossEnvironment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hyatt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hyatt2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/IgnoreRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ImagesSDKExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/JJFullPageScreenShotExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Localization.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MSG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MobileNativeTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/GuineaPigPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Parallell$ThreadPoolScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Parallell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sherwin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TableCompare.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestEyesBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestNGCrossBrowserBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestNGCrossBrowserTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestNGLocalBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestNGLocalResponsive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestNGSauceLabsBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestNGTextInputSauceLabs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestVGEyes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/UIStateChangeable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accessibilityTesting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridExampleNew.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="392">
+              <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,19 +100,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state>
+              <caret selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-start-column="2" selection-end-line="59" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#2541#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestVGEyes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="151">
+              <caret line="46" selection-start-line="46" selection-start-column="2" selection-end-line="60" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1334#1335#0" expanded="true" />
@@ -164,32 +138,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MobileNativeTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-608">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MSG.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="285">
+              <caret line="55" column="77" lean-forward="true" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#772#773#0" expanded="true" />
                 <element signature="e#824#825#0" expanded="true" />
               </folding>
@@ -198,10 +152,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestNGLocalBase.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -209,24 +163,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state>
+              <caret selection-start-column="2" selection-end-line="98" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleNew.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1551#1552#0" expanded="true" />
-                <element signature="e#1587#1588#0" expanded="true" />
-                <element signature="e#2574#2575#0" expanded="true" />
-                <element signature="e#2641#2642#0" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#1258#1259#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ChromeMobileEmulationExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state relative-caret-position="382">
+              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -234,8 +201,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="279">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -292,7 +259,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Hyatt2.java" />
         <option value="$PROJECT_DIR$/src/test/java/HelloWorld2.java" />
         <option value="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CaptureRegion.java" />
         <option value="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/Hyatt.java" />
         <option value="$PROJECT_DIR$/cucumber-java-selenium-webdriver-example/src/test/java/com/automatedtest/sample/infrastructure/driver/Setup.java" />
@@ -306,20 +272,21 @@
         <option value="$PROJECT_DIR$/src/test/java/visualGridNewExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java" />
         <option value="$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/visualGridExampleJNJ.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestEyesBase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/visualGridExampleNew.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestVGEyes.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java" />
         <option value="$PROJECT_DIR$/src/test/java/CreditCards.java" />
         <option value="$PROJECT_DIR$/src/test/java/StubbornJavaSitemapGenerator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/visualGridExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MSG.java" />
+        <option value="$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java" />
+        <option value="$PROJECT_DIR$/src/test/java/visualGridExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/TestVGEyes.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CaptureRegion.java" />
         <option value="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/visualGridExampleNew.java" />
       </list>
     </option>
   </component>
@@ -331,10 +298,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="849" />
-    <option name="y" value="276" />
-    <option name="width" value="1810" />
-    <option name="height" value="1074" />
+    <option name="x" value="-2345" />
+    <option name="y" value="97" />
+    <option name="width" value="1440" />
+    <option name="height" value="815" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -342,7 +309,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -522,6 +488,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -553,7 +520,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppiumAndroidExample">
+  <component name="RunManager" selected="JUnit.visualGridExampleNew">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -570,6 +537,15 @@
       <module name="java-examples" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AppiumAndroidExample" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CaptureRegion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-examples" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CaptureRegion" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -642,17 +618,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestVGEyes" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="java-examples" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestVGEyes" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
@@ -671,19 +636,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.visualGridExampleNew" />
-      <item itemvalue="JUnit.visualGridExampleNew2" />
-      <item itemvalue="JUnit.ResponsiveTestExample" />
-      <item itemvalue="TestNG.TestVGEyes" />
       <item itemvalue="JUnit.AppiumAndroidExample" />
+      <item itemvalue="JUnit.CaptureRegion" />
+      <item itemvalue="JUnit.ResponsiveTestExample" />
+      <item itemvalue="JUnit.visualGridExampleNew2" />
+      <item itemvalue="JUnit.visualGridExampleNew" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.visualGridExampleNew" />
+        <item itemvalue="JUnit.CaptureRegion" />
         <item itemvalue="JUnit.AppiumAndroidExample" />
         <item itemvalue="JUnit.visualGridExampleNew2" />
         <item itemvalue="JUnit.ResponsiveTestExample" />
-        <item itemvalue="TestNG.TestVGEyes" />
-        <item itemvalue="JUnit.visualGridExampleNew" />
       </list>
     </recent_temporary>
   </component>
@@ -702,27 +667,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FullPageScreenShotExample - 2019.03.01 at 09h 36m 07s.xml">
-      <configuration name="FullPageScreenShotExample" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FullPageScreenShotExample - 2019.03.01 at 09h 37m 07s.xml">
-      <configuration name="FullPageScreenShotExample" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FullPageScreenShotExample - 2019.03.01 at 09h 50m 02s.xml">
-      <configuration name="FullPageScreenShotExample" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="visualGridExampleNew - 2019.03.01 at 13h 49m 16s.xml">
-      <configuration name="visualGridExampleNew" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestVGEyes - 2019.03.01 at 14h 39m 52s.xml">
-      <configuration name="TestVGEyes" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="visualGridExampleNew2 - 2019.03.01 at 15h 07m 15s.xml">
-      <configuration name="visualGridExampleNew2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="visualGridExampleNew2 - 2019.03.01 at 15h 11m 10s.xml">
-      <configuration name="visualGridExampleNew2" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="visualGridExampleNew2 - 2019.03.01 at 15h 14m 16s.xml">
       <configuration name="visualGridExampleNew2" configurationId="JUnit" />
     </history-entry>
@@ -732,18 +676,38 @@
     <history-entry file="visualGridExampleNew2 - 2019.03.01 at 16h 29m 23s.xml">
       <configuration name="visualGridExampleNew2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="visualGridExampleNew - 2019.04.01 at 09h 54m 49s.xml">
+      <configuration name="visualGridExampleNew" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="visualGridExampleNew - 2019.04.01 at 10h 47m 42s.xml">
+      <configuration name="visualGridExampleNew" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CaptureRegion - 2019.04.01 at 10h 51m 53s.xml">
+      <configuration name="CaptureRegion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CaptureRegion - 2019.04.01 at 10h 52m 36s.xml">
+      <configuration name="CaptureRegion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CaptureRegion - 2019.04.01 at 10h 53m 36s.xml">
+      <configuration name="CaptureRegion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="visualGridExampleNew - 2019.04.02 at 14h 29m 06s.xml">
+      <configuration name="visualGridExampleNew" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="visualGridExampleNew - 2019.04.03 at 15h 25m 56s.xml">
+      <configuration name="visualGridExampleNew" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="849" y="276" width="1810" height="1074" extended-state="0" />
-    <editor active="true" />
+    <frame x="-2560" y="23" width="1440" height="815" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27941176" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23462088" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32711306" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.89309955" weight="0.39728883" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.89309955" weight="0.4757143" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48866212" weight="0.3984064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -751,7 +715,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.43608597" side_tool="true" visible="true" weight="0.31282586" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.563914" visible="true" weight="0.31282586" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.563914" weight="0.31190476" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -841,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -871,8 +828,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="45">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -947,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleJNJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state relative-caret-position="705">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -963,59 +920,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/StubbornJavaSitemapGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="60" column="53" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1675">
@@ -1084,8 +988,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MobileNativeTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-608">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="375">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1113,11 +1020,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="98" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="59" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestVGEyes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="46" selection-start-line="46" selection-start-column="2" selection-end-line="60" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="285">
+          <caret line="55" column="77" lean-forward="true" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#772#773#0" expanded="true" />
             <element signature="e#824#825#0" expanded="true" />
           </folding>
@@ -1126,50 +1113,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="392">
+          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleNew.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExampleNew2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="693">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1587#1588#0" expanded="true" />
-            <element signature="e#2574#2575#0" expanded="true" />
-            <element signature="e#2641#2642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestVGEyes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
           </folding>
         </state>
       </provider>
