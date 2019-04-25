@@ -1,8 +1,16 @@
-import com.applitools.eyes.rendering.Eyes;
-import com.applitools.eyes.rendering.Target;
-import com.applitools.eyes.visualGridClient.model.RenderingConfiguration;
-import com.applitools.eyes.visualGridClient.model.TestResultSummary;
-import com.applitools.eyes.visualGridClient.services.VisualGridManager;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResults;
+import com.applitools.eyes.selenium.BrowserType;
+import com.applitools.eyes.selenium.Configuration;
+import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
+import com.applitools.eyes.visualgrid.model.DeviceName;
+import com.applitools.eyes.visualgrid.model.ScreenOrientation;
+import com.applitools.eyes.visualgrid.model.TestResultContainer;
+import com.applitools.eyes.visualgrid.model.TestResultSummary;
+import com.applitools.eyes.visualgrid.services.EyesRunner;
+import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,26 +18,33 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-//3.149.1-beta
+import static org.junit.Assert.assertEquals;
 
 public class visualGridExample {
 
-    private VisualGridManager VisualGrid = new VisualGridManager(25);
-    private RenderingConfiguration renderConfig = new RenderingConfiguration();
-    private Eyes eyes = new Eyes(VisualGrid);
+    private EyesRunner visualGridRunner = new VisualGridRunner(10);
+    private Eyes eyes = new Eyes(visualGridRunner);
     private WebDriver driver;
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Before
     public void setUp() throws Exception {
 
-        renderConfig.setAppName("Rendering Grid Test");
-        renderConfig.setTestName("Hello World");
-        renderConfig.addBrowser(800,  600, RenderingConfiguration.BrowserType.FIREFOX);
-        renderConfig.addBrowser(700,  500, RenderingConfiguration.BrowserType.FIREFOX);
-        renderConfig.addBrowser(1200, 800, RenderingConfiguration.BrowserType.CHROME);
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
+        eyes.setForceFullPageScreenshot(true);
+        eyes.setStitchMode(StitchMode.CSS);
+        //eyes.setLogHandler(new StdoutLogHandler(true));
+        eyes.setServerUrl("https://eyes.applitools.com/");
 
-        eyes.setApiKey(applitoolsKey);
+        Configuration configuration = new Configuration();
+        configuration.addBrowser(700,  800, BrowserType.FIREFOX);
+        configuration.addBrowser(700,  800, BrowserType.CHROME);
+        configuration.addBrowser(1200, 800, BrowserType.FIREFOX);
+        configuration.addBrowser(1200, 800, BrowserType.CHROME);
+        configuration.addDeviceEmulation(DeviceName.iPhone_6_7_8, ScreenOrientation.PORTRAIT);
+        configuration.addDeviceEmulation(DeviceName.iPhone_X, ScreenOrientation.PORTRAIT);
+        configuration.addDeviceEmulation(DeviceName.Nexus_10, ScreenOrientation.LANDSCAPE);
+
+        eyes.setConfiguration(configuration);
 
         driver = new ChromeDriver();
         driver.get("https://applitools.com/helloworld");
@@ -38,17 +53,19 @@ public class visualGridExample {
     @Test
     public void HelloWorld() throws Exception {
 
-        eyes.open(driver, renderConfig);
-        eyes.check("first check", Target.window().withName("Step 1 A"));
-        eyes.check("second check", Target.window().fully(false).withName("Step 1 B"));
+        eyes.open(driver, "Applitools VG", "Hello World", new RectangleSize(1200, 800));
+        eyes.check("first check", Target.window());
         driver.findElement(By.tagName("button")).click();
-        eyes.check("third check", Target.window().withName("Step 2 A"));
-        eyes.check("forth check", Target.window().fully(false).withName("Step 2 B"));
+        eyes.check("second check", Target.window());
 
-        eyes.close();
+        TestResultSummary allTestResults = visualGridRunner.getAllTestResults();
+        System.out.println("Test Results: " + allTestResults);
 
-        TestResultSummary allTestResults = VisualGrid.getAllTestResults();
-        System.out.println("Results: " + allTestResults);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
     }
 
     @After
