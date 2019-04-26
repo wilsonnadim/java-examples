@@ -30,7 +30,7 @@ public class CaptureRegion {
     @Test
     public void GithubRegionTest() throws Exception {
         eyes.open(driver, "Github.com", "Check Region", new RectangleSize(1200, 800));
-        eyes.checkRegion(By.cssSelector("div.mx-auto.col-sm-8.col-md-6.hide-sm"), "GH");
+        eyes.checkRegion(By.cssSelector("img.CircleBadge-icon"), "GH");
         eyes.check("GH", Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-6.hide-sm")));
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
