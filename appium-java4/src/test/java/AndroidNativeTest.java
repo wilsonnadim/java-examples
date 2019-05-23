@@ -38,6 +38,12 @@ public class AndroidNativeTest {
 
             eyes.check(Target.window().fully());
 
+//            eyes.check("Fluent - Region by Selector and Element", Target.window()
+//                    .ignore(icons_array)
+//                    .ignore(element)
+//                    .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm"))
+//                    .region(By.className("MyNavBar")).matchLevel(MatchLevel.LAYOUT2));
+
             eyes.close();
 
         } finally {

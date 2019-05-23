@@ -1,5 +1,6 @@
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.MatchLevel;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
@@ -40,7 +41,8 @@ public class AppiumAndroidExample {
         driver.get("https://github.com/");
         eyes.open(driver, "Github.com", "Home Page");
         eyes.checkWindow("Home Page Screenshot");
-        eyes.close();
+        TestResults results = eyes.close(false);
+        //assertEqual(true, results.isPassed());
     }
 
     @After

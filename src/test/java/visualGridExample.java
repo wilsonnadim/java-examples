@@ -40,9 +40,12 @@ public class visualGridExample {
         configuration.addBrowser(700,  800, BrowserType.CHROME);
         configuration.addBrowser(1200, 800, BrowserType.FIREFOX);
         configuration.addBrowser(1200, 800, BrowserType.CHROME);
+        configuration.addBrowser(1200, 800, BrowserType.IE_10);
+        configuration.addBrowser(1200, 800, BrowserType.IE_11);
+        configuration.addBrowser(1200, 800, BrowserType.EDGE);
         configuration.addDeviceEmulation(DeviceName.iPhone_6_7_8, ScreenOrientation.PORTRAIT);
         configuration.addDeviceEmulation(DeviceName.iPhone_X, ScreenOrientation.PORTRAIT);
-        configuration.addDeviceEmulation(DeviceName.Nexus_10, ScreenOrientation.LANDSCAPE);
+        configuration.addDeviceEmulation(DeviceName.Pixel_2_XL, ScreenOrientation.LANDSCAPE);
 
         eyes.setConfiguration(configuration);
 

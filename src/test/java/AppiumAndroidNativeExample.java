@@ -41,7 +41,12 @@ public class AppiumAndroidNativeExample {
         List<WebElement> we  = driver.findElements(By.id("Row Category Name"));
         we.get(2).click();
         eyes.open(driver, "Native App Test", "Native Page");
+
         eyes.checkWindow("Test");
+        driver.findElement(By.id("id")).click();
+        eyes.checkWindow("test");
+
+
         eyes.close();
     }
 

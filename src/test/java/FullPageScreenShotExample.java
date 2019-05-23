@@ -1,4 +1,7 @@
-import com.applitools.eyes.*;
+import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.junit.After;
@@ -23,14 +26,22 @@ public class FullPageScreenShotExample {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
+
+        eyes.setSendDom(true);
+
         //eyes.setMatchLevel(MatchLevel.LAYOUT2);
+
         eyes.setLogHandler(new StdoutLogHandler(true));
         //eyes.setLogHandler(new FileLogger("C:\\Path\\To\\Your\\Dir\\Applitools.log", false, true));
         //eyes.setWaitBeforeScreenshots(3000);
         //eyes.setMatchTimeout(5000);
+
         //eyes.setBranchName("MyAwesomeBranchAgain");
 
+        eyes.setHideCaret(true);
+
         BatchInfo batch = new BatchInfo("My Fullpage Test");
+        //batch.setId("1234");
         eyes.setBatch(batch);
 
 
@@ -48,6 +59,7 @@ public class FullPageScreenShotExample {
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }
+
 
     @After
     public void tearDown() throws Exception {
