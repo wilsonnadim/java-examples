@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertEquals;
 
@@ -30,7 +31,12 @@ public class CaptureRegion {
     @Test
     public void GithubRegionTest() throws Exception {
         eyes.open(driver, "Github.com", "Check Region", new RectangleSize(1200, 800));
-        eyes.checkRegion(By.cssSelector("img.CircleBadge-icon"), "GH");
+
+        eyes.checkRegion(By.cssSelector("img.CircleBadge-icon"), "Circle Badge Clasic");
+
+        WebElement element = driver.findElement(By.cssSelector("img.CircleBadge-icon"));
+        eyes.check("Fluent by Element", Target.region(element));
+
         eyes.check("GH", Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-6.hide-sm")));
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());

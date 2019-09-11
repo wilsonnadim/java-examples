@@ -56,7 +56,11 @@ public class FluentApiTest {
                 .ignore(element)
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")));
 
-        //eyes.check("Fluent - Add Region Match Level", Target.region(By.id("blah")).matchLevel(MatchLevel.LAYOUT2));
+        eyes.check("Fluent - programaticaly add content region", Target.window().content(By.id("YouContentRegionID")).ignoreDisplacements(true));
+
+        eyes.check("Fluent - Ignore Displacements", Target.window().ignoreDisplacements(true));
+
+        eyes.check("Fluent - Add Region Match Level", Target.region(By.id("blah")).matchLevel(MatchLevel.LAYOUT2).ignoreDisplacements(true));
 
         TestResults results = eyes.close(false);
         //assertEquals(true, results.isPassed());

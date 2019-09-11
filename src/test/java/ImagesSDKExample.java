@@ -22,7 +22,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class ImagesSDKExample {
 
@@ -39,12 +39,15 @@ public class ImagesSDKExample {
     @Before
     public void setUp() throws Exception {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        eyes.setHostOS("OSX 10.12");
-        eyes.setHostApp("Chrome 59.0");
+        eyes.setMatchLevel(MatchLevel.STRICT);
+        //eyes.setHostOS("OSX 10.12");
+        //eyes.setHostApp("Chrome 59.0");
+        eyes.setIgnoreCaret(false);
 
         driver = new ChromeDriver();
         driver.get("https://www.github.com");
+
+        //Set this if running in CI with our Plugin. e.g. Jenkins
         if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
             batch.setId(System.getenv("APPLITOOLS_BATCH_ID"));
         }
@@ -52,9 +55,12 @@ public class ImagesSDKExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        eyes.open("Github", "Github Home Page", new RectangleSize(800, 200));
 
+        eyes.open("github.com", "Images SDK Test", new RectangleSize(1000, 800));
+
+        //Create a screenshot first...
         File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
         String fileName = "github-homepage.png";
 
         try {
@@ -66,10 +72,11 @@ public class ImagesSDKExample {
 
         }
 
+        //Now upload the screenshot...
         BufferedImage img;
         try {
             img = ImageIO.read(new File(fileName));
-            eyes.checkImage(img, "Github Home Page");
+            eyes.checkImage(img, "A Screenshot");
         }
         catch (IOException e)
         {
@@ -78,7 +85,7 @@ public class ImagesSDKExample {
         }
 
         TestResults results = eyes.close(false);
-        assertTrue(results.isPassed());
+        assertEquals(true, results.isPassed());
     }
 
     @After

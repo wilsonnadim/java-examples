@@ -35,6 +35,8 @@ public class HelloWorldCrossEnvironment {
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setBaselineEnvName("MacOSX-Chrome");
         eyes.setBatch(batch);
+        eyes.setForceFullPageScreenshot(true);
+        eyes.setHideScrollbars(true);
 
         //Layout should be used on cross-env tests.
         //Almost everything will fail when running against a different env otherwise.
@@ -88,8 +90,8 @@ public class HelloWorldCrossEnvironment {
     public void Test5() throws Exception {
 
         //Produces a New unsavable test. Does not match hostOS, hostApp or viewport
-        eyes.setHostOS("Awesome-OS");
-        eyes.setHostApp("Awesome-Browser");
+        eyes.setHostOS("Linux");
+        eyes.setHostApp("Chrome");
         eyes.open(driver, "Hello World!", "Test 5", new RectangleSize(763, 763));
         eyes.checkWindow("Test 5");
         eyes.close(false);

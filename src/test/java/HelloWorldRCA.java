@@ -40,7 +40,7 @@ public class HelloWorldRCA {
         // Navigate the browser to the "hello world!" web-site.
         driver.get("https://applitools.com/helloworld");
 
-        eyes.open(driver, "My Hello World!", "RCA Example", new RectangleSize(1200, 800));
+        eyes.open(driver, "My Hello World!", "RCA Example", new RectangleSize(1000, 600));
 
         // Visual checkpoint #1.
         eyes.checkWindow("Hello!");
@@ -61,7 +61,7 @@ public class HelloWorldRCA {
         // Navigate the browser to the "hello world!" web-site.
         driver.get("https://applitools.com/helloworld");
 
-        eyes.open(driver, "My Hello World!", "RCA Example", new RectangleSize(1200, 800));
+        eyes.open(driver, "My Hello World!", "RCA Example", new RectangleSize(1000, 600));
 
         // Visual checkpoint #1.
         eyes.checkWindow("Hello!");

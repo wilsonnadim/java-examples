@@ -32,7 +32,6 @@ public class AppiumIosNativeExample {
         capability.setCapability("platformVersion", "10.3");
         capability.setCapability("app", "https://store.applitools.com/download/iOS.TestApp.app.zip");
 
-        //driver = new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"), capability);
         driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), capability);
     }
 

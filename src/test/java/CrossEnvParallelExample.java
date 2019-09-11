@@ -106,6 +106,8 @@ public class CrossEnvParallelExample {
         //Almost everything will fail when using a different match level otherwise.
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
 
+//        eyes.setSaveNewTests(true);
+
         //Optional... add a customized property to filter baseline results
         String booleanString = String.valueOf(baseline);
         eyes.addProperty("Baselines", booleanString);

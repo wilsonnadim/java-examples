@@ -1,18 +1,12 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
 import com.applitools.eyes.selenium.BrowserType;
 import com.applitools.eyes.selenium.Configuration;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
 import com.applitools.eyes.visualgrid.model.DeviceName;
-import com.applitools.eyes.visualgrid.model.ScreenOrientation;
-import com.applitools.eyes.visualgrid.model.TestResultContainer;
-import com.applitools.eyes.visualgrid.model.TestResultSummary;
-import com.applitools.eyes.visualgrid.services.EyesRunner;
 import com.applitools.eyes.visualgrid.services.VisualGridRunner;
+import com.applitools.eyes.visualgrid.model.ScreenOrientation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -27,6 +21,7 @@ import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
+
 
 @RunWith(Parallell.class)
 public class visualGridParallel {
@@ -78,7 +73,7 @@ public class visualGridParallel {
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setServerUrl("https://eyes.applitools.com/");
 
-        Configuration configuration = new Configuration();
+        Configuration configuration = eyes.getConfiguration();
         configuration.setBatch(batch);
         configuration.addBrowser(700,  800, BrowserType.FIREFOX);
         configuration.addBrowser(700,  800, BrowserType.CHROME);
@@ -96,11 +91,12 @@ public class visualGridParallel {
     }
 
     @Test
-    public void GSKSites() throws Exception {
+    public void CrawlGSKSites() throws Exception {
+        //click a popup if it's displayed first
         eyes.open(driver, "GSK", gskUrl, new RectangleSize(1200, 800));
         eyes.check(gskUrl, Target.window().fully());
 
-        TestResultSummary allTestResults = visualGridRunner.getAllTestResults();
+        TestResultsSummary allTestResults = visualGridRunner.getAllTestResults();
         System.out.println("Test Results: " + allTestResults);
 
         TestResultContainer[] results = allTestResults.getAllResults();
