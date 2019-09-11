@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
-@RunWith(Parallell.class)
+@RunWith(Parallel.class)
 public class SauceLabsAppiumNativeExample {
 
     protected String os;

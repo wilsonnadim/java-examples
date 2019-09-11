@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class Parallell extends Parameterized {
+public class Parallel extends Parameterized {
 
     private static class ThreadPoolScheduler implements RunnerScheduler {
         private ExecutorService executor;
@@ -32,7 +32,7 @@ public class Parallell extends Parameterized {
         }
     }
 
-    public Parallell(Class<?> klass) throws Throwable {
+    public Parallel(Class<?> klass) throws Throwable {
         super(klass);
         setScheduler(new ThreadPoolScheduler());
     }

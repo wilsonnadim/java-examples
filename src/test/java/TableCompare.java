@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.LinkedList;
 
-@RunWith(Parallell.class)
+@RunWith(Parallel.class)
 public class TableCompare {
     protected Integer width;
     protected Integer height;

@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 
 
-@RunWith(Parallell.class)
+@RunWith(Parallel.class)
 public class visualGridCrawler {
 
     private String gskUrl;

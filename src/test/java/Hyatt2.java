@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-@RunWith(Parallell.class)
+@RunWith(Parallel.class)
 public class Hyatt2 {
 
     private Eyes eyes = new Eyes();

@@ -23,7 +23,7 @@ import java.util.LinkedList;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(Parallell.class)
+@RunWith(Parallel.class)
 public class SauceLabsExampleDesktop {
 
     @Rule
