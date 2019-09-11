@@ -24,7 +24,7 @@ import static org.junit.Assert.assertEquals;
 
 
 @RunWith(Parallell.class)
-public class visualGridParallel {
+public class visualGridCrawler {
 
     private String gskUrl;
 
@@ -39,7 +39,7 @@ public class visualGridParallel {
         return env;
     }
 
-    public visualGridParallel(String gskUrl) {
+    public visualGridCrawler(String gskUrl) {
         this.gskUrl = gskUrl;
     }
 
@@ -92,7 +92,9 @@ public class visualGridParallel {
 
     @Test
     public void CrawlGSKSites() throws Exception {
+
         //click a popup if it's displayed first
+
         eyes.open(driver, "GSK", gskUrl, new RectangleSize(1200, 800));
         eyes.check(gskUrl, Target.window().fully());
 
