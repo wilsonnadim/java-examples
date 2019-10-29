@@ -2,84 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_appium_java4_4_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_158_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java4_4_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_158_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java4_jersey2x_4_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_158_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_158_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java4_4_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_158_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java4_4_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_7_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appium-java4/src/test/java/AndroidVisualLocatorsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/abTestExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_157_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_157_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_157_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_157_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_157_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appium-java4/appiumjava4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/appium-java4/appiumjava4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appium-java4/target/test-classes/AndroidNativeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/appium-java4/target/test-classes/AndroidNativeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appium-java4/target/test-classes/IOSNativeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/appium-java4/target/test-classes/IOSNativeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PerfectoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PerfectoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accessibilityTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accessibilityTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BrowserStackExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Hyatt2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hyatt2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ImagesSDKExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ImagesSDKExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Parallell$ThreadPoolScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Parallell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TableCompare.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TableCompare.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accessibilityTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accessibilityTesting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridCrawler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/appium-java4/target/" />
@@ -152,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PerfectoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+            <state relative-caret-position="172">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#952#953#0" expanded="true" />
@@ -1065,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PerfectoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+        <state relative-caret-position="172">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#952#953#0" expanded="true" />

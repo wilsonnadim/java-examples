@@ -17,8 +17,8 @@ import java.net.URL;
 
 public class PerfectoTest {
 
-    private String USER_NAME = "moshe.milman@applitools.com";
-    private String PASSWORD = "Perfecto1";
+    private String USER_NAME = "perfectoUser";
+    private String PASSWORD = "perfectoPassword";
     private String url = "https://partners.perfectomobile.com/nexperience/perfectomobile/wd/hub";
 
     private Eyes eyes = new Eyes();
