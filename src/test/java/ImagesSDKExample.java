@@ -40,8 +40,10 @@ public class ImagesSDKExample {
     public void setUp() throws Exception {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setMatchLevel(MatchLevel.STRICT);
+
         //eyes.setHostOS("OSX 10.12");
         //eyes.setHostApp("Chrome 59.0");
+
         eyes.setIgnoreCaret(false);
 
         driver = new ChromeDriver();

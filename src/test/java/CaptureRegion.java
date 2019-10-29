@@ -8,8 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,6 +26,8 @@ public class CaptureRegion {
         eyes.setStitchMode(StitchMode.CSS);
         driver = new ChromeDriver();
         driver.get("https://www.github.com");
+        //eyes.setProxy(new ProxySettings("http://YOUR-PROXY-URI", 2333));
+
     }
 
     @Test
@@ -35,9 +37,10 @@ public class CaptureRegion {
         eyes.checkRegion(By.cssSelector("img.CircleBadge-icon"), "Circle Badge Clasic");
 
         WebElement element = driver.findElement(By.cssSelector("img.CircleBadge-icon"));
-        eyes.check("Fluent by Element", Target.region(element));
+        eyes.check("Fluent by Element", Target.region(element).ignoreDisplacements(true));
 
         eyes.check("GH", Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-6.hide-sm")));
+
         TestResults results = eyes.close(false);
         assertEquals(true, results.isPassed());
     }

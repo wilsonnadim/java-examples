@@ -36,7 +36,7 @@ public class AndroidNativeTest {
 
             eyes.open(driver, "Applitools Demo", "Appium Native Android with Full Page Screenshot");
 
-            eyes.check(Target.window().fully());
+            eyes.check( Target.window().fully());
 
 //            eyes.check("Fluent - Region by Selector and Element", Target.window()
 //                    .ignore(icons_array)

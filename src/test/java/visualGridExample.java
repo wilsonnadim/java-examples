@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import static org.junit.Assert.assertEquals;
 
 public class visualGridExample {
@@ -25,11 +26,11 @@ public class visualGridExample {
     public void setUp() throws Exception {
 
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-        eyes.setServerUrl("https://eyes.applitools.com");
+        eyes.setServerUrl("https://eyesapi.applitools.com");
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setLogHandler(new StdoutLogHandler(true));
-        eyes.setLogHandler(new FileLogger("/Users/justin/logs/Applitools.log", false, true));
+        //eyes.setLogHandler(new FileLogger("/Users/justin/logs/Applitools.log", false, true));
         eyes.setIsDisabled(false);
 
         Configuration config = eyes.getConfiguration();
@@ -53,7 +54,7 @@ public class visualGridExample {
     @Test
     public void HelloWorld() throws Exception {
 
-        eyes.open(driver, "Applitools VG 5", "Hello World 5", new RectangleSize(1200, 800));
+        eyes.open(driver, "Applitools VG", "Hello World", new RectangleSize(1200, 800));
 
         eyes.check("first check", Target.window());
 
@@ -61,12 +62,17 @@ public class visualGridExample {
 
         eyes.check("second check", Target.window().ignoreDisplacements(true));
 
-        TestResultsSummary allTestResults = visualGridRunner.getAllTestResults();
-        System.out.println("Test Results: " + allTestResults);
+        TestResultsSummary allTestResults = visualGridRunner.getAllTestResults(false);
+        //System.out.println("Test Results: " + allTestResults);
 
         TestResultContainer[] results = allTestResults.getAllResults();
         for(TestResultContainer result: results){
             TestResults test = result.getTestResults();
+
+            if (test.getMismatches() > 0) {
+                System.out.println("My Mismatch URL: " + test.getUrl() );
+            }
+
             assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
         }
     }
@@ -77,3 +83,4 @@ public class visualGridExample {
         eyes.abortIfNotClosed();
     }
 }
+

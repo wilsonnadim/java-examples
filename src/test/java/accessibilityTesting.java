@@ -1,4 +1,3 @@
-import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +10,8 @@ public class accessibilityTesting {
         Eyes eyes = new Eyes();
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         WebDriver driver = new ChromeDriver();
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        //eyes.setMatchLevel(MatchLevel.STRICT);
+        eyes.setForceFullPageScreenshot(true);
 
         try {
             eyes.open(driver, "Familysearch.org", "Accessibility Testing", new RectangleSize(1500, 1200));
