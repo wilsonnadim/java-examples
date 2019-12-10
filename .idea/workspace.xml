@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DownloadDiffExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DownloadDiffExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/NewVG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TutorialExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TutorialExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/appium-java4/target/" />
@@ -89,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="250">
+              <caret line="42" column="58" lean-forward="true" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1108,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="250">
+          <caret line="42" column="58" lean-forward="true" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

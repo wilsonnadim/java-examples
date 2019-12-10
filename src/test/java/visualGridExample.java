@@ -37,7 +37,7 @@ public class visualGridExample {
         batchInfo.setNotifyOnCompletion(true);
         eyes.setBatch(batchInfo);
 
-        Configuration config = eyes.getConfiguration();
+        Configuration config = eyes.getConfiguration(); //getConfiguration gets the eyes.set values above and adds to the config...
         config.addBrowser(700,  800, BrowserType.CHROME);
         config.addBrowser(700,  800, BrowserType.FIREFOX);
         config.addBrowser(1200, 800, BrowserType.FIREFOX);
