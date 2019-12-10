@@ -27,7 +27,6 @@ public class CaptureRegion {
         driver = new ChromeDriver();
         driver.get("https://www.github.com");
         //eyes.setProxy(new ProxySettings("http://YOUR-PROXY-URI", 2333));
-
     }
 
     @Test
@@ -42,6 +41,8 @@ public class CaptureRegion {
         eyes.check("GH", Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-6.hide-sm")));
 
         TestResults results = eyes.close(false);
+
+
         assertEquals(true, results.isPassed());
     }
 

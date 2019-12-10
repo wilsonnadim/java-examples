@@ -21,7 +21,6 @@ public class HelloWorld {
         Eyes eyes = new Eyes();
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-        eyes.setEnvName("BLAHHHHHHHH");
 
         try{
 
@@ -29,7 +28,7 @@ public class HelloWorld {
             driver.get("https://applitools.com/helloworld");
 
             // Start the test and set the browser's viewport size to 800x600.
-            eyes.open(driver, "My Hello World!", "My first Selenium Java test!", new RectangleSize(2222, 800));
+            eyes.open(driver, "My Hello World!", "My first Selenium Java test!", new RectangleSize(1200, 800));
 
             // Visual checkpoint #1.
             eyes.checkWindow("Hello!");

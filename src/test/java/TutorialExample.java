@@ -1,6 +1,7 @@
 import com.applitools.eyes.*;
 import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,35 +18,35 @@ public class TutorialExample {
     @Before
     public void setUp() throws Exception {
 
-        eyes.setServerUrl("https://eyes.applitools.com");
+        eyes.setServerUrl("https://eyesapi.applitools.com");
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
         driver = new ChromeDriver();
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
+    public void Demo() throws Exception {
 
-        eyes.open(driver, "Demo App", "Smoke Test", new RectangleSize(800, 600));
+        eyes.open(driver, "Demo App", "Login Page", new RectangleSize(800, 600));
 
         driver.get("https://demo.applitools.com");
 
-        eyes.checkWindow("Login Window");
+        eyes.check("Login Window", Target.window());
 
         eyes.closeAsync();
 
-        TestResultsSummary allTestResults = runner.getAllTestResults();
+    }
 
+    @After
+    public void tearDown() throws Exception {
+
+        TestResultsSummary allTestResults = runner.getAllTestResults();
         TestResultContainer[] results = allTestResults.getAllResults();
         for(TestResultContainer result: results){
             TestResults test = result.getTestResults();
             assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
         }
 
-    }
-
-    @After
-    public void tearDown() throws Exception {
         driver.quit();
         eyes.abortIfNotClosed();
     }

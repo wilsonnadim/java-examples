@@ -32,7 +32,9 @@ public class FluentApiTest {
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
+
         eyes.setMatchLevel(MatchLevel.STRICT);
+
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setBatch(batch);
 
@@ -60,7 +62,7 @@ public class FluentApiTest {
 
         eyes.check("Fluent - Ignore Displacements", Target.window().ignoreDisplacements(true));
 
-        eyes.check("Fluent - Add Region Match Level", Target.region(By.id("myID")).matchLevel(MatchLevel.LAYOUT2).ignoreDisplacements(true));
+        eyes.check("Fluent - Add Region Match Level", Target.region(By.cssSelector("myID")).matchLevel(MatchLevel.CONTENT));
 
         eyes.check("Fluent - Add Region Match Level", Target.frame("myFrameId"));
 

@@ -12,9 +12,9 @@ import java.util.List;
 
 public class DownloadDiffExample {
 
-    private static String downloadDir = "/Your/Output/Dir";
+    private static String downloadDir = "/Users/justin/repos/applitools/results";
     private static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
-    private static String viewKey = "YourViewKey";
+    private static String viewKey = "dilGmVMZ41jydyha7LNzZn0TDqirGX39wLFDypN9g88110";
 
     public static void main(String[] args) throws Exception {
 
@@ -26,7 +26,7 @@ public class DownloadDiffExample {
         try {
             // Start visual testing with browser viewport set to 800x600.
             // Make sure to use the returned driver from this point on.
-            eyes.open(driver, "Hello World!", "My first Selenium Java test!", new RectangleSize(800, 600));
+            eyes.open(driver, "Hello World!", "Selenium Java test!!!", new RectangleSize(1120, 600));
 
             // Navigate the browser to the "hello world!" web-site.
             driver.get("https://applitools.com/helloworld");

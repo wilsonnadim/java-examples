@@ -28,12 +28,16 @@ public class visualGridExample {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setServerUrl("https://eyesapi.applitools.com");
         eyes.setForceFullPageScreenshot(true);
-        eyes.setStitchMode(StitchMode.CSS);
+        eyes.setStitchMode(StitchMode.SCROLL);
         eyes.setLogHandler(new StdoutLogHandler(true));
         //eyes.setLogHandler(new FileLogger("/Users/justin/logs/Applitools.log", false, true));
         eyes.setIsDisabled(false);
 
+        BatchInfo batchInfo = new BatchInfo("Hello World Batch - Java");
+        batchInfo.setNotifyOnCompletion(true);
+
         Configuration config = eyes.getConfiguration();
+        config.addBrowser(1200, 800, BrowserType.EDGE);
         config.addBrowser(700,  800, BrowserType.CHROME);
         config.addBrowser(700,  800, BrowserType.FIREFOX);
         config.addBrowser(1200, 800, BrowserType.FIREFOX);
@@ -54,13 +58,18 @@ public class visualGridExample {
     @Test
     public void HelloWorld() throws Exception {
 
-        eyes.open(driver, "Applitools VG", "Hello World", new RectangleSize(1200, 800));
+        eyes.open(driver, "Applitools VG", "Hello World35643", new RectangleSize(1200, 800));
 
         eyes.check("first check", Target.window());
 
         driver.findElement(By.tagName("button")).click();
 
-        eyes.check("second check", Target.window().ignoreDisplacements(true));
+        eyes.check("second check", Target.window());
+
+    }
+
+    @After
+    public void tearDown() throws Exception {
 
         TestResultsSummary allTestResults = visualGridRunner.getAllTestResults(false);
         //System.out.println("Test Results: " + allTestResults);
@@ -75,10 +84,7 @@ public class visualGridExample {
 
             assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
         }
-    }
 
-    @After
-    public void tearDown() throws Exception {
         driver.quit();
         eyes.abortIfNotClosed();
     }

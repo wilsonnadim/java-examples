@@ -1,4 +1,7 @@
-import com.applitools.eyes.*;
+import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.TestResults;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -19,30 +22,23 @@ public class FullPageScreenShotExample {
     @Before
     public void setUp() throws Exception {
 
-        eyes.setServerUrl("https://eyesapi.applitools.com");
+        eyes.setServerUrl("https://sdeyesapi.applitools.com");
         eyes.setApiKey(applitoolsKey);
         eyes.setHideScrollbars(true);
-        eyes.setForceFullPageScreenshot(false);
-        eyes.setStitchMode(StitchMode.SCROLL);
-
-        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        eyes.setForceFullPageScreenshot(true);
+        eyes.setStitchMode(StitchMode.CSS);
+        //eyes.setMatchLevel(MatchLevel.CONTENT);
 
         eyes.setLogHandler(new StdoutLogHandler(true));
-
+        //Save logs to a file
         //eyes.setLogHandler(new FileLogger("C:\\Path\\To\\Your\\Dir\\Applitools.log", false, true));
 
         //eyes.setMatchTimeout(5000);
         //eyes.setWaitBeforeScreenshots(3000);
 
-        eyes.setBranchName("HolyBranch3");
-        eyes.setParentBranchName("HolyBranch3");
-
-        eyes.setBaselineBranchName("HolyBranch2");
-
         eyes.setHideCaret(true);
 
-        BatchInfo batch = new BatchInfo("My Batch - Justin");
-        //batch.setId("1234");
+        BatchInfo batch = new BatchInfo("My Batch");
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
@@ -50,9 +46,9 @@ public class FullPageScreenShotExample {
 
     @Test
     public void GithubHomePage() throws Exception {
-        driver.get("https://www.google.com");
+        driver.get("https://www.github.com");
 
-        eyes.open(driver, "github.com", "Home Page65", new RectangleSize(1000, 600));
+        eyes.open(driver, "github.com", "Home Page", new RectangleSize(1300, 600));
 
         eyes.check("Github", Target.window());
 
