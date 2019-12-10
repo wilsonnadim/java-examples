@@ -58,7 +58,7 @@ public class visualGridExample {
     @Test
     public void HelloWorld() throws Exception {
 
-        eyes.open(driver, "Applitools VG", "Hello World35643", new RectangleSize(1200, 800));
+        eyes.open(driver, "Applitools VG", "Hello World", new RectangleSize(1200, 800));
 
         eyes.check("first check", Target.window());
 

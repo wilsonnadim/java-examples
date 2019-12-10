@@ -80,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="42" column="58" lean-forward="true" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+            <state relative-caret-position="314">
+              <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -601,9 +601,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="visualGridExample - 2019.12.02 at 08h 04m 11s.xml">
-      <configuration name="visualGridExample" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="mc - 2019.12.02 at 11h 50m 27s.xml">
       <configuration name="mc" configurationId="JUnit" />
     </history-entry>
@@ -629,6 +626,9 @@
       <configuration name="visualGridExample" configurationId="JUnit" />
     </history-entry>
     <history-entry file="visualGridExample - 2019.12.10 at 10h 24m 46s.xml">
+      <configuration name="visualGridExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="visualGridExample - 2019.12.10 at 10h 53m 48s.xml">
       <configuration name="visualGridExample" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1099,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="42" column="58" lean-forward="true" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+        <state relative-caret-position="314">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
