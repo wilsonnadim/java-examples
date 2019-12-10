@@ -28,16 +28,16 @@ public class visualGridExample {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setServerUrl("https://eyesapi.applitools.com");
         eyes.setForceFullPageScreenshot(true);
-        eyes.setStitchMode(StitchMode.SCROLL);
+        eyes.setStitchMode(StitchMode.CSS);
         eyes.setLogHandler(new StdoutLogHandler(true));
         //eyes.setLogHandler(new FileLogger("/Users/justin/logs/Applitools.log", false, true));
         eyes.setIsDisabled(false);
 
         BatchInfo batchInfo = new BatchInfo("Hello World Batch - Java");
         batchInfo.setNotifyOnCompletion(true);
+        eyes.setBatch(batchInfo);
 
         Configuration config = eyes.getConfiguration();
-        config.addBrowser(1200, 800, BrowserType.EDGE);
         config.addBrowser(700,  800, BrowserType.CHROME);
         config.addBrowser(700,  800, BrowserType.FIREFOX);
         config.addBrowser(1200, 800, BrowserType.FIREFOX);
@@ -65,6 +65,8 @@ public class visualGridExample {
         driver.findElement(By.tagName("button")).click();
 
         eyes.check("second check", Target.window());
+
+        eyes.closeAsync();
 
     }
 
