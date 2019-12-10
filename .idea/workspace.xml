@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FannieMae.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/kw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_158_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_158_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_158_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_158_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_158_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_158_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_158_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_158_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_158_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_158_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-examples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TutorialExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TutorialExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DownloadDiffExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DownloadDiffExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TutorialExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TutorialExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/appium-java4/target/" />
@@ -64,11 +41,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,18 +82,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="918">
               <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridCrawler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-898">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -237,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/test/java/MobileNativeTests.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/PerfectoTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/kw.java" />
         <option value="$PROJECT_DIR$/src/test/java/MSG.java" />
         <option value="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" />
@@ -248,6 +224,7 @@
         <option value="$PROJECT_DIR$/src/test/java/visualGridExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CaptureRegion.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" />
       </list>
     </option>
   </component>
@@ -1008,16 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/ApplitoolsTestResultsHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -1136,6 +1103,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
