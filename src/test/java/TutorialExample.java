@@ -26,20 +26,14 @@ public class TutorialExample {
 
     @Test
     public void Demo() throws Exception {
-
-        eyes.open(driver, "Demo App", "Login Page", new RectangleSize(800, 600));
-
         driver.get("https://demo.applitools.com");
-
+        eyes.open(driver, "Demo App", "Login Page", new RectangleSize(800, 600));
         eyes.check("Login Window", Target.window());
-
         eyes.closeAsync();
-
     }
 
     @After
     public void tearDown() throws Exception {
-
         TestResultsSummary allTestResults = runner.getAllTestResults();
         TestResultContainer[] results = allTestResults.getAllResults();
         for(TestResultContainer result: results){

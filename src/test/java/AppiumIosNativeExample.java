@@ -1,6 +1,7 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import io.appium.java_client.ios.IOSDriver;
 import org.junit.After;
 import org.junit.Before;
@@ -10,10 +11,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+import static org.junit.Assert.assertEquals;
 
 public class AppiumIosNativeExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
@@ -39,12 +42,20 @@ public class AppiumIosNativeExample {
     public void iOSTestApp() throws Exception {
         TimeUnit.SECONDS.sleep(5);
         eyes.open(driver, "Test iOS App", "Main View");
-        eyes.checkWindow("TEST");
-        eyes.close();
+        eyes.check("Home Page Screenshot", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

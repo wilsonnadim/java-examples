@@ -1,5 +1,5 @@
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -10,12 +10,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static org.junit.Assert.assertEquals;
 
 public class FullPageScreenShotEsriExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
 
     @Before
@@ -25,9 +25,9 @@ public class FullPageScreenShotEsriExample {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        //eyes.setLogHandler(new StdoutLogHandler(true));
+        eyes.setLogHandler(new StdoutLogHandler(true));
+
         driver = new ChromeDriver();
-        eyes.setSendDom(false);
     }
 
     @Test
@@ -43,15 +43,20 @@ public class FullPageScreenShotEsriExample {
         }
 
         eyes.open(driver, "esri.com", "Education - Our Story", new RectangleSize(1080, 800));
-
         eyes.check("Our Story", Target.region(By.cssSelector("body")).fully().ignoreDisplacements(true));
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

@@ -1,7 +1,5 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -15,15 +13,15 @@ import static org.junit.Assert.assertEquals;
 
 public class FullPageScreenShotExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Before
     public void setUp() throws Exception {
 
-        eyes.setServerUrl("https://sdeyesapi.applitools.com");
-        eyes.setApiKey(applitoolsKey);
+        eyes.setServerUrl("https://eyesapi.applitools.com");
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
@@ -33,7 +31,7 @@ public class FullPageScreenShotExample {
         //Save logs to a file
         //eyes.setLogHandler(new FileLogger("C:\\Path\\To\\Your\\Dir\\Applitools.log", false, true));
 
-        //eyes.setMatchTimeout(5000);
+        eyes.setMatchTimeout(5000);
         //eyes.setWaitBeforeScreenshots(3000);
 
         eyes.setHideCaret(true);
@@ -45,31 +43,42 @@ public class FullPageScreenShotExample {
     }
 
     @Test
-    public void GithubHomePage() throws Exception {
+    public void GithubHomePageProd() throws Exception {
         driver.get("https://www.github.com");
 
         eyes.open(driver, "github.com", "Home Page", new RectangleSize(1300, 600));
-
         eyes.check("Github", Target.window());
+        eyes.closeAsync();
+    }
 
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+    @Test
+    public void GithubHomePageQA() throws Exception {
+        driver.get("https://www.github-qa.com");
+
+        eyes.open(driver, "github.com", "Home Page", new RectangleSize(1300, 600));
+        eyes.check("Github", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
     public void Google() throws Exception {
         driver.get("https://www.google.com");
+
         eyes.open(driver, "google.com", "Home Page", new RectangleSize(1200, 800));
-
-        eyes.checkWindow("Google");
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("Google", Target.window());
+        eyes.closeAsync();
     }
 
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

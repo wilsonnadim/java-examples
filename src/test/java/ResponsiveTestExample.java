@@ -1,9 +1,8 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -39,7 +38,8 @@ public class ResponsiveTestExample {
         this.height = height;
     }
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
@@ -61,7 +61,6 @@ public class ResponsiveTestExample {
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
         driver.get("https://www.github.com");
     }
 
@@ -72,16 +71,21 @@ public class ResponsiveTestExample {
         String w = Integer.toString(width);
         String h = Integer.toString(height);
 
-        eyes.checkWindow(w + "x" + h);
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check(w + h, Target.window());
+        eyes.closeAsync();
     }
 
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

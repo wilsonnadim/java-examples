@@ -1,11 +1,10 @@
 //https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
 
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.FixedCutProvider;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
@@ -17,7 +16,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 import java.util.LinkedList;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parallel.class)
@@ -58,7 +56,8 @@ public class SauceLabsAppiumExample {
         this.deviceOrientation = deviceOrientation;
     }
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
 
     private static BatchInfo batch;
@@ -73,7 +72,7 @@ public class SauceLabsAppiumExample {
         eyes.setApiKey(applitoolsKey);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        eyes.setMatchLevel(MatchLevel.STRICT);
         eyes.setBatch(batch);
 
         DesiredCapabilities capability = new DesiredCapabilities();
@@ -84,28 +83,28 @@ public class SauceLabsAppiumExample {
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
 
-        if (browser == "Safari") {
-            eyes.setImageCut(new FixedCutProvider(63,135,0,0)); //remove URL and footer. values = (header, footer, left, right)
-        }
-
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
-        driver.get("https://www.radiologysolutions.bayer.com/aboutus/congresses/");
+        driver.get("https://www.github.com");
     }
 
     @Test
     public void GithubHomePage() throws Exception {
-
-
-        eyes.open(driver, "Github2222", "Github Home Page");
-        eyes.checkWindow("Home Page");
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.open(driver, "GitHub.com", "Github Home Page");
+        eyes.check("Home Page", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

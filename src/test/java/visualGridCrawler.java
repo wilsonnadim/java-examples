@@ -5,8 +5,8 @@ import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
 import com.applitools.eyes.visualgrid.model.DeviceName;
-import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import com.applitools.eyes.visualgrid.model.ScreenOrientation;
+import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -92,24 +92,20 @@ public class visualGridCrawler {
 
     @Test
     public void CrawlGSKSites() throws Exception {
-
-        //click a popup if it's displayed first
-
         eyes.open(driver, "GSK", gskUrl, new RectangleSize(1200, 800));
         eyes.check(gskUrl, Target.window().fully());
+        eyes.closeAsync();
+    }
 
+    @After
+    public void tearDown() throws Exception {
         TestResultsSummary allTestResults = visualGridRunner.getAllTestResults();
-        System.out.println("Test Results: " + allTestResults);
-
         TestResultContainer[] results = allTestResults.getAllResults();
         for(TestResultContainer result: results){
             TestResults test = result.getTestResults();
             assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
         }
-    }
 
-    @After
-    public void tearDown() throws Exception {
         driver.quit();
         eyes.abortIfNotClosed();
     }

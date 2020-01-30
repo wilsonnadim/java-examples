@@ -1,4 +1,5 @@
 import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -13,9 +14,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 public class FluentApiTest {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
     private static BatchInfo batch;
@@ -45,13 +49,16 @@ public class FluentApiTest {
 
     @Test
     public void FluentTest() throws Exception {
-        eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1000, 700));
+        eyes.open(driver, "Fluent Test", "Github", new RectangleSize(1200, 700));
 
         List<WebElement> icons = driver.findElements(By.cssSelector("img.CircleBadge-icon"));
         WebElement[] icons_array = new WebElement[icons.size()];
         icons.toArray(icons_array);
 
         WebElement element = driver.findElement(By.cssSelector("a.mr-4")); //github logo top left
+
+        eyes.checkWindow("MyTagName");
+        eyes.check("tag", Target.window());
 
         eyes.check("Fluent - Region by Selector and Element", Target.window()
                 .ignore(icons_array)
@@ -66,12 +73,21 @@ public class FluentApiTest {
 
         eyes.check("Fluent - Add Region Match Level", Target.frame("myFrameId"));
 
-        TestResults results = eyes.close(false);
-        //assertEquals(true, results.isPassed());
+        eyes.check("Fluent - Use DOM and Patterns", Target.window().useDom(true).enablePatterns(true).layout());
+
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

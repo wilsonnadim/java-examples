@@ -1,6 +1,7 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,10 +13,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 import java.util.List;
+import static org.junit.Assert.assertEquals;
 
 public class AppiumAndroidNativeExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
     private static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
@@ -25,6 +28,7 @@ public class AppiumAndroidNativeExample {
         BatchInfo batch = new BatchInfo("Amazon Test App Local");
         eyes.setBatch(batch);
         eyes.setLogHandler(new StdoutLogHandler(true));
+
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platformName", "Android");
         capability.setCapability("platform", "android");
@@ -32,6 +36,7 @@ public class AppiumAndroidNativeExample {
         capability.setCapability("app", "/Users/justin/repos/arc/app-debug.apk");
         ///capability.setCapability("appPackage", "com.amazonaws.devicefarm.android.referenceapp");
         capability.setCapability("appActivity", ".Activities.MainActivity");
+
         driver = new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"), capability);
     }
 
@@ -42,16 +47,22 @@ public class AppiumAndroidNativeExample {
         we.get(2).click();
         eyes.open(driver, "Native App Test", "Native Page");
 
-        eyes.checkWindow("Test");
+        eyes.check("Test", Target.window());
         driver.findElement(By.id("id")).click();
-        eyes.checkWindow("test");
+        eyes.check("test", Target.window());
 
-
-        eyes.close();
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
         driver.quit();
         eyes.abortIfNotClosed();
     }

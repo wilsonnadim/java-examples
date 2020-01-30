@@ -1,7 +1,9 @@
 //https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
 
-import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
@@ -16,6 +18,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
+import static org.junit.Assert.assertEquals;
+
 
 @RunWith(Parallel.class)
 public class SauceLabsAppiumNativeExample {
@@ -40,8 +44,8 @@ public class SauceLabsAppiumNativeExample {
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
-        env.add(new String[]{"Android", "6.0", "Android Emulator",                     "", "portrait"});
-        env.add(new String[]{"Android", "7.0", "Android GoogleAPI Emulator",           "", "portrait"});
+        env.add(new String[]{"Android", "6.0", "Android Emulator", "", "portrait"});
+        env.add(new String[]{"Android", "7.0", "Android GoogleAPI Emulator", "", "portrait"});
         env.add(new String[]{"Android", "4.4", "Google Nexus 7 HD GoogleAPI Emulator", "", "portrait"});
         env.add(new String[]{"Android", "4.4", "Samsung Galaxy S3 GoogleAPI Emulator", "", "portrait"});
         return env;
@@ -55,13 +59,14 @@ public class SauceLabsAppiumNativeExample {
         this.deviceOrientation = deviceOrientation;
     }
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
 
     private static BatchInfo batch;
 
     @BeforeClass
-    public static void batchInitialization(){
+    public static void batchInitialization() {
         batch = new BatchInfo("Native App With Sauce Labs");
     }
 
@@ -69,6 +74,7 @@ public class SauceLabsAppiumNativeExample {
     public void setUp() throws Exception {
         eyes.setApiKey(applitoolsKey);
         eyes.setBatch(batch);
+
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
@@ -77,23 +83,31 @@ public class SauceLabsAppiumNativeExample {
         capability.setCapability("device-orientation", deviceOrientation);
         capability.setCapability("name", name.getMethodName());
         capability.setCapability("app", "https://www.dropbox.com/s/yksa2wfszjjslba/app-debug.apk?dl=1");
-        String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
+
+        String sauce_url = "https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
     }
 
     @Test
     public void NativeApp() throws Exception {
         driver.findElement(By.id("ReferenceApp")).click();
-        List<WebElement> we  = driver.findElements(By.id("Row Category Name"));
+        List<WebElement> we = driver.findElements(By.id("Row Category Name"));
         we.get(2).click();
         eyes.open(driver, "Native App Test", "Native Components");
-        eyes.checkWindow("Test");
-        eyes.close();
+        eyes.check("Components Page", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for (TestResultContainer result : results) {
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

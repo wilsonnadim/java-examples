@@ -1,6 +1,8 @@
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,21 +14,20 @@ import static org.junit.Assert.assertEquals;
 
 public class JJFullPageScreenShotExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Before
     public void setUp() throws Exception {
 
-        //eyes.setServerUrl(URI.create("https://your-onprem-server"));
-        eyes.setApiKey(applitoolsKey);
+        eyes.setServerUrl("https://eyesapi.applitools.com");
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setHideScrollbars(true);
-        //eyes.setForceFullPageScreenshot(true);
-        //eyes.setStitchMode(StitchMode.CSS);
-        //eyes.setMatchLevel(MatchLevel.LAYOUT2);
-        //eyes.setLogHandler(new StdoutLogHandler(true));
-        //eyes.setBaselineEnvName("OldOSX");
+        eyes.setForceFullPageScreenshot(true);
+        eyes.setStitchMode(StitchMode.CSS);
+        eyes.setMatchLevel(MatchLevel.STRICT);
+        eyes.setLogHandler(new StdoutLogHandler(true));
 
         driver = new ChromeDriver();
         driver.get("https://www.jnj.com/");
@@ -38,15 +39,20 @@ public class JJFullPageScreenShotExample {
 
         driver.findElement(By.cssSelector("button.CookieBanner-button")).click();
 
-        eyes.checkWindow("J&J");
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("J&J", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

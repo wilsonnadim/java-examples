@@ -1,7 +1,5 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -19,9 +17,9 @@ import static org.junit.Assert.assertEquals;
 
 public class abTestExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
-    public static String applitoolsKey = "t78DEK6KY2SbybSqrtRANZFjGMg4le5LWYfsLprUA4k110";//System.getenv("APPLITOOLS_API_KEY");
     private static BatchInfo batch;
 
     @BeforeClass
@@ -33,7 +31,7 @@ public class abTestExample {
     public void setUp() throws Exception {
 
         eyes.setServerUrl("https://eyesapi.applitools.com");
-        eyes.setApiKey(applitoolsKey);
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setHideScrollbars(true);
         eyes.setHideCaret(true);
         eyes.setForceFullPageScreenshot(false);
@@ -56,14 +54,20 @@ public class abTestExample {
         driver.get("https://www." + url + ".com");
         eyes.open(driver, "My Search Engine", "Search Page", new RectangleSize(1200, 800));
         eyes.check(url, Target.window());
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
-
-
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

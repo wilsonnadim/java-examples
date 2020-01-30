@@ -1,8 +1,12 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertEquals;
 
 public class FannieMae {
 
@@ -16,7 +20,8 @@ public class FannieMae {
         WebDriver driver = new ChromeDriver();
 
         // Initialize the eyes SDK
-        Eyes eyes = new Eyes();
+        EyesRunner runner = new ClassicRunner();
+        Eyes eyes = new Eyes(runner);
 
         // Set Applitools API Key
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
@@ -30,24 +35,23 @@ public class FannieMae {
         // Default applitools cloud https://eyesapi.applitools.com
         eyes.setServerUrl("https://eyesapi.applitools.com");
 
-        // print logs to console
-        //eyes.setLogHandler(new StdoutLogHandler(true));
-
         // To group multiple tests
         BatchInfo batch = new BatchInfo("Justin - Applitools Training");
         eyes.setBatch(batch);
 
-        // Set Match Level (before eyes.open) -- Exact, Strict, Content, Layout
+        // Set Match Level (before eyes.open)s -- Exact, Strict, Content, Layout
         //eyes.setMatchLevel(MatchLevel.CONTENT);
 
         try {
 
             // Set Application Name, Test Name and Viewport Size
-            eyes.open(driver, "applitools.com", "Hello World",
-                    new RectangleSize(301, 600));
+            eyes.open(driver, "applitools.com", "Hello World - New",
+                    new RectangleSize(1000, 600));
 
             // Navigate the browser to specified URL
             driver.get("https://applitools.com/helloworld");
+
+            driver.findElement(By.tagName("button")).click();
 
             // Visual Validation Check Point 1
             eyes.checkWindow("HelloWorld");
@@ -55,15 +59,14 @@ public class FannieMae {
             driver.get("https://applitools.com/helloworld?diff1");
 
             // Visual Validation Check Point 2
-            eyes.checkWindow("Diff1");
+            eyes.check("Diff1", Target.window());
 
             driver.get("https://applitools.com/helloworld?diff2");
 
             // Visual Validation Check Point 3
-            eyes.checkWindow("Diff2");
+            eyes.check("Diff2", Target.window());
 
-            // End Visual Test
-            eyes.close(false);
+            eyes.closeAsync();
 
 
         } catch (Exception e) {
@@ -71,6 +74,13 @@ public class FannieMae {
             System.out.println(e);
 
         } finally {
+
+            TestResultsSummary allTestResults = runner.getAllTestResults(false);
+            TestResultContainer[] results = allTestResults.getAllResults();
+            for(TestResultContainer result: results){
+                TestResults test = result.getTestResults();
+                assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+            }
 
             // Abort test in case of an unexpected error
             eyes.abortIfNotClosed();

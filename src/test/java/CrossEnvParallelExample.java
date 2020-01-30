@@ -1,5 +1,7 @@
 import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.*;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
@@ -32,7 +34,8 @@ public class CrossEnvParallelExample {
     private RectangleSize viewport = new RectangleSize(1300, 900);
 
     //Set your variables...
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private static BatchInfo batch;
     private WebDriver driver;
 
@@ -83,9 +86,8 @@ public class CrossEnvParallelExample {
     private void VisualCheck(String url) throws InterruptedException {
         driver.get("https://www.applitools.com" + url);
         eyes.open(this.driver, this.appName, name.getMethodName(), this.viewport);
-        eyes.checkWindow("isBaseline: " + baseline);
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("isBaseline: " + baseline, Target.window());
+        eyes.closeAsync();
     }
 
     @BeforeClass
@@ -106,17 +108,9 @@ public class CrossEnvParallelExample {
         //Almost everything will fail when using a different match level otherwise.
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
 
-//        eyes.setSaveNewTests(true);
-
         //Optional... add a customized property to filter baseline results
         String booleanString = String.valueOf(baseline);
         eyes.addProperty("Baselines", booleanString);
-
-        //You should avoid ever using these methods unless absolutely necessary.
-        //Let the SDK detect the OS/Browser and always set the viewport in the eyes.open method...
-        //eyes.setExplicitViewportSize(new RectangleSize(1300, 900));
-        //eyes.setHostApp("Chrome");
-        //eyes.setHostOS("Mac OS X 10.14");
 
         if (browser.equals("Chrome")) {
             driver = new ChromeDriver();
@@ -129,6 +123,13 @@ public class CrossEnvParallelExample {
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

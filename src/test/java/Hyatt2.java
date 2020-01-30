@@ -33,9 +33,9 @@ public class Hyatt2 {
     public static LinkedList getEnvironments() throws Exception {
         LinkedList env = new LinkedList();
         env.add(new Integer[]{480, 639});
-//        env.add(new Integer[]{630, 699});
-//        env.add(new Integer[]{860, 640});
-//        env.add(new Integer[]{1212, 666});
+        env.add(new Integer[]{630, 699});
+        env.add(new Integer[]{860, 640});
+        env.add(new Integer[]{1212, 666});
 
         return env;
     }
@@ -159,67 +159,67 @@ public class Hyatt2 {
         }
     }
 
-//    @Test
-//    public void HyattSearch() throws Exception {
-//
-//        List<WebElement> checkinDate = driver.findElements(By.cssSelector("li"));
-//        for(int i=0; i<checkinDate.size(); i++) {
-//            try {
-//                if (!checkinDate.get(i).getAttribute("data-target").equals("checkinDate")) {
-//                    checkinDate.remove(i);
-//                }
-//            } catch(NullPointerException ex) {
-//                System.out.println(ex);
-//            }
-//        }
-//        WebElement[] checkinDateArray = new WebElement[checkinDate.size()];
-//        checkinDate.toArray(checkinDateArray);
-//
-//        //Capture the events Header page. This is optional and can be done on another test.
-//        eyes.open(driver, appName, "Search Header", new RectangleSize(width, height));
-//        eyes.check("Search Page Top Menu", Target.region(driver.findElement(By.cssSelector("div.ui-header.b-color_bg-carbon"))));
-//        eyes.check("Search Page Header", Target.region(driver.findElement(By.className("search-page-header"))).layout(checkinDateArray));
-//        eyes.check("Search Page Sort", Target.region(driver.findElement(By.cssSelector("body > div.row.container > div > div > div.b-row.b-row_gutter-3 > div:nth-child(1) > div"))));
-//        eyes.close(false);
-//
-//        //Capture the events Footer page. This is optional and can be done on another test.
-//        eyes.open(driver, appName, "Search Footer", new RectangleSize(width, height));
-//        eyes.check("Brands Footer", Target.region(driver.findElement(By.className("b-brandbar"))));
-//        eyes.check("Footer", Target.region(driver.findElement(By.className("ui-footer"))));
-//        eyes.close(false);
-//
-//        //Put all search rows in an array
-//        List<WebElement> results = driver.findElements(By.cssSelector("div.p-hotel-card"));
-//
-//        List<WebElement> pricing = driver.findElements(By.cssSelector("div.hotel-pricing.b-text_align-right"));
-//        for(int i=0; i<pricing.size(); i++) {
-//            if (pricing.get(i).getLocation().getX() == 0) {
-//                pricing.remove(i);
-//            }
-//        }
-//
-//        WebElement[] pricing_array = new WebElement[pricing.size()];
-//        pricing.toArray(pricing_array);
-//
-//        List<WebElement> locations = driver.findElements(By.cssSelector("div.b-mt2"));
-//        for(int i=0; i<locations.size(); i++) {
-//            try {
-//                if (!locations.get(i).getAttribute("data-js").contentEquals("location")) {
-//                    locations.remove(i);
-//                }
-//            } catch(NullPointerException ex) {
-//                System.out.println(ex);
-//            }
-//        }
-//
-//        WebElement[] locations_array = new WebElement[locations.size()];
-//        locations.toArray(locations_array);
-//        for(int i=0; i<results.size(); i++){
-//            String hotelId = results.get(i).getAttribute("data-spirit-code");
-//            eyes.open(driver, appName, "Hotel: " + hotelId, new RectangleSize(width, height));
-//            eyes.check("Hotel: " + hotelId, Target.region(results.get(i)).layout(pricing_array).layout(locations_array));
-//            eyes.close(false);
-//        }
-//    }
+    @Test
+    public void HyattSearch() throws Exception {
+
+        List<WebElement> checkinDate = driver.findElements(By.cssSelector("li"));
+        for(int i=0; i<checkinDate.size(); i++) {
+            try {
+                if (!checkinDate.get(i).getAttribute("data-target").equals("checkinDate")) {
+                    checkinDate.remove(i);
+                }
+            } catch(NullPointerException ex) {
+                System.out.println(ex);
+            }
+        }
+        WebElement[] checkinDateArray = new WebElement[checkinDate.size()];
+        checkinDate.toArray(checkinDateArray);
+
+        //Capture the events Header page. This is optional and can be done on another test.
+        eyes.open(driver, appName, "Search Header", new RectangleSize(width, height));
+        eyes.check("Search Page Top Menu", Target.region(driver.findElement(By.cssSelector("div.ui-header.b-color_bg-carbon"))));
+        eyes.check("Search Page Header", Target.region(driver.findElement(By.className("search-page-header"))).layout(checkinDateArray));
+        eyes.check("Search Page Sort", Target.region(driver.findElement(By.cssSelector("body > div.row.container > div > div > div.b-row.b-row_gutter-3 > div:nth-child(1) > div"))));
+        eyes.close(false);
+
+        //Capture the events Footer page. This is optional and can be done on another test.
+        eyes.open(driver, appName, "Search Footer", new RectangleSize(width, height));
+        eyes.check("Brands Footer", Target.region(driver.findElement(By.className("b-brandbar"))));
+        eyes.check("Footer", Target.region(driver.findElement(By.className("ui-footer"))));
+        eyes.close(false);
+
+        //Put all search rows in an array
+        List<WebElement> results = driver.findElements(By.cssSelector("div.p-hotel-card"));
+
+        List<WebElement> pricing = driver.findElements(By.cssSelector("div.hotel-pricing.b-text_align-right"));
+        for(int i=0; i<pricing.size(); i++) {
+            if (pricing.get(i).getLocation().getX() == 0) {
+                pricing.remove(i);
+            }
+        }
+
+        WebElement[] pricing_array = new WebElement[pricing.size()];
+        pricing.toArray(pricing_array);
+
+        List<WebElement> locations = driver.findElements(By.cssSelector("div.b-mt2"));
+        for(int i=0; i<locations.size(); i++) {
+            try {
+                if (!locations.get(i).getAttribute("data-js").contentEquals("location")) {
+                    locations.remove(i);
+                }
+            } catch(NullPointerException ex) {
+                System.out.println(ex);
+            }
+        }
+
+        WebElement[] locations_array = new WebElement[locations.size()];
+        locations.toArray(locations_array);
+        for(int i=0; i<results.size(); i++){
+            String hotelId = results.get(i).getAttribute("data-spirit-code");
+            eyes.open(driver, appName, "Hotel: " + hotelId, new RectangleSize(width, height));
+            eyes.check("Hotel: " + hotelId, Target.region(results.get(i)).layout(pricing_array).layout(locations_array));
+            eyes.close(false);
+        }
+    }
 
 }

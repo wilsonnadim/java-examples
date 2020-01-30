@@ -1,8 +1,7 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -12,9 +11,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import static org.junit.Assert.assertEquals;
+
 public class HelloWorldCrossEnvironment {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
@@ -50,28 +52,31 @@ public class HelloWorldCrossEnvironment {
     public void BaselineTest() throws Exception {
         driver = new ChromeDriver();
         driver.get("https://applitools.com/helloworld");
+
         //AppName should really stay static. The testName should be changed per different test
         eyes.open(driver, "My Awesome App", "Test Example", new RectangleSize(width, height));
-        eyes.checkWindow("Baseline Image");
-        eyes.close(false);
+        eyes.check("Chrome Test!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
     public void TestFirefox() throws Exception {
         driver = new FirefoxDriver();
         driver.get("https://applitools.com/helloworld");
+
         eyes.open(driver, "My Awesome App", "Test Example", new RectangleSize(width, height));
-        eyes.checkWindow("Firefox Test");
-        eyes.close(false);
+        eyes.check("Firefox Test!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
     public void TestSafari() throws Exception {
         driver = new SafariDriver();
         driver.get("https://applitools.com/helloworld");
+
         eyes.open(driver, "My Awesome App", "Test Example", new RectangleSize(width, height));
-        eyes.checkWindow("Safari Test");
-        eyes.close(false);
+        eyes.check("Safari!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
@@ -82,24 +87,31 @@ public class HelloWorldCrossEnvironment {
         eyes.setExplicitViewportSize(new RectangleSize(1, 1));
 
         eyes.open(driver, "Hello World!", "Test 4", new RectangleSize(763, 763));
-        eyes.checkWindow("Test 4");
-        eyes.close(false);
+        eyes.check("Test 4!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
     public void Test5() throws Exception {
-
         //Produces a New unsavable test. Does not match hostOS, hostApp or viewport
         eyes.setHostOS("Linux");
         eyes.setHostApp("Chrome");
+
         eyes.open(driver, "Hello World!", "Test 5", new RectangleSize(763, 763));
-        eyes.checkWindow("Test 5");
-        eyes.close(false);
+        eyes.check("Test 5!", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

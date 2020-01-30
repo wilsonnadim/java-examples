@@ -1,11 +1,11 @@
 //https://www.browserstack.com/automate/capabilities#ie-capabilities
 //https://www.browserstack.com/list-of-browsers-and-platforms?product=live
 
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -20,7 +20,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 import java.util.LinkedList;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parallel.class)
@@ -34,13 +33,13 @@ public class BrowserStackExample {
     };
 
     protected String os;
-    protected String os_version;
-    protected String browser_version;
+    private String os_version;
+    private String browser_version;
     protected String browser;
-    protected String screenResolution;
+    private String screenResolution;
 
     public static String username = "your_bs_user";
-    public static String accesskey = "your_bs_key";
+    private static String accesskey = "your_bs_key";
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
@@ -62,7 +61,8 @@ public class BrowserStackExample {
         this.screenResolution = resolution;
     }
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
 
     @Before
@@ -95,13 +95,20 @@ public class BrowserStackExample {
     @Test
     public void GithubHomePage() throws Exception {
         eyes.open(driver, "Github", "Home Page");
-        eyes.checkWindow("Home Page Screenshot");
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("Home Page Screenshot", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

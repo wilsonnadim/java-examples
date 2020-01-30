@@ -1,8 +1,8 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,12 +12,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import static org.junit.Assert.assertEquals;
 
 public class ChromeMobileEmulationExample {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private RemoteWebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
@@ -28,8 +28,6 @@ public class ChromeMobileEmulationExample {
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.SCROLL);
         eyes.setLogHandler(new StdoutLogHandler(true));
-
-
         BatchInfo batch = new BatchInfo("Chrome Emulation Test");
         eyes.setBatch(batch);
 
@@ -37,24 +35,28 @@ public class ChromeMobileEmulationExample {
         mobileEmulation.put("deviceName", "iPhone X");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
-
         driver = new ChromeDriver(chromeOptions);
 
-        driver.get("https://www.made.com/");
+        driver.get("https://www.github.com/");
     }
 
-    //Start your Selenium server prior to running this test...
     @Test
-    public void HomePageTest() throws Exception {
-        eyes.open(driver, "Made.com", "Chrome iOS Emulation");
-        eyes.checkWindow("home page");
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+    public void GitHubTest() throws Exception {
+        eyes.open(driver, "GitHub.com", "GitHub - Chrome iOS Emulation");
+        eyes.check("GH", Target.window());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

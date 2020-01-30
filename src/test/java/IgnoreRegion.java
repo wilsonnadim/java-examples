@@ -1,5 +1,5 @@
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
@@ -11,21 +11,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
-
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class IgnoreRegion {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey(applitoolsKey);
-        //driver = new FirefoxDriver();
-        //driver = new SafariDriver();
-        //driver = new ChromeDriver();
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         SafariOptions safariOptions = new SafariOptions();
         safariOptions.setUseTechnologyPreview(true);
         driver = new SafariDriver(safariOptions);
@@ -46,14 +42,21 @@ public class IgnoreRegion {
             .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")) //ignores the login form
             .ignore(element)); //ignores github logo top left
 
-        TestResults results = eyes.close(false);
-        assertTrue(results.isPassed());
+        eyes.closeAsync();
 
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
+}
 }

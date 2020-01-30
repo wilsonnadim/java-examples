@@ -1,7 +1,5 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -20,7 +18,8 @@ import static org.junit.Assert.assertEquals;
 
 public class CreditCards {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
 
     //Keep in-mind adjusting these values will create a new baseline...
@@ -55,25 +54,19 @@ public class CreditCards {
         }
     }
 
-    @After
-    public void tearDown() throws Exception {
-        driver.quit();
-        eyes.abortIfNotClosed();
-    }
-
     @Test
-    public void studentCreditCards() throws Exception {
+    public void studentCreditCardsFeatured() throws Exception {
 
         WebElement featuredCard = driver.findElement(By.cssSelector("div.product-box.product-box--featured.product-box--masked--featured"));
         String featuredId = featuredCard.getAttribute("data-product-id");
 
         eyes.open(driver, "Creditcards.com", "Card: " + featuredId, new RectangleSize(width, height));
-
         eyes.check("Card: " + featuredId, Target.region(featuredCard).fully());
+        eyes.closeAsync();
+    }
 
-        TestResults featuredResults = eyes.close(false);
-        assertEquals(true, featuredResults.isPassed());
-
+    @Test
+    public void studentCreditCardsNonFeatured() throws Exception {
         //Put all remaining non-featured cards in an array
         List<WebElement> cards = driver.findElements(By.className("product-box"));
         cards.remove(0); //Remove the first object in array which is in the featured card...
@@ -82,12 +75,21 @@ public class CreditCards {
             String cardId = cards.get(i).getAttribute("data-product-id");
             eyes.open(driver, "Creditcards.com", "Card: " + cardId, new RectangleSize(width, height));
             eyes.check("Card: " + cardId, Target.region(cards.get(i)).fully());
-
-            TestResults results = eyes.close(false);
-            assertEquals(true, results.isPassed());
+            eyes.closeAsync();
         }
     }
-}
 
-//baseline comparison of updated code
-//performance improvement of dashboard.
+    @After
+    public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
+        driver.quit();
+        eyes.abortIfNotClosed();
+    }
+}

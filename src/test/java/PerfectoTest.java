@@ -1,5 +1,5 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -15,13 +15,16 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 
+import static org.junit.Assert.assertEquals;
+
 public class PerfectoTest {
 
     private String USER_NAME = "perfectoUser";
     private String PASSWORD = "perfectoPassword";
     private String url = "https://partners.perfectomobile.com/nexperience/perfectomobile/wd/hub";
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private static BatchInfo batch;
     private WebDriver driver;
 
@@ -54,7 +57,7 @@ public class PerfectoTest {
 
         eyes.open(driver, "GitHub Android", "Android Test");
         eyes.check("Android Page", Target.window());
-        eyes.close();
+        eyes.closeAsync();
     }
 
     @Test
@@ -80,12 +83,19 @@ public class PerfectoTest {
 
         eyes.open(driver, "GitHub iOS", "iOS Test");
         eyes.check("iOS Page", Target.window());
-        eyes.close();
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

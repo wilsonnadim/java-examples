@@ -1,5 +1,5 @@
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -10,12 +10,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static org.junit.Assert.assertEquals;
 
 public class CaptureRegion {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
@@ -33,21 +33,26 @@ public class CaptureRegion {
     public void GithubRegionTest() throws Exception {
         eyes.open(driver, "Github.com", "Check Region", new RectangleSize(1200, 800));
 
-        eyes.checkRegion(By.cssSelector("img.CircleBadge-icon"), "Circle Badge Clasic");
+        eyes.check("Circle Badge Clasic", Target.region(By.cssSelector("img.CircleBadge-icon")));
 
         WebElement element = driver.findElement(By.cssSelector("img.CircleBadge-icon"));
         eyes.check("Fluent by Element", Target.region(element).ignoreDisplacements(true));
 
         eyes.check("GH", Target.region(By.cssSelector("div.mx-auto.col-sm-8.col-md-6.hide-sm")));
 
-        TestResults results = eyes.close(false);
-
-
-        assertEquals(true, results.isPassed());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
         eyes.abortIfNotClosed();
     }

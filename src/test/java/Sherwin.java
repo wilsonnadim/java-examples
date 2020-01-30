@@ -1,4 +1,5 @@
 import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -17,9 +18,9 @@ import static org.junit.Assert.assertEquals;
 
 public class Sherwin {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
     private static BatchInfo batch;
 
     @BeforeClass
@@ -30,7 +31,7 @@ public class Sherwin {
     @Before
     public void setUp() throws Exception {
 
-        eyes.setApiKey(applitoolsKey);
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
@@ -38,7 +39,6 @@ public class Sherwin {
         eyes.setBatch(batch);
 
         driver = new ChromeDriver();
-
         driver.get("https://www.sherwin-williams.com/painting-contractors/products/exterior-paint-coatings/deck-products/finishes#facet:&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:45&");
     }
 
@@ -51,14 +51,19 @@ public class Sherwin {
         ratings.toArray(ratings_array);
 
         eyes.check("Fluent - Region and Ignore array", Target.region(driver.findElement(By.id("ProductShelfContainer"))).ignore(ratings_array));
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for (TestResultContainer result : results) {
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

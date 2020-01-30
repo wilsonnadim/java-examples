@@ -1,9 +1,7 @@
 //https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
 
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
@@ -40,7 +38,6 @@ public class SauceLabsExampleDesktop {
 
     public static String username = "SauceUser";
     public static String accesskey = "SauceKey";
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
     public static LinkedList getEnvironments() throws Exception {
@@ -64,9 +61,6 @@ public class SauceLabsExampleDesktop {
         return env;
     }
 
-     //       eyes.setSendDom(true);
-    //IE 11.2670 Win 7/10
-
     public SauceLabsExampleDesktop(String os, String version, String browser, String resolution) {
         this.os = os;
         this.version = version;
@@ -74,7 +68,8 @@ public class SauceLabsExampleDesktop {
         this.screenResolution = resolution;
     }
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private RemoteWebDriver driver;
 
     private static BatchInfo batch;
@@ -86,15 +81,13 @@ public class SauceLabsExampleDesktop {
 
     @Before
     public void setUp() throws Exception {
-        eyes.setApiKey(applitoolsKey);
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setHideScrollbars(true);
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.LAYOUT2); //Must use Layout for cross browser tests...
         eyes.setBatch(batch);
-        eyes.setBaselineEnvName("GitHub-Cross-Browser-Test");
-        //eyes.setBranchName("myBranch");
-
+        eyes.setBranchName("myBranch");
 
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
@@ -105,7 +98,6 @@ public class SauceLabsExampleDesktop {
 
         String sauce_url = "https://"+ username +":"+ accesskey + "@ondemand.saucelabs.com:443/wd/hub";
         driver = new RemoteWebDriver(new URL(sauce_url), capability);
-
         driver.get("https://github.com");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -114,22 +106,25 @@ public class SauceLabsExampleDesktop {
 
     @Test
     public void GithubHomePage() throws Exception {
-
         eyes.open(driver, "Github Desktop", "Home Page", new RectangleSize(1200, 800));
 
-        //eyes.checkWindow("Home Page");
         WebElement element = driver.findElement(By.className("position-relative")); //github logo top left
         eyes.check("Fluent - Region by Selector and Element", Target.window()
                 .ignore(By.cssSelector("div.mx-auto.col-sm-8.col-md-5.hide-sm")) //ignores the login form
                 .ignore(element)); //ignores github logo top left
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for (TestResultContainer result : results) {
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

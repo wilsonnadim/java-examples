@@ -1,5 +1,8 @@
 import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.EyesRunner;
 import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.TestResultsSummary;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.fluent.Target;
 import io.appium.java_client.MobileBy;
@@ -44,18 +47,21 @@ public class MobileNativeTests {
         capabilities.setCapability("noReset", true);
         //capabilities.setCapability("appiumVersion", "1.9.1");
 
-        Eyes eyes = new Eyes();
+        EyesRunner runner = new ClassicRunner();
+        Eyes eyes = new Eyes(runner);
+
         setupLogging(eyes, capabilities, "AndroidNativeAppTest1");
 
         WebDriver driver = new AndroidDriver(new URL(appiumServerUrl), capabilities);
 
         try {
             eyes.open(driver, "Mobile Native Tests", "Android Native App 1");
-            eyes.checkWindow("Contact list");
-            eyes.close();
+            eyes.check("Contact List", Target.window());
+            eyes.closeAsync();
         } finally {
+            TestResultsSummary allTestResults = runner.getAllTestResults(false);
             driver.quit();
-            eyes.abortIfNotClosed();
+            eyes.abort();
         }
     }
 
@@ -76,7 +82,9 @@ public class MobileNativeTests {
         capabilities.setCapability("newCommandTimeout", 600);
         capabilities.setCapability("appiumVersion", "1.6.0");
 
-        Eyes eyes = new Eyes();
+        EyesRunner runner = new ClassicRunner();
+        Eyes eyes = new Eyes(runner);
+
         setupLogging(eyes, capabilities,"AndroidNativeAppTest2");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL(appiumServerUrl), capabilities);
@@ -88,8 +96,9 @@ public class MobileNativeTests {
             MobileElement scrollableElement = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().scrollable(true)"));
 
             eyes.check("Main window with ignore", Target.region(scrollableElement).ignore(scrollableElement));
-            eyes.close(false);
+            eyes.closeAsync();
         } finally {
+            TestResultsSummary allTestResults = runner.getAllTestResults(false);
             eyes.abortIfNotClosed();
             driver.quit();
         }
@@ -107,18 +116,21 @@ public class MobileNativeTests {
         capabilities.setCapability("clearSystemFiles", true);
         capabilities.setCapability("noReset", true);
 
-        Eyes eyes = new Eyes();
+        EyesRunner runner = new ClassicRunner();
+        Eyes eyes = new Eyes(runner);
+
         setupLogging(eyes, capabilities,"iOSNativeAppTest");
 
         WebDriver driver = new IOSDriver(new URL(appiumServerUrl), capabilities);
 
         try {
             eyes.open(driver, "Mobile Native Tests", "iOS Native App");
-            eyes.checkWindow("checkWindow");
-            eyes.close();
+            eyes.check("Check Window", Target.window());
+            eyes.closeAsync();
         } finally {
+            TestResultsSummary allTestResults = runner.getAllTestResults(false);
             driver.quit();
-            eyes.abortIfNotClosed();
+            eyes.abort();
         }
     }
 }

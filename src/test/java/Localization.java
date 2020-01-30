@@ -1,5 +1,7 @@
 import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,9 +13,9 @@ import static org.junit.Assert.assertEquals;
 
 public class Localization {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
-    public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
     private static BatchInfo batchInfo;
 
     @org.junit.BeforeClass
@@ -31,14 +33,20 @@ public class Localization {
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 
-    public void initializeEyes() {
-        eyes = new Eyes();
-        //eyes.setServerUrl(URI.create("https://your-onprem-server"));
-        eyes.setApiKey(applitoolsKey);
+    private void initializeEyes() {
+        eyes.setServerUrl("https://eyesapi.applitools.com");
+        eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setBatch(batchInfo);
     }
@@ -48,30 +56,24 @@ public class Localization {
     public void GoogleUS() throws Exception {
         driver.get("https://www.google.com");
         eyes.open(driver, "Google", "Google US", new RectangleSize(1035, 635));
-        eyes.checkWindow("github");
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("America!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
     public void GoogleIT() throws Exception {
         driver.get("https://www.google.it");
         eyes.open(driver, "Google", "Google Italy", new RectangleSize(1035, 635));
-        eyes.checkWindow("github");
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("Italy!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
     public void GoogleSpain() throws Exception {
         driver.get("https://www.google.es");
         eyes.open(driver, "Google", "Google Spain", new RectangleSize(1035, 635));
-        eyes.checkWindow("github");
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("Spain!", Target.window());
+        eyes.closeAsync();
     }
 
     //Check layouts of one language to another...
@@ -80,10 +82,8 @@ public class Localization {
         eyes.setMatchLevel(MatchLevel.LAYOUT2); //Must use Layout for this...
         driver.get("https://fr-fr.facebook.com/");
         eyes.open(driver, "Facebook", "Facebook", new RectangleSize(1035, 635));
-        eyes.checkWindow("FR"); //This creates the baseline
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("France!", Target.window());
+        eyes.closeAsync();
     }
 
     @Test
@@ -91,9 +91,7 @@ public class Localization {
         eyes.setMatchLevel(MatchLevel.LAYOUT2); //Must use Layout for this...
         driver.get("https://de-de.facebook.com/");
         eyes.open(driver, "Facebook", "Facebook", new RectangleSize(1035, 635));
-        eyes.checkWindow("DE"); //This compares against above baseline. appName, testName, viewPort size must be the same...
-
-        TestResults results = eyes.close(false);
-        assertEquals(true, results.isPassed());
+        eyes.check("Germany!", Target.window());
+        eyes.closeAsync();
     }
 }

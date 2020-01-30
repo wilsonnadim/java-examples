@@ -1,8 +1,7 @@
-import com.applitools.eyes.BatchInfo;
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.TestResults;
+import com.applitools.eyes.*;
+import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,12 +10,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 
 public class HelloWorldRCA {
 
-    private Eyes eyes = new Eyes();
+    private EyesRunner runner = new ClassicRunner();
+    private Eyes eyes = new Eyes(runner);
     private WebDriver driver;
 
     @Before
@@ -43,17 +43,15 @@ public class HelloWorldRCA {
         eyes.open(driver, "My Hello World!", "RCA Example", new RectangleSize(1000, 600));
 
         // Visual checkpoint #1.
-        eyes.checkWindow("Hello!");
+        eyes.check("Hello!", Target.window());
 
         // Click the "Click me!" button.
         driver.findElement(By.tagName("button")).click();
 
         // Visual checkpoint #2.
-        eyes.checkWindow("Click!");
+        eyes.check("Click!", Target.window());
 
-        // End the test.
-        TestResults results = eyes.close(false);
-        assertTrue(results.isPassed());
+        eyes.closeAsync();
     }
 
     @Test
@@ -64,26 +62,28 @@ public class HelloWorldRCA {
         eyes.open(driver, "My Hello World!", "RCA Example", new RectangleSize(1000, 600));
 
         // Visual checkpoint #1.
-        eyes.checkWindow("Hello!");
-
-        // Click the "Click me!" button.
-        driver.findElement(By.tagName("button")).click();
+        eyes.check("Hello!", Target.window());
 
         //Delete the Thumbs up image
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("var elem = document.querySelector('div.section.image-section'); elem.parentNode.removeChild(elem)");
 
         // Visual checkpoint #2.
-        eyes.checkWindow("Click!");
+        eyes.check("Click!", Target.window());
 
-        // End the test.
-        TestResults results = eyes.close(false);
-        assertTrue(results.isPassed());
+        eyes.closeAsync();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestResultsSummary allTestResults = runner.getAllTestResults(false);
+        TestResultContainer[] results = allTestResults.getAllResults();
+        for(TestResultContainer result: results){
+            TestResults test = result.getTestResults();
+            assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
+        }
+
         driver.quit();
-        eyes.abortIfNotClosed();
+        eyes.abort();
     }
 }

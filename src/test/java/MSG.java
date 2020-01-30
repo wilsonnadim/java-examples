@@ -20,7 +20,7 @@ public class MSG {
     private Eyes eyes = new Eyes();
     private WebDriver driver;
 
-    private void loadPage(int heightSize, int suspensionDuration) throws InterruptedException {
+    private void lazyLoadPage(int heightSize, int suspensionDuration) throws InterruptedException {
         RectangleSize viewport = eyes.getViewportSize(driver);
         for (int j = 0; j < heightSize; j += viewport.getHeight() - 20) {
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0," + j + ")");
@@ -116,7 +116,7 @@ public class MSG {
         while((driver.findElements(By.className("_3LcCX")).size() + driver.findElements(By.className("_3mYdI")).size()) < eventCount){
             try {
                 Integer height = getEntireHeight();
-                loadPage(height, 60);
+                lazyLoadPage(height, 60);
                 TimeUnit.SECONDS.sleep(1);
                 System.out.println("Current Feature Event Count: " + driver.findElements(By.className("_3mYdI")).size());
                 System.out.println("Current Event Count: " + driver.findElements(By.className("_3LcCX")).size());
