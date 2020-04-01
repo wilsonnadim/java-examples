@@ -45,7 +45,9 @@ public class kw {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
         try{
-
+             //Username: kelle123412345
+            //Password: w2EgJsFy
+            //https://console-qa.command.kw.com/command/opportunities/details?contactId=511480&id=161959&teamId=
             // Navigate the browser
             driver.get("https://console-qa.command.kw.com/command/contacts/3792604");
 

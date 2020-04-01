@@ -14,7 +14,7 @@ public class DownloadDiffExample {
 
     private static String downloadDir = "/Users/justin/repos/applitools/results";
     private static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
-    private static String viewKey = "YourViewReadKey";
+    private static String viewKey = "dilGmVMZ41jydyha7LNzZn0TDqirGX39wLFDypN9g88110";
 
     public static void main(String[] args) throws Exception {
 

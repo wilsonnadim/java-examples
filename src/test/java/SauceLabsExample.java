@@ -35,8 +35,8 @@ public class SauceLabsExample {
     protected String deviceOrientation;
     protected String screenResolution;
 
-    public static String username = "matan";
-    public static String accesskey = "a56c483d-9c60-41e3-a396-d7a998141734";
+    public static String username = "sauceUser";
+    public static String accesskey = "sauceKey";
     public static String applitoolsKey = System.getenv("APPLITOOLS_API_KEY");
 
     @Parameterized.Parameters
@@ -46,7 +46,7 @@ public class SauceLabsExample {
         env.add(new String[]{"Windows 10", "78.0", "chrome",            null, null, "1280x1024"});
         env.add(new String[]{"Windows 10",  "49.0", "firefox",           null, null, "1280x1024"});
         env.add(new String[]{"Windows 7",   "11.0", "internet explorer", null, null, "1280x1024"});
-        env.add(new String[]{"OS X 10.10",  "54.0", "chrome",            null, null, "1280x1024"});
+        env.add(new String[]{"OS X 10.12",  "54.0", "chrome",            null, null, "1280x960"});
         env.add(new String[]{"Android",     "6.0",  "chrome", "Android Emulator", "portrait", null});
         env.add(new String[]{"Android",     "7.1",  "chrome", "Android GoogleAPI Emulator", "landscape", null});
         env.add(new String[]{"iOS",         "10.3", "Safari", "iPhone 7 Plus Simulator", "portrait", null});
@@ -84,6 +84,8 @@ public class SauceLabsExample {
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setMatchLevel(MatchLevel.CONTENT);
         eyes.setBatch(batch);
+        //eyes.setBaselineBranchName("blob");
+        eyes.setBaselineEnvName("blob");
 
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.PLATFORM, os);
@@ -115,6 +117,9 @@ public class SauceLabsExample {
 
     @After
     public void tearDown() throws Exception {
+        driver.quit();
+        eyes.abort();
+
         TestResultsSummary allTestResults = runner.getAllTestResults(false);
         TestResultContainer[] results = allTestResults.getAllResults();
         for (TestResultContainer result : results) {
@@ -122,7 +127,5 @@ public class SauceLabsExample {
             assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
         }
 
-        driver.quit();
-        eyes.abort();
     }
 }

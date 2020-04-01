@@ -67,15 +67,18 @@ public class FluentApiTest {
 
         eyes.check("Fluent - programaticaly add content region", Target.window().ignore(By.id("YouContentRegionID")));
 
-        eyes.check("Fluent - Ignore Displacements", Target.window().ignoreDisplacements(true));
+        eyes.check("Fluent - Ignore Displacements", Target.window().ignoreDisplacements(true).ignore(By.cssSelector("css")).layout(By.cssSelector("layoutCss")));
 
-        eyes.check("Fluent - Add Region Match Level", Target.region(By.cssSelector("myID")).matchLevel(MatchLevel.CONTENT));
+        eyes.check("Fluent - Region", Target.region(By.cssSelector("myCss")).fully());
 
-        eyes.check("Fluent - Add Region Match Level", Target.frame("myFrameId"));
+        eyes.check("Fluent - iFrame Region", Target.frame("myFrameId").fully());
 
         eyes.check("Fluent - Use DOM and Patterns", Target.window().useDom(true).enablePatterns(true).layout());
 
+        eyes.check("Fluent - Choose a different scrollable selector", Target.window().scrollRootElement(By.cssSelector("body")));
+
         eyes.closeAsync();
+
     }
 
     @After

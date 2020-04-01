@@ -2,57 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b48ea2-62bf-4032-b13c-aee30f509531" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/vgSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_158_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_159_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_158_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_159_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_158_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_159_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_158_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_159_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_158_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_159_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExampleVG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/kw2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_appium_java4_4_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_159_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java3_3_160_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_common_java4_4_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_159_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java3_jersey2x_3_160_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_connectivity_java4_jersey2x_4_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_159_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_images_java3_3_160_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_159_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java3_3_160_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_sdk_core_java4_4_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_159_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java3_3_160_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_applitools_eyes_selenium_java4_4_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appium-java4/appiumjava4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/appium-java4/appiumjava4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/github-homepage.png" beforeDir="false" afterPath="$PROJECT_DIR$/github-homepage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AppiumIosExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppiumIosExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BrowserStackAppiumExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BrowserStackAppiumExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BrowserStackExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BrowserStackExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CaptureRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromeMobileEmulationExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromeMobileEmulationExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreditCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreditCards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FannieMae.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FannieMae.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FluentApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FullPageScreenShotEsriExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FullPageScreenShotEsriExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HelloWorldRCA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HelloWorldRCA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Hyatt2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Hyatt2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Localization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Localization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MSG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MSG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MobileNativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MobileNativeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PerfectoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PerfectoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SauceLabsAppiumNativeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SauceLabsAppiumNativeExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Sherwin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sherwin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TableCompare.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TutorialExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TutorialExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abTestExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/abTestExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accessibilityTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accessibilityTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/visualGridCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridCrawler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/visualGridExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/visualGridExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumAndroidExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AppiumAndroidExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumAndroidNativeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AppiumAndroidNativeExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumIosExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AppiumIosExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AppiumIosNativeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AppiumIosNativeExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BrowserStackAppiumExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BrowserStackExample$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BrowserStackExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BrowserStackExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CaptureRegion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ChromeMobileEmulationExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ChromeMobileEmulationExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CreditCards.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CreditCards.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample$myBrowsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample$myBrowsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CrossEnvParallelExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DownloadDiffExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DownloadDiffExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/FannieMae.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FannieMae.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FluentApiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotEsriExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotEsriExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FullPageScreenShotExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/java-examples.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MSG.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MSG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorldCrossEnvironment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorldCrossEnvironment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HelloWorldRCA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HelloWorldRCA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Hyatt2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hyatt2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/IgnoreRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IgnoreRegion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/JJFullPageScreenShotExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/JJFullPageScreenShotExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Localization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Localization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Medtronics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MobileNativeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MobileNativeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PerfectoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ResponsiveTestExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsAppiumNativeExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExample$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SauceLabsExampleDesktop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sherwin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sherwin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TableCompare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TutorialExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TutorialExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/abTestExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/abTestExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accessibilityTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accessibilityTesting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/kw.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/kw.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/vgSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/vgSimple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridCrawler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/visualGridExample.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,47 +89,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="117" selection-start-line="117" selection-end-line="129" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Sherwin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+            <state relative-caret-position="521">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="42" column="65" lean-forward="true" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="44" lean-forward="true" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="34" selection-start-line="34" selection-end-line="49" selection-end-column="26" />
+            <state relative-caret-position="705">
+              <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,19 +138,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestNGLocalBase.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="-237">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/vgSimple.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="48" selection-start-line="48" selection-end-line="59" selection-end-column="5" />
+            <state relative-caret-position="-545">
+              <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,10 +159,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TutorialExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="51">
+              <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/applitools/eyes-common-java3/3.160.2/eyes-common-java3-3.160.2.jar!/com/applitools/eyes/RectangleSize.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/applitools/eyes-common-java3/3.160.2/eyes-common-java3-3.160.2.jar!/com/applitools/utils/ArgumentGuard.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -161,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/visualGridCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="99" selection-start-line="99" selection-end-line="110" selection-end-column="5" />
+            <state relative-caret-position="175">
+              <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,8 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/GSKvisualGridExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GSKVisualGridMultiple.java" />
         <option value="$PROJECT_DIR$/appium-java4/pom.xml" />
         <option value="$PROJECT_DIR$/appium-java4/src/test/java/IOSNativeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java" />
@@ -220,13 +250,9 @@
         <option value="$PROJECT_DIR$/src/test/java/visualGridParallel.java" />
         <option value="$PROJECT_DIR$/src/test/java/ImagesSDKExample.java" />
         <option value="$PROJECT_DIR$/appium-java4/src/test/java/AndroidVisualLocatorsTest.java" />
-        <option value="$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/kw.java" />
         <option value="$PROJECT_DIR$/src/test/java/mc.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/Medtronics.java" />
         <option value="$PROJECT_DIR$/src/test/java/MSG.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/abTestExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/accessibilityTesting.java" />
         <option value="$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java" />
@@ -240,14 +266,10 @@
         <option value="$PROJECT_DIR$/src/test/java/CreditCards.java" />
         <option value="$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/FannieMae.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/FullPageScreenShotEsriExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java" />
         <option value="$PROJECT_DIR$/src/test/java/HelloWorldRCA.java" />
         <option value="$PROJECT_DIR$/src/test/java/Hyatt2.java" />
-        <option value="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" />
         <option value="$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/Localization.java" />
         <option value="$PROJECT_DIR$/src/test/java/MobileNativeTests.java" />
@@ -255,13 +277,23 @@
         <option value="$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsAppiumNativeExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java" />
         <option value="$PROJECT_DIR$/src/test/java/Sherwin.java" />
         <option value="$PROJECT_DIR$/src/test/java/TutorialExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/vgSimple.java" />
+        <option value="$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/IgnoreRegion.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/FluentApiTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/test/java/visualGridCrawler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExampleVG.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kw.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kw2.java" />
         <option value="$PROJECT_DIR$/src/test/java/visualGridExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SauceLabsExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java" />
       </list>
     </option>
   </component>
@@ -273,10 +305,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="698" />
-    <option name="y" value="135" />
-    <option name="width" value="1688" />
-    <option name="height" value="1058" />
+    <option name="x" value="-1921" />
+    <option name="y" value="62" />
+    <option name="width" value="1783" />
+    <option name="height" value="1195" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -321,123 +353,6 @@
             <path>
               <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="basepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="driver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-java-selenium-webdriver-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="automatedtest" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="searchresultpage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -463,6 +378,14 @@
             </path>
             <path>
               <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-examples" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GithubTest.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="Selenium Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -481,17 +404,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/java" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="Pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/appium-java4" />
       <recent name="$PROJECT_DIR$/appium-java4/src/test/java" />
       <recent name="$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="ApplitoolsTestResultHandler" />
+      <recent name="Pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
@@ -507,22 +431,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HelloWorld">
+  <component name="RunManager" selected="JUnit.SauceLabsExample">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HelloWorld" />
+    <configuration name="DownloadDiffExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DownloadDiffExample" />
       <module name="java-examples" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DownloadDiffExampleVG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ApplitoolsTestResultHandler.DownloadDiffExampleVG" />
+      <module name="java-examples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ApplitoolsTestResultHandler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kw2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kw2" />
+      <module name="java-examples" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -537,34 +483,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Medtronics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SauceLabsExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-examples" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Medtronics" />
+      <option name="MAIN_CLASS_NAME" value="SauceLabsExample" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="abTestExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-examples" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="abTestExample" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="vgSimple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-examples" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="vgSimple" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -622,19 +550,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.Medtronics" />
-      <item itemvalue="JUnit.abTestExample" />
-      <item itemvalue="JUnit.vgSimple" />
-      <item itemvalue="Application.HelloWorld" />
+      <item itemvalue="Application.DownloadDiffExampleVG" />
+      <item itemvalue="Application.DownloadDiffExample" />
+      <item itemvalue="Application.kw2" />
       <item itemvalue="JUnit.HelloWorld" />
+      <item itemvalue="JUnit.SauceLabsExample" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SauceLabsExample" />
+        <item itemvalue="Application.kw2" />
+        <item itemvalue="Application.DownloadDiffExampleVG" />
+        <item itemvalue="Application.DownloadDiffExample" />
         <item itemvalue="JUnit.HelloWorld" />
-        <item itemvalue="Application.HelloWorld" />
-        <item itemvalue="JUnit.Medtronics" />
-        <item itemvalue="JUnit.vgSimple" />
-        <item itemvalue="JUnit.abTestExample" />
       </list>
     </recent_temporary>
   </component>
@@ -652,56 +580,56 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Medtronics - 2020.01.23 at 12h 19m 05s.xml">
-      <configuration name="Medtronics" configurationId="JUnit" />
+    <history-entry file="visualGridExample - 2020.03.12 at 08h 08m 15s.xml">
+      <configuration name="visualGridExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Medtronics - 2020.01.23 at 12h 20m 34s.xml">
-      <configuration name="Medtronics" configurationId="JUnit" />
+    <history-entry file="visualGridExample - 2020.03.12 at 08h 15m 33s.xml">
+      <configuration name="visualGridExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Medtronics - 2020.01.23 at 12h 20m 54s.xml">
-      <configuration name="Medtronics" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Medtronics - 2020.01.23 at 12h 22m 13s.xml">
-      <configuration name="Medtronics" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Medtronics - 2020.01.23 at 12h 24m 44s.xml">
-      <configuration name="Medtronics" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Medtronics - 2020.01.23 at 12h 28m 24s.xml">
-      <configuration name="Medtronics" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HelloWorld - 2020.01.30 at 14h 03m 52s.xml">
+    <history-entry file="HelloWorld - 2020.03.12 at 09h 12m 38s.xml">
       <configuration name="HelloWorld" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HelloWorld - 2020.01.30 at 14h 10m 32s.xml">
-      <configuration name="HelloWorld" configurationId="JUnit" />
+    <history-entry file="SauceLabsExample - 2020.03.19 at 15h 13m 37s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HelloWorld - 2020.01.30 at 14h 11m 41s.xml">
-      <configuration name="HelloWorld" configurationId="JUnit" />
+    <history-entry file="SauceLabsExample - 2020.03.19 at 15h 14m 58s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HelloWorld - 2020.01.30 at 14h 13m 45s.xml">
-      <configuration name="HelloWorld" configurationId="JUnit" />
+    <history-entry file="SauceLabsExample - 2020.03.19 at 15h 16m 01s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SauceLabsExample - 2020.03.19 at 15h 18m 15s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SauceLabsExample - 2020.03.19 at 15h 36m 09s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SauceLabsExample - 2020.03.19 at 16h 13m 59s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SauceLabsExample - 2020.03.19 at 16h 15m 55s.xml">
+      <configuration name="SauceLabsExample" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="698" y="135" width="1688" height="1058" extended-state="0" />
+    <frame x="-1921" y="62" width="1783" height="1195" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31044957" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2073521" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32711306" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7460658" visible="true" weight="0.2852598" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48866212" weight="0.26121077" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7460658" visible="true" weight="0.4814815" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48866212" weight="0.26926926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32992035" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2539342" side_tool="true" weight="0.15873016" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.55633354" weight="0.2969247" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.55633354" weight="0.2962963" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -711,6 +639,31 @@
       <window_info anchor="right" id="Perfecto Dashboard" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31044957" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32711306" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7460658" weight="0.2852598" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48866212" weight="0.26121077" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32992035" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2539342" side_tool="true" weight="0.15873016" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.55633354" visible="true" weight="0.2969247" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="Perfecto Lab" order="5" />
+      <window_info anchor="right" id="Perfecto Dashboard" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -724,269 +677,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/ApplitoolsTestResultsHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="289" column="25" lean-forward="true" selection-start-line="289" selection-start-column="25" selection-end-line="289" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/mc.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/NewVG.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="66" column="43" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/abTestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/accessibilityTesting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosNativeExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BrowserStackExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CaptureRegion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ChromeMobileEmulationExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="49" selection-start-line="49" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BrowserStackAppiumExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="98" selection-start-line="98" selection-end-line="99" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CreditCards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="81" selection-start-line="81" selection-end-line="93" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FannieMae.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="36" selection-start-line="36" selection-end-line="37" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3630#3631#0" expanded="true" />
-            <element signature="e#3694#3695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotEsriExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="49" selection-start-line="49" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="82" column="32" lean-forward="true" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GithubTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="104" selection-start-line="104" selection-end-line="115" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/kw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
-          <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="16" selection-start-line="16" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Medtronics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="41" selection-start-line="41" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2015">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Localization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="35" column="76" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MobileNativeTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MSG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Parallel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Hyatt2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -994,78 +684,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorldRCA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="76" selection-start-line="76" selection-end-line="87" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PerfectoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="88" selection-start-line="88" selection-end-line="99" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="11" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsAppiumNativeExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="100" selection-start-line="100" selection-end-line="111" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="115" selection-start-line="115" selection-end-line="126" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="117" selection-start-line="117" selection-end-line="129" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TableCompare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TableCompare.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestNGCrossBrowserBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1087,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Sherwin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TutorialExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1111,10 +723,328 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sherwin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="34" selection-start-line="34" selection-end-line="49" selection-end-column="26" />
+        <state relative-caret-position="76">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/abTestExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-java-selenium-webdriver-example/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appium-java4/src/test/java/AndroidNativeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorldRCA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsAppiumNativeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="100" selection-start-line="100" selection-end-line="111" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-java-selenium-webdriver-example/src/test/java/com/automatedtest/sample/homepage/HomePageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsAppiumExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CreditCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumIosExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appium-java4/src/test/java/AndroidVisualLocatorsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/accessibilityTesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorldCrossEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CrossEnvParallelExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="97" column="11" lean-forward="true" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-java-selenium-webdriver-example/src/test/java/com/automatedtest/sample/homepage/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-java-selenium-webdriver-example/src/test/java/com/automatedtest/sample/infrastructure/driver/Setup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JJFullPageScreenShotExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="16" selection-start-line="16" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ResponsiveTestExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotEsriExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/applitools/eyes-selenium-java3/3.160.2/eyes-selenium-java3-3.160.2.jar!/com/applitools/eyes/selenium/ClassicRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImagesSDKExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidNativeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AppiumAndroidExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="52" column="49" lean-forward="true" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PerfectoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="72" column="60" lean-forward="true" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BrowserStackExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/builders/AllDefaultPossibilitiesBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appium-java4/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/ApplitoolsTestResultsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ApplitoolsTestResultHandler/DownloadDiffExampleVG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="89" column="1" selection-end-line="89" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kw2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MSG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/applitools/eyes-common-java3/3.160.2/eyes-common-java3-3.160.2.jar!/com/applitools/eyes/RectangleSize.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/applitools/eyes-common-java3/3.160.2/eyes-common-java3-3.160.2.jar!/com/applitools/utils/ArgumentGuard.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FluentApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExampleDesktop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-545">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1123,18 +1053,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/visualGridCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="99" selection-start-line="99" selection-end-line="110" selection-end-column="5" />
+        <state relative-caret-position="175">
+          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/visualGridExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SauceLabsExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+        <state relative-caret-position="361">
+          <caret line="42" column="65" lean-forward="true" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/IgnoreRegion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="44" lean-forward="true" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FullPageScreenShotExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

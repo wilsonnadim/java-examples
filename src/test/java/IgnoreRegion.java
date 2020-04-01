@@ -59,4 +59,3 @@ public class IgnoreRegion {
         eyes.abort();
     }
 }
-}

@@ -71,7 +71,7 @@ public class visualGridCrawler {
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
         eyes.setLogHandler(new StdoutLogHandler(true));
-        eyes.setServerUrl("https://eyes.applitools.com/");
+        eyes.setServerUrl("https://eyesapi.applitools.com/");
 
         Configuration configuration = eyes.getConfiguration();
         configuration.setBatch(batch);

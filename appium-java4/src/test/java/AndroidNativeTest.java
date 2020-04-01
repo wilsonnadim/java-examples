@@ -4,13 +4,15 @@ import com.applitools.eyes.selenium.fluent.Target;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
 public class AndroidNativeTest {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception, URISyntaxException{
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -26,6 +28,13 @@ public class AndroidNativeTest {
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 
         Eyes eyes = new Eyes();
+
+        eyes.setServerUrl(new URI("https://serverURL.com"));
+
+        eyes.setServerUrl("https://serverURL.com");
+
+
+
 
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setForceFullPageScreenshot(true);

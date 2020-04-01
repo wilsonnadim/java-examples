@@ -36,7 +36,7 @@ public class HelloWorld {
         driver.get("https://applitools.com/helloworld");
 
         // Start the test and set the browser's viewport size to 800x600.
-        eyes.open(driver, "MY-HELLO-WORLD", "My first Selenium Java test!", new RectangleSize(1200, 800));
+        eyes.open(driver, "Hello World", "My first Selenium Java test!", new RectangleSize(1200, 800));
 
         // Visual checkpoint #1.
         eyes.check("Hello!", Target.window());
@@ -52,14 +52,15 @@ public class HelloWorld {
 
     @After
     public void tearDown() throws Exception {
+        driver.quit();
+
         TestResultsSummary allTestResults = runner.getAllTestResults(false);
         TestResultContainer[] results = allTestResults.getAllResults();
         for(TestResultContainer result: results){
             TestResults test = result.getTestResults();
             assertEquals(test.getName() + " has mismatches", 0, test.getMismatches());
         }
-        
-        driver.quit();
+
         eyes.abort();
     }
 
