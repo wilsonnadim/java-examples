@@ -25,6 +25,7 @@ public class visualGridExample {
         batch = new BatchInfo(batchName);
         batch.setSequenceName(batchName);
         batch.setNotifyOnCompletion(true);
+        //batch.setId("set a unique id...")
     }
 
     @Before
