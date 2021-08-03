@@ -11,6 +11,10 @@
     <modules>
         <module>appium-java4</module>
     </modules>
+     <properties>
+  <sonar.organization>wilsonnadim</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
 
     <dependencies>
 
